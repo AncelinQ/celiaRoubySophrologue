@@ -1,0 +1,57 @@
+<section id="rdvSect">
+  <article>
+      <h1 class="mainTitle">Prendre Rendez-vous</h1>
+      <h4>Vous pouvez prendre RDV en ligne via le formulaire ci-dessous, par téléphone ou par <a href="mailto:contact@celia-rouby-sophrologue.fr">email</a>.</h4>
+      <ul><li><a href="tel:+33673851774"><i class="fas fa-phone-alt"></i>06.73.85.17.74</a></li>
+      <li><a href="mailto:celia.rouby@gmail.com"><i class="fas fa-envelope"></i>celia.rouby@gmail.com</a></li></ul>
+      <p class="requestSent"></p>
+      <form id="rdvForm" action="prendre-rdv.php" method="POST">
+      <fieldset>
+          <?php require_once 'calendar.php'; ?>
+          <table id="userInfoForm">
+          <tbody>
+          <p id="selectedTimeSlotInfo"></p>
+            <tr>
+             <td>
+                <label for="rdvFirstName">Votre prénom <span class="red">*</span> : </label>
+                <input class="userInfo userName firstName" type="text" name="rdvFirstName" id="rdvFirstName" placeholder="Prénom">
+             </td>
+             <td>
+                <label for="rdvLastName">Votre nom <span class="red">*</span> : </label>
+                <input class="userInfo userName lastName" type="text" name="rdvLastName" id="rdvLastName" placeholder="Nom">
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="rdvPhone" required>Votre téléphone <span class="red">*</span> : </label>
+                <input class="userInfo phone" type="text" inputmode="numeric" pattern="[0-9]*" name="rdvPhone" id="rdvPhone" placeholder="Téléphone ">
+              </td>
+              <td>
+                <label for="rdvEmail">Votre email <span class="red">*</span> : </label>
+              <input class="userInfo email" type="text" name="rdvEmail" id="rdvEmail" placeholder="Email"></td>
+            </tr>
+            <tr>
+              <td colspan="14"><label for="rdvMotif">Choisissez un motif de consultation <span class="red">*</span> :</label>
+              <select name="rdvMotif" id="rdvMotif" class="userInfo">
+                <option value="0">Motif de consultation</option>
+                <option value="Premiere consultation">Première consultation</option>
+                <option value="Suivi de consultation">Suivi de consultation</option>
+              </select>  </td>
+            </tr>
+            <tr>
+              <td colspan="14">
+                  <button type="button" id="rdvMessageButton">Ajouter un message</button>
+                  <label for="rdvMessage" class="rdvMessage">Votre message :</label>
+                <textarea name="rdvMessage" id="rdvMessage" class="rdvMessage message" rows="8" cols="80" maxlength="2000"></textarea></td>
+            </tr>
+            <tr>
+              <td colspan="14"><input type="button" id="rdvBtn" name="button" value="Envoyer">
+              <p>Les champs indiqués par une <span class="red">*</span> sont obligatoires.</p></td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>  
+    </form>
+  </article>
+</section>
+<script type="text/javascript" src="js/active.js"></script>

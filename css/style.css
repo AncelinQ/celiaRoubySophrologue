@@ -1,0 +1,1569 @@
+@font-face {
+    font-family: 'ElegantIcons';
+    src: url('../fonts/ElegantIcons.eot');
+    src: url('../fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ElegantIcons.woff2') format('woff2'),
+        url('../fonts/ElegantIcons.woff') format('woff'),
+        url('../fonts/ElegantIcons.ttf') format('truetype'),
+        url('../fonts/ElegantIcons.svg#ElegantIcons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ElegantIcons';
+    src: url('../fonts/ElegantIcons_1.eot');
+    src: url('../fonts/ElegantIcons_1.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ElegantIcons_1.woff2') format('woff2'),
+        url('../fonts/ElegantIcons_1.woff') format('woff'),
+        url('../fonts/ElegantIcons_1.ttf') format('truetype'),
+        url('../fonts/ElegantIcons_1.svg#ElegantIcons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ElegantIcons';
+    src: url('../fonts/ElegantIcons_2.eot');
+    src: url('../fonts/ElegantIcons_2.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ElegantIcons_2.woff2') format('woff2'),
+        url('../fonts/ElegantIcons_2.woff') format('woff'),
+        url('../fonts/ElegantIcons_2.ttf') format('truetype'),
+        url('../fonts/ElegantIcons_2.svg#ElegantIcons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*GLOBAL*/
+
+/*ANIMATIONS*/
+
+.selectedTime, .selectedTime:hover, .bookedTime, .bookedTime:hover, #headerNav > ul > li > a, #headerNav > ul > li:hover > a, footer a, #footerNav a:hover, #ipNav li a, #ipNav li:hover a, #speNav li a, #speNav li:hover a, .avTime, .avTime:hover, .adminAvTime, .adminAvTime:hover, #contactBtn, #contactBtn:hover, #rdvBtn, #rdvBtn:hover, #previousWeek, #previousWeek:hover, #nextWeek, #nextWeek:hover, #rdvMessageButton, #rdvMessageButton:hover, #header, #headerToFixed, #headerNav, #headerNavToFixed, .headerNavLi, .headerNavLiTofixed, .headerNavLiToFixed:hover a, .headerNavLiToFixed a, #logo, #logoToFixed, #loginBtn, #loginBtn:hover, #logoutBtn, #logoutBtn:hover, .rdvDelete, .rdvDelete:hover, .dayOn, .dayOn:hover, .dayOff, .dayOff:hover, #alertBtn, #alertBtn:hover, #alertWindowContent a:hover, #alertWindowContent a, .deactivated, .deactivated:hover, #backToEspn, #backToEspn:hover, .btnsList a, .btnsList a:hover, #plusLoinDouleur a, #plusLoinDouleur a:hover, #rdvSect >article>h4 a:hover, #rdvSect >article>ul a:hover, #rdvSect p a:hover, #rdvSect >article>h4 a, #rdvSect >article>ul a, #rdvSect >article>h2 a:hover, #rdvSect >article>ul a:hover, #smallMenuBtn, #smallMenuBtn:hover, #smallMenuNav li a, #smallMenuNav li:hover a, .smallMenuNavLi, #smallMenuBtn div, #smallMenuBtn:hover div, .enSavoirPlusNav:hover, .enSavoirPlusNav, .smallSize, .fullSize, #specialisations li, #specialisations li:hover, #specialisations img, #specialisations img:hover{
+  transition: all 0.2s ease;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  background-size: cover;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  font-size: 1.8rem;
+  font-family: 'Quicksand', cursive;
+  line-height: 1.8;
+}
+
+main {
+  margin: 0 auto;
+  padding: 2rem 0 5rem;
+  max-width: 90%;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Handlee', cursive;
+}
+
+h4, h5{
+  font-family: 'Handlee', cursive;
+}
+
+h1{
+  font-size: 3rem;
+
+}
+
+h2{
+  font-size: 2.6rem;
+  color: #1ba7c3;
+}
+
+h3{
+  font-size: 2.4rem;
+  color: #1ba7c3;
+}
+
+h4{
+  font-size: 2.2rem;
+  color: #1ba7c3;
+  padding: 2rem;
+}
+
+h5{
+  font-size: 2rem;
+  color: #1ba7c3;
+  padding: 2rem;
+}
+
+h6{
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: #1ba7c3;
+}
+
+i{
+  margin-right: 1rem;
+}
+
+small {
+  display: block;
+  margin-top: 5rem;
+  margin-bottom: -4rem;
+  font-size: 1.4rem;
+}
+
+#backToEspn {
+  font-family: 'Quicksand', cursive;
+  margin-top: 1rem;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.blue{
+  color: #1ba7c3;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.block {
+  display: block;
+}
+
+.mainTitle{
+
+  color:#1ba7c3;
+
+}
+
+article{
+  border-radius: 5px;
+}
+
+.mainTitle, #sophroTopArt h1, #sophroTopArt h4, #sophroTopArt p, .accomp h3, .accomp a{
+  flex-basis: 100%;
+}
+
+.accomp, #sophroBottomArt, #sophroMidArt, #seances, #cabinet{
+  margin-top: 1rem;
+}
+
+.btnsList a:hover, #backToEspn:hover{
+  background-color: #1ba7c3;
+  color: #ffffff;
+  border: 1px solid #1ba7c3;
+}
+
+#homePage, #indications, #specialisation1,#specialisation2, .accomp, .btnsList, #indications, #rdvSect ul, #rdvSect article, #contactSect article, #contactInputs, #adminUl{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mainTitle, #indexList, #sophroTopArt ul, #sophroPractice ul, #sophroBottomArt ul, .avTime, .adminAvTime, .deactivated, .unavTime, .bookedTime, .selectedTime, #defTrauma, #consequencesESPT, #sophroEtESPT, #priseEnCharge, .accompDesc, .accompSeance, .domaines ul, #aboutMeList{
+  border-radius: 5px;
+}
+
+#accompIndivDesc, #accompIndivSeance, #defTrauma, .accompDesc, .accompSeance, #consequencesESPT, #sophroEtESPT, #priseEnCharge, #aboutMeList{
+  border: 1px solid #fabca2;
+  background-color: #fdebe250;
+  padding: 1rem;
+}
+
+/*HEADER & NAVS*/
+
+#header{
+  width: 100%;
+  border-bottom: 1px solid #1ba7c3;
+  background-size: cover;
+  background: rgb(253,235,226);
+  background: linear-gradient(0deg, rgba(253,235,226,0) 0%, rgba(253,235,226,0.6) 100%);
+  font-family: "Handlee", cursive;
+}
+
+#headerToFixed, #smallHeaderUlToFixed{
+  font-family: "Handlee", cursive;
+}
+
+
+header img {
+  display: block;
+  margin: auto;
+  max-width: 400px;
+}
+
+#logo img {
+  max-width: 150px;
+  padding-top: 1rem;
+  margin-bottom: -2rem;
+}
+
+#smallHeader{
+  padding-top: 2rem;
+  display: none;
+}
+
+#smallHeaderUl{
+  display: block;
+  text-align: center;
+  top:2rem;
+  left:50%;
+}
+
+#smallMenu{
+  display: inline-block;
+}
+
+#logoSmallMenu img{
+  max-width: 150px;
+}
+
+#smallMenuBtn{
+  display: inline-block;
+  font-size: 2rem;
+  background: none;
+  border: 0;
+  padding:1rem 0 2rem;
+}
+
+#smallMenuBtn div {
+  width: 35px;
+  height: 5px;
+  background-color: #1ba7c3;
+  margin: 6px 0;
+  border-radius: 5px;
+}
+
+#smallMenuBtn:hover div{
+  background-color: #1b76d1;
+}
+
+.smallMenuNavLi{
+  padding: 1rem;
+}
+
+#logoSmallToFixed{
+  content: url(../img/logo-sophro-text-horizontal.png);
+  max-width: 250px;
+  margin-bottom: -0.5rem;
+}
+
+.headerNavLi:nth-child(n+2), .ipNav, .speNav, #smallMenuNav {
+  padding: 0 1rem 2rem;
+}
+
+header> nav> ul> li:nth-child(n+2)> a {
+  padding: 1rem ;
+}
+
+#headerNav > ul {
+  font-size: 1.6rem;
+  padding: 0 1rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+#headerNav > ul > li:hover > a, #ipNav li:hover a, #speNav li:hover a, .headerNavLiToFixed:hover > a, footer a:hover, #smallMenuNav li:hover > a, #plusLoinDouleur a:hover {
+  text-decoration: underline;
+  color: #1b76d1;
+}
+
+#headerToFixed, #smallHeaderUlToFixed{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  border-bottom: 1px solid #1ba7c3;
+
+  background: linear-gradient(0deg, rgba(255,255,255,0.85) 50%,  rgba(255,255,255,1) 100%);;
+  padding-top: 1rem;
+  z-index: 1;
+}
+
+#headerToFixed{
+  flex-direction: row;
+}
+
+#smallHeaderUlToFixed{
+  flex-direction: row-reverse;
+}
+
+#smallHeaderUlToFixed li:nth-child(1){
+  flex-basis: 50%;
+}
+
+#logoToFixed{
+content: url(../img/logo-sophro-text-horizontal.png);
+max-width: 200px;
+  margin-bottom: -0.5rem;
+}
+
+#headerNavToFixed > ul {
+  font-size: 1.4rem;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.headerNavLiToFixed {
+  padding: 0 1rem;
+}
+
+#infosPratiques, #specialisationsNav{
+    position: relative;
+}
+
+#infosPratiques > a, #specialisationsNav > a {
+  padding-right: 3rem;
+}
+
+#infosPratiques > a::after, #specialisationsNav > a::after, #specialisationsSmallNav > a::after, #infosPratiquesSmallNav > a::after{
+  position: absolute;
+  font-family: 'ElegantIcons', cursive;
+  content: "3";
+}
+
+#specialisationsSmallNav > a::after, #infosPratiquesSmallNav > a::after{
+  padding-top: 0.3rem;
+}
+
+#ipNav, #speNav{
+  overflow:auto;
+  width: 100%;
+}
+
+#ipNav, #speNav, #smallMenuNav{
+  display: none;
+  position: absolute;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  color: #1ba7c3;
+  -webkit-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
+  -moz-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
+  border: 1px solid #1ba7c3;
+
+  border-radius: 10px;
+  z-index: 1;
+}
+
+#ipNav, #speNav, .smallMenuNavLi >ul li{
+  list-style: circle inside;
+}
+
+.smallMenuNavLi{
+  list-style: disc inside;
+}
+
+#smallMenuNav{
+  top:23.6rem;
+  left:15%;
+  width: 70%;
+  text-align: left;
+}
+
+.smallMenuNavLi >a{
+  font-weight: bold;
+}
+
+#speNav li:last-child, #ipNav li:last-child{
+  padding-bottom: 0;
+}
+
+#speNav {
+  padding-left: 4rem;
+  text-indent: -1.6rem;
+}
+
+#ipNav li a, #speNav li a, #smallMenuNav li a{
+  color: #1ba7c3;
+  font-size: 1.6rem;
+}
+
+#ipSmallNav, #speSmallNav{
+  list-style: circle inside ;
+  padding-left: 2rem;
+}
+
+.active{
+  font-weight: bold;
+  text-decoration: underline;
+  color: #1ba7c3;
+  letter-spacing: 1px;
+}
+/*ACCUEIL*/
+
+#homePage li{
+  font-size: 2rem;
+}
+
+#homePage h1, #homePage p, #indexList li, #indexList, #topArticle{
+  margin-bottom: 2rem;
+}
+
+#indexList li:nth-child(even) {
+  color: #000000;
+}
+
+#indexList{
+  display: inline-block;
+  background-color: #fdebe250;
+  border: 1px solid #fabca2;
+  padding: 1rem;
+}
+
+.btnsList{
+  margin: 2rem;
+}
+
+.btnsList a, #backToEspn{
+  color: #1ba7c3;
+  background-color: #ffffff50;
+  border: 1px solid #1ba7c3;
+  padding: 1rem;
+  border-radius: 30px;
+  font-weight: normal;
+  font-size: 1.6rem;
+}
+
+.btnsList a{
+  margin:0 1rem;
+}
+
+#specialisations ul{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+ #specialisations ul:after, #speEnd:after, #accompDouleur:after, #enSavoirPlus:after, #sophroTopArt h4:after, #tarifs{
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  padding-top: 20px;
+  border-bottom:1.5px solid #fabca2;
+}
+
+#specialisations li {
+  width:25%;
+}
+
+#specialisations li:hover h3{
+  text-decoration: underline;
+}
+
+#specialisations li:hover img{
+  -webkit-box-shadow: 0px 0px 10px 5px #1ba7c350;
+  -moz-box-shadow: 0px 0px 10px 5px #1ba7c350;
+  box-shadow: 0px 0px 10px 5px #1ba7c350;
+  border-radius: 100%;
+}
+
+/*LA SOPHROLOGIE*/
+
+#sophroSect li{
+  list-style: circle inside;
+}
+
+#sophroBtns li {
+  list-style: none;
+}
+
+#sophroTopArt h2 {
+  color: #000000;
+  font-family: Quicksand, "cursive";
+  font-size: 1.8rem;
+  margin: 2rem;
+}
+
+#sophroTopArt h4{
+  color: #000000;
+}
+
+#sophroTopArtPart01, #sophroTopArtPart02, #sophroPractice {
+  flex: 1;
+  padding: 1rem;
+}
+
+#sophroTopArt article li:not(:last-child){
+  padding-bottom: 1rem;
+}
+
+#sophroTopArt>p{
+  padding-bottom: 1rem;
+}
+
+#sophroTopArtPart01{
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  text-align: left;
+}
+
+#sophroTopArtPart02{
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: right;
+}
+
+#sophroTopArt p{
+  text-align: left;
+  width: 30%;
+}
+
+#sophroPracticeSubList{
+  margin-left : 4rem;
+}
+
+#sophroSectPart02 {
+  margin: 3rem 0 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-radius: 5px;
+  align-items: flex-start;
+}
+
+#sophroSectPart02 > article {
+flex-basis: 50%;
+}
+#sophroSectPart02 > article:nth-child(1) {
+  background-color: #fdebe270;
+}
+
+#sophroSectPart02 img{
+  border-radius: 5px;
+  max-width: 80%;
+  margin: 2rem;
+}
+
+#sophroSectPart02 h2, #sophroSectPart02 h4{
+  text-align: left;
+}
+
+#sophroBottomArt li, #sophroBottomArt p{
+  text-align: justify;
+  padding: 1rem;
+}
+
+#sophroMidArt p{
+  text-align: center;
+}
+
+#sophroBottomArt ul{
+  margin-bottom: 1rem;
+}
+
+#sophroBottomArt li {
+  list-style: none;
+}
+
+#sophroMidArt p:last-child{
+  text-decoration: underline;
+}
+
+/*MES SPÉCIALISATIONS*/
+
+.specialisations h4 {
+  font-size: 2.4rem;
+}
+
+#violencesTopSect{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#violencesTopSect img, #bodyRel img, #douleur img{
+  margin:2rem 2rem 1rem;
+}
+
+#violencesTopSect img{
+  width: 40%;
+}
+
+#bodyRel img, #douleur img{
+  width: 30%;
+}
+
+#accompDouleur ul{
+  padding-top: 1rem;
+  font-size: 2rem;
+  display: inline-block;
+}
+
+#accompDouleur ul li{
+  padding: 0.5rem 2rem;
+  text-align: left;
+}
+
+#accompDouleur{
+  padding-right: 1rem;
+}
+
+#plusLoinDouleur li{
+  margin: 1rem 0;
+}
+
+#violenceEtSophro li{
+  text-align: left;
+  padding-bottom: 2rem;
+}
+
+#violenceEtSophro{
+  padding-left: 1rem;
+  border-top: 2px solid #fabca2;
+  margin-top: 2rem;
+  border-radius: 0;
+  background-color: #fdebe250;
+}
+
+#speDiv{
+  display: inline-block;
+  padding: 4rem 1rem 1rem;
+  width: 70%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#bodyRel article h1{
+  flex-basis: 100%;
+}
+
+#bodyRel img{
+  overflow:hidden;
+  min-height: 0;
+  min-width: 0;
+}
+
+#bodyRelUl li, #sophroSect li{
+  padding-top: 1.5rem;
+}
+
+#violenceEtSophro li:nth-child(-n+4):after, #bodyRelUl li:after, #sophroTopArt article > ul:after, #seances:after, #sophroSectPart02:after, #sophroMidArt:after, #douleur article:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  padding-top: 20px;
+  border-bottom:1.5px solid #fabca2;
+}
+
+#violencesMainContent{
+  flex-basis: 70%;
+}
+
+#enSavoirPlusNav{
+  flex-basis: 25%;
+  padding: 1rem;
+  border-left: 1px solid #fabca2;
+  margin: 1rem;
+}
+
+#enSavoirPlusNav ul{
+  font-size: 1.8rem;
+  font-family: "Handlee", cursive;
+  padding-bottom: 2rem;
+}
+
+#enSavoirPlusNav ul li{
+  padding: 0.5rem;
+  background-color: #fdebe250;
+  border: 1px solid #fabca2;
+  border-radius: 5px;
+  margin: 1rem;
+}
+
+#enSavoirPlusNav ul li:hover, #indexList:hover {
+  cursor: pointer;
+  background-color: #fdebe250;
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(251,214,197,1);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(251,214,197,1);
+  box-shadow: 0px 0px 5px 5px rgba(251,214,197,1);
+}
+
+#enSavoirPlusNav ul li{
+  flex-basis: 20%;
+}
+
+#espnArtToFixed{
+  position: fixed;
+  margin-top: -19rem;
+  padding-right: 7%;
+}
+
+#espnArtToFixedDown{
+  position: relative;
+  margin-top: 85rem;
+}
+
+#enSavoirPlus, #specialisations ul, #speEnd, #accompDouleur{
+  margin-bottom: 1rem;
+}
+
+.bulle, #bodyRelUl li, #douleur p, #sophroSect li{
+  text-align: justify;
+}
+
+.bulle p, #douleur p {
+  padding: 1rem;
+}
+
+#imgCerveau{
+  display: block;
+  margin: 2rem auto;
+}
+.smallSize{
+  width: 60%;
+}
+.fullSize {
+  width: 100%;
+}
+
+#bodyRelUl {
+  justify-content: left;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 1rem 2rem;
+}
+
+.btnsList a {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+
+#speEnd{
+  text-align: justify;
+}
+
+#speEnd p{
+  padding: 1rem;
+  margin: 2rem;
+}
+
+.hide {
+  display: none;
+}
+
+#violenceEtSophro ul{
+  border-bottom: 2px solid #fabca2;
+}
+
+#accompDouleur h2{
+  text-align: center;
+}
+
+#violenceEtSophro h2{
+  text-align: center;
+}
+
+.bulle{
+  margin: 1rem;
+}
+
+
+
+/*QUI SUIS-JE*/
+
+#aboutMe, #me{
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 2rem;
+  width: 65%;
+}
+
+#quiSuisJe p{
+  padding-bottom: 1rem;
+  text-indent: 2rem;
+}
+
+#aboutMe{
+  text-align: justify;
+  margin: 0 1rem;
+}
+
+#aboutMeList> ul{
+  list-style: disc inside;
+}
+
+
+#douleursUl{
+  list-style: circle inside;
+  text-indent: 2rem;
+}
+
+#me h3{
+  font-size: 1.8rem;
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+#me ul{
+  list-style: disc inside;
+  font-size: 1.4rem;
+}
+
+#quiSuisJeBtns li{
+  list-style: none;
+}
+
+#me{
+  float: left;
+  max-width: 30%;
+  margin: 0 1rem;
+}
+
+#celiaRoubyPhoto{
+  border-radius: 50%;
+  width: 80%;
+  text-align: center;
+}
+
+#formations, #ipPage ul:nth-child(-n+3) {
+  padding: 1rem;
+  background-color: #fdebe250;
+  border: 1px solid #F3826B50;
+  border-radius: 5px;
+  text-align: left;
+}
+
+/*INFOS PRATIQUES*/
+
+#ipPage ul:nth-child(-n+3){
+  display: inline-block;
+}
+#ipPage li{
+  list-style: circle inside;
+}
+
+
+#ipBtns li{
+  list-style: none;
+}
+
+#ipPage div{
+
+  text-align: center;
+  padding: 1rem 0;
+}
+
+#ipPage p, #ipPage h4{
+  margin: 1rem 0;
+}
+#ipPage iframe {
+  width: 100%;
+}
+
+/*CONTACT - PRENDRE RDV - ADMIN OFFICE - ADMIN LOGIN - GESTION DES FORMULAIRES*/
+
+label{
+  display: block;
+  padding-left: 1rem;
+}
+
+input, select {
+  outline-color: #1ba7c3;
+  outline-width: 2px;
+}
+
+.requestSent{
+  opacity: 1;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#contactSect h3{
+  font-weight: normal;
+  color: #0a0a0a;
+  margin: 1rem 0 0;
+}
+
+#rdvSect ul{
+  flex-direction: row;
+  list-style: none;
+  text-align: center;
+}
+
+#rdvSect article, #contactSect article{
+  flex-direction: column;
+  align-items: center;
+}
+
+#rdvSect ul li{
+  padding: 0 2rem;
+}
+
+#rdvForm{
+  width: 50%;
+  margin: 0 auto;
+}
+
+#userInfoForm{
+  width: 100%;
+}
+
+fieldset, .dayOn, .dayOff, .dayPast{
+  border-radius: 10px;
+}
+
+fieldset, .dayOn{
+  border: 1px solid #1ba7c3;
+}
+
+.dayOff{
+  border: 1px solid #F3826B;
+}
+
+.dayPast{
+  padding: 1rem 2rem;
+  border: 1px solid rgb(180, 180, 180);
+  color: rgba(70, 70, 70, 0.84);
+  background-color: rgba(180, 180, 180, 0.1);
+}
+
+fieldset{
+  padding: 2rem 0;
+}
+
+.userInfo, #contactBtn,#rdvBtn, #rdvMotif, #loginForm input, #alertBtn{
+  border-radius: 20px;
+}
+
+#contactInputs, #adminUl{
+  flex-direction: row;
+
+}
+
+#contactInputs li{
+  width: 50%;
+}
+
+#contactBtn, #rdvBtn, #rdvMotif{
+  width: 96.5%;
+}
+
+#rdvSect h4 {
+  color: #0a0a0a;
+  margin: 1rem 0;
+}
+
+#rdvMotif{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  background-image: url(../img/arrow-3.png);
+  background-size: 1.4rem;
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+
+#rdvCal, #userInfoForm, #adminRdvCal{
+  width:100%;
+}
+
+#rdvCal, #rdvCal tr, #rdvCal td, #userInfoForm, #userInfoForm tr, #userInfoForm td, #adminRdvCal, #adminRdvCal tr, #adminRdvCal td{
+  margin: 0 auto;
+  text-align: center;
+}
+
+textarea, .userInfo, #contactBtn, #rdvBtn, #loginForm input{
+  border: 1px solid #1ba7c3;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+#contactBtn, #rdvBtn, #loginBtn{
+  color: #ffffff;
+  background-color: #1ba7c3;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+#alertBtn{
+  color: #ffffff;
+  background-color: #7FC8AB;
+  padding: 1rem 2rem;
+  text-align: center;
+  border:1px solid #7FC8AB;
+  margin: 1rem;
+}
+
+#contactBtn, #rdvBtn, #rdvMotif,.userInfo, .userInfo::placeholder, option, select, textarea, #loginForm input, #loginForm input::placeholder, #logoutBtn, .rdvDelete, .dayOn, .dayOff, .dayPast, #alertBtn{
+  font-family: 'Quicksand', cursive;
+  font-size: 1.4rem;
+}
+
+.userInfo{
+  width: 85%;
+}
+
+textarea{
+  border-radius: 10px;
+  resize: none;
+  width:90%;
+}
+
+#rdvCal td, #adminRdvCal td{
+  padding: 0.5rem;
+}
+
+.weekBtn{
+  vertical-align: middle;
+  text-align: center;
+}
+
+#previousWeek, #nextWeek{
+  font-family: 'ElegantIcons', sans-serif ;
+  padding: 15rem 0;
+  font-size: 4rem;
+  border: none;
+  color: #1ba7c3;
+  background: none;
+}
+
+#unavPreviousWeek, #unavNextWeek{
+  font-family: 'ElegantIcons', sans-serif;
+  padding: 15rem 0;
+  font-size: 4rem;
+  border: none;
+  color: #BEBEBE;
+  background: none;
+}
+
+#previousWeek, #unavPreviousWeek{
+  padding-left: 1rem;
+}
+
+#nextWeek, #unavNextWeek{
+  padding-right: 1rem;
+}
+
+#rdvCal, #rdvCal tr, #rdvCal th{
+  padding: 1rem;
+}
+
+#rdvCal th, .unavTime:hover, #unavPreviousWeek:hover, #unavNextWeek:hover {
+  cursor: default;
+}
+
+.avTime:hover, .selectedTime:hover, #contactBtn:hover, #rdvBtn:hover, .adminAvTime:hover, #loginBtn:hover{
+  background-color: #1b76d1;
+  border-color: #1b76d1;
+}
+
+.bookedTime:hover, #alertBtn:hover{
+  background-color: #23c483;
+  border-color: #23c483;
+}
+
+#previousWeek:hover, #nextWeek:hover{
+  color: #1b76d1;
+}
+
+#previousWeek:hover, #nextWeek:hover, .avTime:hover, .adminAvTime:hover, .selectedTime, .bookedTime, #contactBtn:hover, #rdvBtn:hover, select:hover, #loginBtn, .bookedTime:hover, #logoutBtn:hover, .rdvDelete:hover, .dayOn:hover, .dayOff:hover, #alertBtn:hover, .deactivated:hover, #backToEspn:hover , #smallMenuBtn, #imgCerveau, #ipBtns a:hover{
+  cursor: pointer;
+}
+
+.avTime, .adminAvTime, .deactivated, .unavTime, .bookedTime{
+  padding: 0.5rem 1rem;
+}
+
+.unavTime{
+  border: 0 #BEBEBE;
+  background-color: #BEBEBE;
+  color: #ffffff;
+}
+
+.selectedTime{
+  border:0;
+  background-color: #1b76d1;
+  color: #ffffff;
+  padding: 0.5rem 0.7rem;
+  transform: scale(1.2);
+  font-weight: bolder;
+}
+
+#logoutBtn, .rdvDelete{
+  text-align: right;
+  border: 0;
+  border-radius: 0.5rem;
+  height: 0;
+  padding-bottom: 2rem;
+  color: #ffffff;
+  background-color: #F3826B;
+}
+
+.rdvDelete{
+  position: absolute;
+}
+
+#adminUl li{
+  padding: 1rem;
+  margin:1rem 0;
+}
+
+.rdvDelete{
+  margin:0.5rem 0 0 0.5rem;
+}
+#logoutBtn:hover, .rdvDelete:hover{
+  background-color: #db322f;
+}
+#loginFieldset{
+  display: inline-block;
+  padding: 1rem;
+}
+
+.dayOn, .dayOff{
+  background: none;
+  padding: 1rem 2rem;
+}
+
+.dayOn:hover{
+  border-color: #1ba7c3;
+  background-color: #1ba7c310;
+}
+
+.dayOff:hover{
+  border-color: #F3826B;
+  background-color: #F1707C10;
+}
+
+.calendarDate{
+  line-height: 2rem;
+}
+
+#alertWindowBg{
+  width: 100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(255,255,255,0.5);
+  z-index: 1;
+  overflow: scroll;
+}
+
+#alertWindow{
+  background-color: #ffffff;
+  border: 1px solid #7FC8AB;
+  border-radius: 10px;
+  position: relative;
+  padding: 1rem;
+  line-height: 2rem;
+  text-align: center;
+  display: block;
+  width:50%;
+}
+
+#alertWindowContent{
+  line-height: 2;
+}
+
+.avTime, .adminAvTime{
+  border: 0 #1ba7c3;
+  color: #ffffff;
+  background-color: #1ba7c3;
+}
+
+.deactivated{
+  border: 0 #F3826B;
+  color: #ffffff;
+}
+
+.deactivated:hover{
+  border-color: #F3826B;
+  background-color: #ff4348;
+}
+
+.bookedTime {
+  border: 0 #7FC8AB;
+  background-color: #7FC8AB;
+  color: #ffffff;
+}
+
+span.red{
+  color: #d61515;
+}
+
+.errorInput, .errorRequest{
+  border: 1px solid #d61515;
+}
+
+.okInput, .successRequest{
+  border: 1px solid green;
+}
+
+.successRequest{
+  background-color: #95ff77;
+}
+
+.errorRequest, .deactivated{
+  background-color: #F3826B;
+}
+
+/*FOOTER*/
+
+footer{
+  background: rgb(253,235,226);
+  background: linear-gradient(0deg, rgba(253,235,226,1) 10%, rgba(253,235,226,0) 100%);
+}
+
+#footerMain{
+  padding: 3rem 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+  border-top: 1px solid #1ba7c3;
+  text-align: center;
+}
+
+#footerNav, #footerInfos, #footerNav h3, #footerInfos h3{
+  text-align: left;
+}
+
+#footerNav li{
+  list-style: disc;
+}
+
+#footerNav h3, #footerInfos h3{
+  padding: 1rem 0;
+}
+
+
+#footerNav li:nth-child(n+1){
+  color:#1ba7c3;
+}
+
+#legalInfos{
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+#rdvMessageButton {
+  color: #1ba7c3;
+  border: 0;
+  background: none;
+  font-size: 1.3rem;
+  padding: 1rem 0;
+}
+
+#rdvMessageButton:hover, #alertWindowContent a:hover, #rdvSect >article>h4 a:hover, #rdvSect >article>ul a:hover{
+  color: #1b76d1;
+  text-decoration: #1b76d1 underline;
+  cursor: pointer;
+}
+
+#selectedTimeSlotInfo{
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/*MENTIONS LEGALES*/
+#mentionsLegales{
+  text-align: left;
+}
+
+
+/**MEDIA SCREEN**/
+
+@media screen and (max-width: 1255px) {
+    #enSavoirPlus article{
+        flex-basis: 43%;
+    }
+}
+
+@media screen and (max-width: 1190px) {
+  #headerNavToFixed ul li{
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+
+
+    #accompDouleur i {
+        top: 0;
+        left: 0;
+    }
+
+    #violenceEtSophro i {
+        top: 0;
+        right: 0;
+    }
+
+    #spe3 i:nth-child(1) {
+        top: 4%;
+        left: 0;
+        font-size: 10rem;
+    }
+
+    #spe3 i:nth-child(2) {
+        top: 0;
+        left: 7rem;
+        font-size: 3rem;
+    }
+
+    #spe4 i {
+        top: 0;
+        right: 0;
+    }
+
+    #spe4 li{
+        width:80%;
+    }
+}
+
+@media screen and (max-width: 1120px){
+    #headerNav ul li{
+    padding: 0 0 1rem 0;
+    }
+}
+
+@media screen and (max-width: 1105px) {
+    #headerNavToFixed >ul > li:nth-child(2) {
+        display: none;
+    }
+
+    #accompIndiv i, #accompColl i, #accompInstit i{
+        top: -58px;
+        left: 25%;
+        color: #1ba7c3;
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 1069px) {
+
+    #indications h2{
+        font-size: 2rem;
+    }
+
+    #rdvForm{
+      width:auto;
+    }
+}
+
+@media screen and (max-width: 980px) {
+  #smallHeader{
+    display: block;
+  }
+  #headerToFixed {
+    border: 0;
+    background: none;
+  }
+
+  #sophroSectPart02{
+    flex-direction: column;
+  }
+
+  #headerNav, .headerNavLi, #headerNavToFixed, .headerNavLiToFixed {
+    display: none;
+    }
+
+  #smallMenuNav {
+    left: 5%;
+    width:85%;
+  }
+
+  #sophroPractice {
+    flex-basis: 100%;
+  }
+
+  #specialisation1, #specialisation2, #violencesTopSect{
+    flex-direction: column;
+  }
+
+  #enSavoirPlusNav{
+    border: 0;
+  }
+
+    #accompDouleur{
+        padding-right: 0;
+    }
+
+    #violenceEtSophro{
+        padding-left: 0;
+    }
+
+    #specialisation1 h2, #specialisation2 h2{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    footer{
+    flex-direction: column;
+    }
+
+    #footerNav, footer>ul{
+    padding-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 890px) {
+
+  #specialisations li{
+    flex-basis: 35%;
+  }
+
+    #aboutMe, #aboutMeList{
+    max-width: 100%;
+    width: auto;
+    }
+
+    #me{
+    float: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    }
+
+    #celiaRoubyPhoto{
+    max-width: 30%;
+    }
+
+    #me ul{
+    font-size: 1.5rem ;
+    }
+
+    #accompIndiv i, #accompColl i, #accompInstit i{
+        left: 0;
+    }
+
+    .accompDesc,.accompSeance{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+  #specialisations li{
+    flex-basis: 51%;
+  }
+
+    #sophroTopArtPart01, #sophroTopArtPart02 {
+    flex-basis: 100%;
+    }
+
+  #violencesTopSect img, #bodyRel img, #douleur img  {
+    width: 50%;
+  }
+
+    #enSavoirPlus article{
+        flex-basis: 100%;
+    }
+
+  .dayPast, .dayOff, .dayOn{
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+    #accompInstit h3 {
+        max-width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 610px) {
+    #formations{
+    margin-top: 2rem;
+    }
+
+    #celiaRoubyPhoto{
+    max-width: 40%;
+    }
+
+    #me ul{
+    font-size: 1.4rem;
+    }
+
+    .rdvDelete{
+      margin: 1rem 0 0 0;
+      position: inherit;
+    }
+
+    .bookedTime{
+      display: block;
+      margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+  #celiaRoubyPhoto{
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 475px) {
+    #footerNav li{
+    list-style: disc inside;
+    }
+
+   /* #indexBtns, #sophroBtns, #quiSuisJeBtns{
+    flex-direction: column;
+    }*/
+
+  .btnsList li{
+    margin: 1rem 0;
+    }
+
+    #accompIndiv h3 {
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    #specialisations i{
+        display: none;
+    }
+
+    #spe4 li {
+        width: 100%;
+    }
+}

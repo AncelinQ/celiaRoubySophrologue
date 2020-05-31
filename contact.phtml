@@ -1,0 +1,48 @@
+<section id="contactSect">
+  <article>
+      <h1 class="mainTitle">Contact</h1>
+      <h3>Poser une question, solliciter un devis ou demander un RDV</h3>
+      <p class="requestSent"></p>
+      <form id="contactForm" action="contact.php" method="POST">
+      <fieldset>
+        <table id="contactInputs">
+          <tbody>
+            <tr>
+              <td colspan="6">
+                  <label for="contactFirstName" required>Votre prénom <span class="red">*</span> : </label>
+                  <input class="userInfo firstName" type="text" name="contactFirstName" id="contactFirstName" placeholder="Prénom">
+              </td>
+              <td colspan="6">
+                  <label for="contactLastName" required>Votre nom <span class="red">*</span> : </label>
+                  <input class="userInfo lastName" type="text" name="contactLastName" id="contactLastName" placeholder="Nom">
+              </td>
+            </tr>
+            <tr>
+              <td colspan="6">
+                  <label for="contactPhone" required>Votre téléphone <span class="red">*</span> : </label>
+                  <input class="userInfo phone" type="text" inputmode="numeric" pattern="[0-9]*" name="contactPhone" id="contactPhone" placeholder="Téléphone ">
+              </td>
+              <td colspan="6">
+                <label for="contactEmail" required>Votre email <span class="red">*</span> : </label>
+                <input class="userInfo email" type="text" name="contactEmail" id="contactEmail" placeholder="Email ">
+              </td>
+            </tr>
+              <tr>
+                <td colspan="12">
+                  <label for="contactMessage" required>Votre message <span class="red">*</span> : </label>
+                  <textarea class="message" id="contactMessage" name="contactMessage" rows="8" cols="80" maxlength="2000"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="12">
+                  <input type="button" name="button" id="contactBtn" value="Envoyer">
+                  <p>Les champs indiqués par une <span class="red">*</span> sont obligatoires.</p>
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
+    </form>
+  </article>
+</section>
+<script type="text/javascript" src="js/active.js"></script>

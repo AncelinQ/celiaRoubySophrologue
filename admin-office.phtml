@@ -1,0 +1,106 @@
+<section id="adminOffice">
+
+    <form>
+        <label for="patient-search">Recherche de patient : </label>
+        <input type="search" id="patient-search" placeholder="Entrez le nom d'un patient ?">
+        <button>Envoyer</button>
+    </form>
+
+    <div id="alertWindowBg">
+        <div id="alertWindow">
+            <div id='alertWindowContent'>
+            </div>
+            <input type="button" id="alertBtn" name="alertBtn" value="Ok">
+        </div>
+    </div>
+
+    <p id="adminCalStatus"></p>
+
+    <form action="admin-rdvManager.php" method="POST">
+        <table id="adminRdvCal">
+            <tbody>
+            <!--LA PREMIERE RANGÉE INCLUS LES INFOS DES JOURS DE LA SEMAINE AFFICHÉE ENTOURÉS DES BOUTONS PREVIOUS ET NEXT -->
+            <tr>
+                <!--LE BOUTON PREVIOUS CHARGE LA PAGE EN FONCTION DES GET PRESENTS DANS L'URL-->
+                <td rowspan="12" class="weekBtn">
+                    <a href="admin-office.php?week=<?= $calendar->previousWeek()->week; ?>&month=<?= $calendar->previousWeek()->month; ?>&year=<?= $calendar->previousWeek()->year; ?>"
+                       id="previousWeek">4</a>
+                </td>
+                <?php
+                //ON CRÉE LES CASES DES JOURS DE LA SEMAINE, DU LUNDI AU SAMEDI DONC 6 CASES//
+                for ($day = 1; $day <= 6; $day++): ?>
+                    <td class='calendarDate'>
+                        <button type="button"
+                            <?php
+                            //ON VERIFIE LA DISPONIBILITÉ DE LA JOURNÉE, S'IL N'Y A AUCUN DES 8 CRENEAUX ENREGISTRÉS DANS LA TABLE 'UNAVAILABLE'  ET SI LE JOUR EST STRICTEMENT SUPERIEUR À AUJOURD'HUI, LE JOUR EST DISPONIBLE//
+                            if (!isset(rdvClass::getDayAvailability($calendar->getTimeSlotId($day))[7]) && ($calendar->getTimeSlotId($day) > $calendar->getDayToday())): ?>
+                                class="adminDaySwitch dayOn"
+                            <?php
+                            //SI LE JOUR EST INFÉRIEUR OU EGAL À AUJOURD'HUI, LE JOUR EST PASSÉ //
+                            elseif (($calendar->getTimeSlotId($day) <= $calendar->getDayToday())): ?>
+                                class="adminDaySwitch dayPast"
+                            <?php
+                            //SINON LE JOUR EST INDISPONIBLE//
+                            else : ?>
+                                class="adminDaySwitch dayOff"
+                            <?php endif; ?>
+                                name="<?= $calendar->getTimeSlotId($day); //ON RÉCUPÈRE LES INFOS DU JOUR POUR LE NAME//?>">
+                            <!--ON RÉCUPÈRE LES NOMS NUMEROS ET MOIS ET ON LES AFFICHE-->
+                            <span class='bold block'> <?= $calendar->getDayNameCal($day); ?> </span>
+                            <?= $calendar->getDayNumber($day); ?>  <?= $calendar->getMonthNameCal($day); ?>
+                            <p>on/off</p>
+                        </button>
+                    </td>
+                <?php endfor; ?>
+                <!--LE BOUTON NEXT CHARGE LA PAGE EN FONCTION DES GET PRESENTS DANS L'URL-->
+                <td rowspan="12" class="weekBtn">
+                    <a href="admin-office.php?week=<?= $calendar->nextWeek()->week; ?>&month=<?= $calendar->nextWeek()->month; ?>&year=<?= $calendar->nextWeek()->year; ?>"
+                       id="nextWeek">5</a>
+                </td>
+            </tr>
+            <?php
+            //ON CRÉE LES LIGNES DU TABLEAU PAR CRÉNEAU HORAIRE, DE 8H30 À 20H//
+            for ($timeSlot=0; $timeSlot < count($calendar->timeSlots); $timeSlot++): ?>
+                    <tr>
+                        <?php
+                        //PUIS ON CRÉE LES CASES PAR JOUR, DU LUNDI AU SAMEDI//
+                        for ($day = 1; $day <= 6; $day++): ?>
+                            <td>
+                                <input type="button"
+
+                                       id="<?= $calendar->getTimeSlotId($day) . ' ' . $calendar->timeSlots[$timeSlot];
+                                       //ON CRÉE L'ID AU FORMAT "Y-m-d H:i:s"//?>:00"
+                                    <?php
+                                    //SI LE CRENEAU EXISTE DANS LA TABLE 'RDV' ON AJOUTE LA CLASSE BOOKEDTIME//
+                                    if (isset ($weekRdvs[$calendar->getTimeSlotId($day) . ' ' . $calendar->timeSlots[$timeSlot] . ":00"])): ?>
+                                        class="bookedTime adminTimeSlot <?= $calendar->getTimeSlotId($day); ?>"
+                                    <?php
+                                    //SI LE CRENEAU N'EXISTE PAS DANS LA TABLE 'RDV' ET QUE LA DATE EST ANTÉRIEUR À AUJOURD'HUI ON AJOUTE LA CLASSE UNAVTIME//
+                                    elseif (!isset($weekRdvs[$calendar->getTimeSlotId($day) . ' ' . $calendar->timeSlots[$timeSlot] . ":00"]) && $calendar->getTimeSlotId($day) <= $calendar->getDayToday()): ?>
+                                        class="unavTime adminTimeSlot <?= $calendar->getTimeSlotId($day); ?>"
+                                    <?php
+                                    //SI LE CRENEAU EXISTE DANS LA TABLE 'UNAVAILABLE' ON AJOUTE LA CLASSE DEACTIVATED//
+                                    elseif (rdvClass::getTimeSlotAvailability($calendar->getTimeSlotId($day) . ' ' . $calendar->timeSlots[$timeSlot] . ":00") != false): ?>
+                                        class="deactivated adminTimeSlot <?= $calendar->getTimeSlotId($day); ?>"
+                                    <?php
+                                    //SINON ON AJOUTE LA CLASS ADMINAVTIME//
+                                    else : ?>
+                                        class="adminAvTime adminTimeSlot <?= $calendar->getTimeSlotId($day); ?>"
+                                    <?php endif; ?>
+                                       name="<?= $calendar->getDayName($day); ?> <?= $calendar->getDayNumber($day); ?> <?= $calendar->getMonthName($day); //ON RÉCUPERE LE NOM ET LE NUMERO DU JOUR AINSI QUE LE MOIS POUR LE NAME EX : JEUDI 08 AVRIL//?>"
+                                       value="<?= $calendar->timeSlots[$timeSlot]; ?>">
+                                <?php
+                                //SI LE CRENEAU EXISTE DANS LA TABLE 'RDV' ON AJOUTE UN BOUTON DELETE À CÔTÉ DU CRÉNEAU AVEC LE NAME QUI CORRESPOND À L'ID DU CRÉNEAU//
+                                if (isset ($weekRdvs[$calendar->getTimeSlotId($day) . ' ' . $calendar->timeSlots[$timeSlot] . ":00"])): ?>
+                                    <input type="button" class="rdvDelete"
+                                           name="<?= $calendar->getTimeSlotId($day) . ' ' . $calendar->timeSlots[$timeSlot]; ?>:00"
+                                           value="x">
+                                <?php endif; ?>
+                            </td>
+                        <?php endfor; ?>
+                    </tr>
+            <?php endfor; ?>
+            </tbody>
+        </table>
+    </form>
+</section>
