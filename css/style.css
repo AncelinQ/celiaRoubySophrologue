@@ -1,37 +1,37 @@
 @font-face {
-    font-family: 'ElegantIcons';
-    src: url('../fonts/ElegantIcons.eot');
-    src: url('../fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ElegantIcons.woff2') format('woff2'),
-        url('../fonts/ElegantIcons.woff') format('woff'),
-        url('../fonts/ElegantIcons.ttf') format('truetype'),
-        url('../fonts/ElegantIcons.svg#ElegantIcons') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'ElegantIcons';
+  src: url('../fonts/ElegantIcons.eot');
+  src: url('../fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/ElegantIcons.woff2') format('woff2'),
+  url('../fonts/ElegantIcons.woff') format('woff'),
+  url('../fonts/ElegantIcons.ttf') format('truetype'),
+  url('../fonts/ElegantIcons.svg#ElegantIcons') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'ElegantIcons';
-    src: url('../fonts/ElegantIcons_1.eot');
-    src: url('../fonts/ElegantIcons_1.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ElegantIcons_1.woff2') format('woff2'),
-        url('../fonts/ElegantIcons_1.woff') format('woff'),
-        url('../fonts/ElegantIcons_1.ttf') format('truetype'),
-        url('../fonts/ElegantIcons_1.svg#ElegantIcons') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'ElegantIcons';
+  src: url('../fonts/ElegantIcons_1.eot');
+  src: url('../fonts/ElegantIcons_1.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/ElegantIcons_1.woff2') format('woff2'),
+  url('../fonts/ElegantIcons_1.woff') format('woff'),
+  url('../fonts/ElegantIcons_1.ttf') format('truetype'),
+  url('../fonts/ElegantIcons_1.svg#ElegantIcons') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'ElegantIcons';
-    src: url('../fonts/ElegantIcons_2.eot');
-    src: url('../fonts/ElegantIcons_2.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/ElegantIcons_2.woff2') format('woff2'),
-        url('../fonts/ElegantIcons_2.woff') format('woff'),
-        url('../fonts/ElegantIcons_2.ttf') format('truetype'),
-        url('../fonts/ElegantIcons_2.svg#ElegantIcons') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'ElegantIcons';
+  src: url('../fonts/ElegantIcons_2.eot');
+  src: url('../fonts/ElegantIcons_2.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/ElegantIcons_2.woff2') format('woff2'),
+  url('../fonts/ElegantIcons_2.woff') format('woff'),
+  url('../fonts/ElegantIcons_2.ttf') format('truetype'),
+  url('../fonts/ElegantIcons_2.svg#ElegantIcons') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
@@ -39,7 +39,7 @@
 
 /*ANIMATIONS*/
 
-.selectedTime, .selectedTime:hover, .bookedTime, .bookedTime:hover, #headerNav > ul > li > a, #headerNav > ul > li:hover > a, footer a, #footerNav a:hover, #ipNav li a, #ipNav li:hover a, #speNav li a, #speNav li:hover a, .avTime, .avTime:hover, .adminAvTime, .adminAvTime:hover, #contactBtn, #contactBtn:hover, #rdvBtn, #rdvBtn:hover, #previousWeek, #previousWeek:hover, #nextWeek, #nextWeek:hover, #rdvMessageButton, #rdvMessageButton:hover, #header, #headerToFixed, #headerNav, #headerNavToFixed, .headerNavLi, .headerNavLiTofixed, .headerNavLiToFixed:hover a, .headerNavLiToFixed a, #logo, #logoToFixed, #loginBtn, #loginBtn:hover, #logoutBtn, #logoutBtn:hover, .rdvDelete, .rdvDelete:hover, .dayOn, .dayOn:hover, .dayOff, .dayOff:hover, #alertBtn, #alertBtn:hover, #alertWindowContent a:hover, #alertWindowContent a, .deactivated, .deactivated:hover, #backToEspn, #backToEspn:hover, .btnsList a, .btnsList a:hover, #plusLoinDouleur a, #plusLoinDouleur a:hover, #rdvSect >article>h4 a:hover, #rdvSect >article>ul a:hover, #rdvSect p a:hover, #rdvSect >article>h4 a, #rdvSect >article>ul a, #rdvSect >article>h2 a:hover, #rdvSect >article>ul a:hover, #smallMenuBtn, #smallMenuBtn:hover, #smallMenuNav li a, #smallMenuNav li:hover a, .smallMenuNavLi, #smallMenuBtn div, #smallMenuBtn:hover div, .enSavoirPlusNav:hover, .enSavoirPlusNav, .smallSize, .fullSize, #specialisations li, #specialisations li:hover, #specialisations img, #specialisations img:hover{
+.selectedTime, .selectedTime:hover, .bookedTime, .bookedTime:hover, #headerNav > ul > li > a, #headerNav > ul > li:hover > a, footer a, #footerNav a:hover, #ipNav li a, #ipNav li:hover a, #speNav li a, #speNav li:hover a, .avTime, .avTime:hover, .adminAvTime, .adminAvTime:hover, #contactBtn, #contactBtn:hover, #rdvBtn, #rdvBtn:hover, #previousWeek, #previousWeek:hover, #nextWeek, #nextWeek:hover, #rdvMessageButton, #rdvMessageButton:hover, #header, #headerToFixed, #headerNav, #headerNavToFixed, .headerNavLi, .headerNavLiTofixed, .headerNavLiToFixed:hover a, .headerNavLiToFixed a, #logo, #logoToFixed, #loginBtn, #loginBtn:hover, #logoutBtn, #logoutBtn:hover, .rdvDelete, .rdvDelete:hover, .dayOn, .dayOn:hover, .dayOff, .dayOff:hover, #alertBtn, #alertBtn:hover,.alertBtnArt, .alertBtnArt:hover, .alertWindowContentArt a:hover, .alertWindowContentArt a, #alertWindowContent a:hover, #alertWindowContent a, .deactivated, .deactivated:hover, #backToEspn, #backToEspn:hover, .btnsList a, .btnsList a:hover, #plusLoinDouleur a, #plusLoinDouleur a:hover, #rdvSect >article>h4 a:hover, #rdvSect >article>ul a:hover, #rdvSect p a:hover, #rdvSect >article>h4 a, #rdvSect >article>ul a, #rdvSect >article>h2 a:hover, #rdvSect >article>ul a:hover, #smallMenuBtn, #smallMenuBtn:hover, #smallMenuNav li a, #smallMenuNav li:hover a, .smallMenuNavLi, #smallMenuBtn div, #smallMenuBtn:hover div, .enSavoirPlusNav:hover, .enSavoirPlusNav, #specialisations li, #specialisations li:hover, #specialisations img, #specialisations img:hover{
   transition: all 0.2s ease;
 }
 
@@ -314,8 +314,8 @@ header> nav> ul> li:nth-child(n+2)> a {
 }
 
 #logoToFixed{
-content: url(../img/logo-sophro-text-horizontal.png);
-max-width: 200px;
+  content: url(../img/logo-sophro-text-horizontal.png);
+  max-width: 200px;
   margin-bottom: -0.5rem;
 }
 
@@ -333,7 +333,7 @@ max-width: 200px;
 }
 
 #infosPratiques, #specialisationsNav{
-    position: relative;
+  position: relative;
 }
 
 #infosPratiques > a, #specialisationsNav > a {
@@ -462,7 +462,7 @@ max-width: 200px;
   margin-top: 1rem;
 }
 
- #specialisations ul:after, #speEnd:after, #accompDouleur:after, #enSavoirPlus:after, #sophroTopArt h4:after, #tarifs{
+#specialisations ul:after, #speEnd:after, #accompDouleur:after, #enSavoirPlus:after, #sophroTopArt h4:after, #tarifs{
   content: "";
   display: block;
   margin: 0 auto;
@@ -552,7 +552,7 @@ max-width: 200px;
 }
 
 #sophroSectPart02 > article {
-flex-basis: 50%;
+  flex-basis: 50%;
 }
 #sophroSectPart02 > article:nth-child(1) {
   background-color: #fdebe270;
@@ -610,7 +610,7 @@ flex-basis: 50%;
   width: 40%;
 }
 
-#bodyRel img, #douleur img{
+#bodyRel img, #imgDouleur{
   width: 30%;
 }
 
@@ -741,7 +741,7 @@ flex-basis: 50%;
   display: block;
   margin: 2rem auto;
 }
-.smallSize{
+.clickable{
   width: 60%;
 }
 .fullSize {
@@ -960,6 +960,22 @@ fieldset{
   border-radius: 20px;
 }
 
+.alertBtnArt{
+  position: absolute;
+  top: 7%;
+  left: 93%;
+  color: #ffffff;
+  background-color: #F3826B;
+  padding: 1rem 1.4rem;
+  text-align: center;
+  border:0;
+  border-radius: 20px;
+}
+
+.alertBtnArt i{
+  margin:0;
+}
+
 #contactInputs, #adminUl{
   flex-direction: row;
 
@@ -1093,7 +1109,7 @@ textarea{
   color: #1b76d1;
 }
 
-#previousWeek:hover, #nextWeek:hover, .avTime:hover, .adminAvTime:hover, .selectedTime, .bookedTime, #contactBtn:hover, #rdvBtn:hover, select:hover, #loginBtn, .bookedTime:hover, #logoutBtn:hover, .rdvDelete:hover, .dayOn:hover, .dayOff:hover, #alertBtn:hover, .deactivated:hover, #backToEspn:hover , #smallMenuBtn, #imgCerveau, #ipBtns a:hover{
+#previousWeek:hover, #nextWeek:hover, .avTime:hover, .adminAvTime:hover, .selectedTime, .bookedTime, #contactBtn:hover, #rdvBtn:hover, select:hover, #loginBtn, .bookedTime:hover, #logoutBtn:hover, .rdvDelete:hover, .dayOn:hover, .dayOff:hover, #alertBtn:hover, .deactivated:hover, #backToEspn:hover , #smallMenuBtn, .clickable, #ipBtns a:hover, .alertBtnArt:hover{
   cursor: pointer;
 }
 
@@ -1138,7 +1154,7 @@ textarea{
 .rdvDelete{
   margin:0.5rem 0 0 0.5rem;
 }
-#logoutBtn:hover, .rdvDelete:hover{
+#logoutBtn:hover, .rdvDelete:hover, .alertBtnArt:hover{
   background-color: #db322f;
 }
 #loginFieldset{
@@ -1165,7 +1181,7 @@ textarea{
   line-height: 2rem;
 }
 
-#alertWindowBg{
+#alertWindowBg, .alertWindowBgArt{
   width: 100%;
   height:100%;
   position: fixed;
@@ -1192,7 +1208,15 @@ textarea{
   width:50%;
 }
 
-#alertWindowContent{
+.alertWindowArt{
+  padding: 1rem;
+  width:100%;
+  position: relative;
+}
+
+
+
+#alertWindowContent, .alertWindowContentArt{
   line-height: 2;
 }
 
@@ -1287,7 +1311,7 @@ footer{
   padding: 1rem 0;
 }
 
-#rdvMessageButton:hover, #alertWindowContent a:hover, #rdvSect >article>h4 a:hover, #rdvSect >article>ul a:hover{
+#rdvMessageButton:hover, #alertWindowContent a:hover, .alertWindowContentArt a:hover, #rdvSect >article>h4 a:hover, #rdvSect >article>ul a:hover{
   color: #1b76d1;
   text-decoration: #1b76d1 underline;
   cursor: pointer;
@@ -1307,9 +1331,9 @@ footer{
 /**MEDIA SCREEN**/
 
 @media screen and (max-width: 1255px) {
-    #enSavoirPlus article{
-        flex-basis: 43%;
-    }
+  #enSavoirPlus article{
+    flex-basis: 43%;
+  }
 }
 
 @media screen and (max-width: 1190px) {
@@ -1321,66 +1345,66 @@ footer{
 @media screen and (max-width: 1160px) {
 
 
-    #accompDouleur i {
-        top: 0;
-        left: 0;
-    }
+  #accompDouleur i {
+    top: 0;
+    left: 0;
+  }
 
-    #violenceEtSophro i {
-        top: 0;
-        right: 0;
-    }
+  #violenceEtSophro i {
+    top: 0;
+    right: 0;
+  }
 
-    #spe3 i:nth-child(1) {
-        top: 4%;
-        left: 0;
-        font-size: 10rem;
-    }
+  #spe3 i:nth-child(1) {
+    top: 4%;
+    left: 0;
+    font-size: 10rem;
+  }
 
-    #spe3 i:nth-child(2) {
-        top: 0;
-        left: 7rem;
-        font-size: 3rem;
-    }
+  #spe3 i:nth-child(2) {
+    top: 0;
+    left: 7rem;
+    font-size: 3rem;
+  }
 
-    #spe4 i {
-        top: 0;
-        right: 0;
-    }
+  #spe4 i {
+    top: 0;
+    right: 0;
+  }
 
-    #spe4 li{
-        width:80%;
-    }
+  #spe4 li{
+    width:80%;
+  }
 }
 
 @media screen and (max-width: 1120px){
-    #headerNav ul li{
+  #headerNav ul li{
     padding: 0 0 1rem 0;
-    }
+  }
 }
 
 @media screen and (max-width: 1105px) {
-    #headerNavToFixed >ul > li:nth-child(2) {
-        display: none;
-    }
+  #headerNavToFixed >ul > li:nth-child(2) {
+    display: none;
+  }
 
-    #accompIndiv i, #accompColl i, #accompInstit i{
-        top: -58px;
-        left: 25%;
-        color: #1ba7c3;
-        font-size: 5rem;
-    }
+  #accompIndiv i, #accompColl i, #accompInstit i{
+    top: -58px;
+    left: 25%;
+    color: #1ba7c3;
+    font-size: 5rem;
+  }
 }
 
 @media screen and (max-width: 1069px) {
 
-    #indications h2{
-        font-size: 2rem;
-    }
+  #indications h2{
+    font-size: 2rem;
+  }
 
-    #rdvForm{
-      width:auto;
-    }
+  #rdvForm{
+    width:auto;
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -1398,7 +1422,7 @@ footer{
 
   #headerNav, .headerNavLi, #headerNavToFixed, .headerNavLiToFixed {
     display: none;
-    }
+  }
 
   #smallMenuNav {
     left: 5%;
@@ -1417,28 +1441,28 @@ footer{
     border: 0;
   }
 
-    #accompDouleur{
-        padding-right: 0;
-    }
+  #accompDouleur{
+    padding-right: 0;
+  }
 
-    #violenceEtSophro{
-        padding-left: 0;
-    }
+  #violenceEtSophro{
+    padding-left: 0;
+  }
 
-    #specialisation1 h2, #specialisation2 h2{
-        text-align: center;
-    }
+  #specialisation1 h2, #specialisation2 h2{
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 900px) {
 
-    footer{
+  footer{
     flex-direction: column;
-    }
+  }
 
-    #footerNav, footer>ul{
+  #footerNav, footer>ul{
     padding-bottom: 2rem;
-    }
+  }
 }
 
 @media screen and (max-width: 890px) {
@@ -1447,12 +1471,12 @@ footer{
     flex-basis: 35%;
   }
 
-    #aboutMe, #aboutMeList{
+  #aboutMe, #aboutMeList{
     max-width: 100%;
     width: auto;
-    }
+  }
 
-    #me{
+  #me{
     float: none;
     display: flex;
     flex-direction: row;
@@ -1461,23 +1485,23 @@ footer{
     align-items: center;
     max-width: 100%;
     width: 100%;
-    }
+  }
 
-    #celiaRoubyPhoto{
+  #celiaRoubyPhoto{
     max-width: 30%;
-    }
+  }
 
-    #me ul{
+  #me ul{
     font-size: 1.5rem ;
-    }
+  }
 
-    #accompIndiv i, #accompColl i, #accompInstit i{
-        left: 0;
-    }
+  #accompIndiv i, #accompColl i, #accompInstit i{
+    left: 0;
+  }
 
-    .accompDesc,.accompSeance{
-        width: 100%;
-    }
+  .accompDesc,.accompSeance{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -1486,17 +1510,17 @@ footer{
     flex-basis: 51%;
   }
 
-    #sophroTopArtPart01, #sophroTopArtPart02 {
+  #sophroTopArtPart01, #sophroTopArtPart02 {
     flex-basis: 100%;
-    }
+  }
 
   #violencesTopSect img, #bodyRel img, #douleur img  {
     width: 50%;
   }
 
-    #enSavoirPlus article{
-        flex-basis: 100%;
-    }
+  #enSavoirPlus article{
+    flex-basis: 100%;
+  }
 
   .dayPast, .dayOff, .dayOn{
     padding: 0.5rem;
@@ -1504,34 +1528,34 @@ footer{
 }
 
 @media screen and (max-width: 650px) {
-    #accompInstit h3 {
-        max-width: 70%;
-    }
+  #accompInstit h3 {
+    max-width: 70%;
+  }
 
 }
 
 @media screen and (max-width: 610px) {
-    #formations{
+  #formations{
     margin-top: 2rem;
-    }
+  }
 
-    #celiaRoubyPhoto{
+  #celiaRoubyPhoto{
     max-width: 40%;
-    }
+  }
 
-    #me ul{
+  #me ul{
     font-size: 1.4rem;
-    }
+  }
 
-    .rdvDelete{
-      margin: 1rem 0 0 0;
-      position: inherit;
-    }
+  .rdvDelete{
+    margin: 1rem 0 0 0;
+    position: inherit;
+  }
 
-    .bookedTime{
-      display: block;
-      margin: 0 auto;
-    }
+  .bookedTime{
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -1541,29 +1565,29 @@ footer{
 }
 
 @media screen and (max-width: 475px) {
-    #footerNav li{
+  #footerNav li{
     list-style: disc inside;
-    }
+  }
 
-   /* #indexBtns, #sophroBtns, #quiSuisJeBtns{
-    flex-direction: column;
-    }*/
+  /* #indexBtns, #sophroBtns, #quiSuisJeBtns{
+   flex-direction: column;
+   }*/
 
   .btnsList li{
     margin: 1rem 0;
-    }
+  }
 
-    #accompIndiv h3 {
-        max-width: 70%;
-    }
+  #accompIndiv h3 {
+    max-width: 70%;
+  }
 }
 
 @media screen and (max-width: 445px) {
-    #specialisations i{
-        display: none;
-    }
+  #specialisations i{
+    display: none;
+  }
 
-    #spe4 li {
-        width: 100%;
-    }
+  #spe4 li {
+    width: 100%;
+  }
 }

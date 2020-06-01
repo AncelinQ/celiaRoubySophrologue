@@ -216,38 +216,38 @@ $(function() {
     $('.timeSlot').click(function (e) {
         e.preventDefault();
 
-            if ($(this).hasClass('selectedTime')) {
-                $(this).removeClass('selectedTime');
-                $(this).addClass('avTime');
-            } else if ($(this).hasClass('avTime')) {
-                $('.timeSlot').removeClass('selectedTime').addClass('avTime');
-                $('.unavTime').removeClass('avTime');
-                $(this).addClass('selectedTime');
-                $(this).removeClass('avTime');
-            }
-            //SI LE CRENEAU SELECTIONNÉ EXISTE ON RÉCUPÈRE SON NAME QUE L'ON SPLIT EN UN TABLEAU POUR SÉPARER LE NOM DU JOUR, SON NOMBRE ET LE MOIS, ON RÉCUPÈRE AUSSI SA VALEUR QUI EST L'HEURE//
-            if ($('.selectedTime').length) {
-                var timeSlotDataArray = $('.selectedTime').attr('name').split(' ');
-                var timeSlotDayName = timeSlotDataArray[0];
-                var timeSlotDayNumber = timeSlotDataArray[1];
-                var timeSlotMonth = timeSlotDataArray[2];
-                var timeSlotTime = $('.selectedTime').val();
+        if ($(this).hasClass('selectedTime')) {
+            $(this).removeClass('selectedTime');
+            $(this).addClass('avTime');
+        } else if ($(this).hasClass('avTime')) {
+            $('.timeSlot').removeClass('selectedTime').addClass('avTime');
+            $('.unavTime').removeClass('avTime');
+            $(this).addClass('selectedTime');
+            $(this).removeClass('avTime');
+        }
+        //SI LE CRENEAU SELECTIONNÉ EXISTE ON RÉCUPÈRE SON NAME QUE L'ON SPLIT EN UN TABLEAU POUR SÉPARER LE NOM DU JOUR, SON NOMBRE ET LE MOIS, ON RÉCUPÈRE AUSSI SA VALEUR QUI EST L'HEURE//
+        if ($('.selectedTime').length) {
+            var timeSlotDataArray = $('.selectedTime').attr('name').split(' ');
+            var timeSlotDayName = timeSlotDataArray[0];
+            var timeSlotDayNumber = timeSlotDataArray[1];
+            var timeSlotMonth = timeSlotDataArray[2];
+            var timeSlotTime = $('.selectedTime').val();
 
-                //ON AFFICHE UNE PHRASE RÉCAPITULATRICE EN Y INTÉGRANT LES INFORMATIONS DU CRÉNEAU AVEC UN MISE EN FORME//
-                $('#selectedTimeSlotInfo').html('Vous avez choisi le <span class="bold" style ="color: #1b76d1">' + timeSlotDayName + ' ' + timeSlotDayNumber + ' ' + timeSlotMonth + '</span> à <span class="bold" style ="color: #1b76d1">' + timeSlotTime + '</span>.').css('color', 'black')
-            }
-            //SI AUCUN CRÉNEAU N'EST SÉLECTIONNÉ (OU LE CRÉNEAU A ÉTÉ DÉSELECTIONNÉ) ON DEMANDE DE SELECTIONNER UN CRÉNEAU (ON NE L'AFFICHE PAS SI ON CLIQUE SUR UN CRÉNEAU INDISPONIBLE EN PREMIER LIEU)//
-            else if ($('.selectedTime').length === 0 && !$(this).hasClass('unavTime')) {
-                $('#selectedTimeSlotInfo').html('Veuillez selectionner un créneau.').css('color', 'red');
-            }
+            //ON AFFICHE UNE PHRASE RÉCAPITULATRICE EN Y INTÉGRANT LES INFORMATIONS DU CRÉNEAU AVEC UN MISE EN FORME//
+            $('#selectedTimeSlotInfo').html('Vous avez choisi le <span class="bold" style ="color: #1b76d1">' + timeSlotDayName + ' ' + timeSlotDayNumber + ' ' + timeSlotMonth + '</span> à <span class="bold" style ="color: #1b76d1">' + timeSlotTime + '</span>.').css('color', 'black')
+        }
+        //SI AUCUN CRÉNEAU N'EST SÉLECTIONNÉ (OU LE CRÉNEAU A ÉTÉ DÉSELECTIONNÉ) ON DEMANDE DE SELECTIONNER UN CRÉNEAU (ON NE L'AFFICHE PAS SI ON CLIQUE SUR UN CRÉNEAU INDISPONIBLE EN PREMIER LIEU)//
+        else if ($('.selectedTime').length === 0 && !$(this).hasClass('unavTime')) {
+            $('#selectedTimeSlotInfo').html('Veuillez selectionner un créneau.').css('color', 'red');
+        }
 
-            //SI UN BOUTON VALIDE EST SELECTIONNÉ, ON AFFICHE LE FORMULAIRE DE RENDEZ VOUS ET ON SCROLL DESSUS//
-            if ($(this).hasClass('selectedTime')) {
-                $('#userInfoForm').show();
-                $('html, body').animate({
-                    scrollTop: $("#rdvForm").offset().top
-                }, 500);
-            }
+        //SI UN BOUTON VALIDE EST SELECTIONNÉ, ON AFFICHE LE FORMULAIRE DE RENDEZ VOUS ET ON SCROLL DESSUS//
+        if ($(this).hasClass('selectedTime')) {
+            $('#userInfoForm').show();
+            $('html, body').animate({
+                scrollTop: $("#rdvForm").offset().top
+            }, 500);
+        }
     });
 
     //ACTIVE LA VERIFICATION ET L'ENVOIE DES DONNÉES EN AJAX LORS DE LA PRISE DE RDV VIA LE FORMULAIRE PAGE 'PRENDRE RDV'//
@@ -376,7 +376,7 @@ $(function() {
 
 
     //FAIT APPARAÎTRE / DISPARAÎTRE L'OPTION D'AJOUT DE MESSAGE LORS DE LA PRISE DE RDV ET CENTRE LA FENÊTRE DESSUS//
-   $('#rdvMessageButton').click(function(e) {
+    $('#rdvMessageButton').click(function(e) {
         e.preventDefault();
         $('.rdvMessage').toggle();
         $('html, body').animate({
@@ -385,13 +385,13 @@ $(function() {
     });
 
 
-   //FAIT APPARAÎTRE LE MENU DE NAVIGATION 'INFOS PRATIQUES'//
+    //FAIT APPARAÎTRE LE MENU DE NAVIGATION 'INFOS PRATIQUES'//
     $('#infosPratiques').hover(function(){
-        $('#ipNav').fadeIn(100);
+            $('#ipNav').fadeIn(100);
         },
         function(){
-        $('#ipNav').fadeOut(100);
-    });
+            $('#ipNav').fadeOut(100);
+        });
 
     //FAIT APPARAÎTRE LE MENU DE NAVIGATION 'SPECIALISATIONS'//
     $('#specialisationsNav').hover(function(){
@@ -399,12 +399,12 @@ $(function() {
         },
         function(){
             $('#speNav').fadeOut(100);
-    });
+        });
 
     //FAIT APPARAÎTRE LE MENU PRINCIPAL DANS LE CAS OÙ LA LARGEUR EST BASSE(SUR SMARTPHONE OU TABLETTE)//
     $('#smallMenuBtn').click(function(){
-            $('#smallMenuNav').fadeToggle(200);
-        });
+        $('#smallMenuNav').fadeToggle(200);
+    });
 
     //ACTIVE LA VERIFICATION ET L'ENVOIE DES DONNÉES EN AJAX LORS DE LA TENTATIVE DE CONNEXION UTILISATEUR//
     $('#loginBtn').click(function(e) {
@@ -457,7 +457,7 @@ $(function() {
                         $('.requestSent').show();
                     }
                 }
-                });
+            });
         }
         //SINON CELA SIGNIFIE QUE TOUT LES CHAMPS NE SONT PAS REMPLIS, ON ALERTE DONC AVEC UN MESSAGE D'ERREUR//
         else{
@@ -595,7 +595,7 @@ $(function() {
                     'timeSlotToSwitch': timeSlotToSwitch
                 },
                 success: function (data) {
-                //ON RÉCUPÈRE LES DONNÉES ET ON AJOUTE ET RETIRE LES CLASSES AFFÉRENTES AU SWITCH //
+                    //ON RÉCUPÈRE LES DONNÉES ET ON AJOUTE ET RETIRE LES CLASSES AFFÉRENTES AU SWITCH //
                     var timeSlot = JSON.parse(data);
                     if (timeSlot.status === "unavTime") {
                         $(fullTimeSlot).addClass('deactivated').removeClass('adminAvTime');
@@ -604,7 +604,7 @@ $(function() {
                     }
                 },
                 error: function () {
-                //SI PROBLÈME D'ENVOI, ON AFFICHE N MESSAGE D'ERREUR//
+                    //SI PROBLÈME D'ENVOI, ON AFFICHE N MESSAGE D'ERREUR//
                     $('#adminCalStatus').html("Une erreur interne s'est produite.")
                 }
             })
@@ -680,15 +680,21 @@ $(function() {
 
     });
 
-    $('#imgCerveau').click(function(){
-        if($('#imgCerveau').hasClass('smallSize')){
-            $('#imgCerveau').addClass('fullSize').removeClass('smallSize');
-        }
-        else{
-            $('#imgCerveau').addClass('smallSize').removeClass('fullSize');
-        }
+    $('.clickable').click(function(){
+        var source = $(this).attr('src');
+        var srcId = $(this).attr('id');
+        var srcAlt = $(this).attr('alt');
+
+        $('.alertWindowContentArt').prepend('<img src="'+source+'" id="'+srcId+'" alt="'+srcAlt+'" style="width: 100%; cursor: default;">');
+        $('.alertWindowBgArt').css({"width": '100%', 'height': '100%', "display": 'flex'});
     });
 
+    //ON CACHE #ALERTWINDOWBGART ET ON EFFACE LE CONTENU DE #AERTWINDOWCONTENTART//
+    $('.alertBtnArt').click(function(e) {
+        e.preventDefault();
+        $('.alertWindowBgArt').css("display", 'none');
+        $('.alertWindowContentArt').html('');
+    });
 
     var key = $(this).attr('id');
     var value = speList[key];
@@ -704,8 +710,8 @@ $(function() {
     }).mouseleave(function(){
         for(key in speList)
         {
-                value = speList[key];
-                $('#'+key).css('opacity', '100%');
+            value = speList[key];
+            $('#'+key).css('opacity', '100%');
         }
     });
 
