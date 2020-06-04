@@ -67,14 +67,13 @@ main {
   text-align: center;
 }
 
-h1, h2, h3 {
-  text-align: center;
-  padding: 1rem;
+h1, h2, h3, h4, h5{
   font-family: 'Handlee', cursive;
 }
 
-h4, h5{
-  font-family: 'Handlee', cursive;
+h1, h2, h3{
+  text-align: center;
+  padding: 1rem;
 }
 
 h1{
@@ -155,12 +154,16 @@ article{
   border-radius: 5px;
 }
 
-.mainTitle, #sophroTopArt h1, #sophroTopArt h4, #sophroTopArt p, .accomp h3, .accomp a{
+.mainTitle, #sophroTopArt h1, #sophroTopArt h4, #sophroTopArt p{
   flex-basis: 100%;
 }
 
-.accomp, #sophroBottomArt, #sophroMidArt, #seances, #cabinet{
+#sophroBottomArt, #sophroMidArt, #seances{
   margin-top: 1rem;
+}
+
+.btnsList li{
+  margin: 1rem 0;
 }
 
 .btnsList a:hover, #backToEspn:hover{
@@ -169,17 +172,17 @@ article{
   border: 1px solid #1ba7c3;
 }
 
-#homePage, #indications, #specialisation1,#specialisation2, .accomp, .btnsList, #indications, #rdvSect ul, #rdvSect article, #contactSect article, #contactInputs, #adminUl{
+#homePage, #indications, #specialisation1,#specialisation2, .btnsList, #rdvSect ul, #rdvSect article, #contactSect article, #contactInputs, #adminUl{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.mainTitle, #indexList, #sophroTopArt ul, #sophroPractice ul, #sophroBottomArt ul, .avTime, .adminAvTime, .deactivated, .unavTime, .bookedTime, .selectedTime, #defTrauma, #consequencesESPT, #sophroEtESPT, #priseEnCharge, .accompDesc, .accompSeance, .domaines ul, #aboutMeList{
+.mainTitle, #indexList, #sophroTopArt ul, #sophroPractice ul, #sophroBottomArt ul, .avTime, .adminAvTime, .deactivated, .unavTime, .bookedTime, .selectedTime, #defTrauma, #consequencesESPT, #sophroEtESPT, #priseEnCharge, #aboutMeList{
   border-radius: 5px;
 }
 
-#accompIndivDesc, #accompIndivSeance, #defTrauma, .accompDesc, .accompSeance, #consequencesESPT, #sophroEtESPT, #priseEnCharge, #aboutMeList{
+#defTrauma, #consequencesESPT, #sophroEtESPT, #priseEnCharge, #aboutMeList{
   border: 1px solid #fabca2;
   background-color: #fdebe250;
   padding: 1rem;
@@ -215,7 +218,7 @@ header img {
 
 #smallHeader{
   padding-top: 2rem;
-  display: none;
+  display: block;
 }
 
 #smallHeaderUl{
@@ -263,8 +266,12 @@ header img {
   margin-bottom: -0.5rem;
 }
 
-.headerNavLi:nth-child(n+2), .ipNav, .speNav, #smallMenuNav {
-  padding: 0 1rem 2rem;
+#headerNav, .headerNavLi, #headerNavToFixed, .headerNavLiToFixed {
+  display: none;
+}
+
+#headerNav ul li{
+  padding: 0 0 1rem 0;
 }
 
 header> nav> ul> li:nth-child(n+2)> a {
@@ -294,19 +301,20 @@ header> nav> ul> li:nth-child(n+2)> a {
   top: 0;
   left:0;
   width: 100%;
-  border-bottom: 1px solid #1ba7c3;
-
-  background: linear-gradient(0deg, rgba(255,255,255,0.85) 50%,  rgba(255,255,255,1) 100%);;
   padding-top: 1rem;
   z-index: 1;
 }
 
 #headerToFixed{
   flex-direction: row;
+  border: 0;
+  background: none;
 }
 
 #smallHeaderUlToFixed{
   flex-direction: row-reverse;
+  border-bottom: 1px solid #1ba7c3;
+  background: linear-gradient(0deg, rgba(255,255,255,0.85) 50%,  rgba(255,255,255,1) 100%);
 }
 
 #smallHeaderUlToFixed li:nth-child(1){
@@ -319,13 +327,12 @@ header> nav> ul> li:nth-child(n+2)> a {
   margin-bottom: -0.5rem;
 }
 
-#headerNavToFixed > ul {
-  font-size: 1.4rem;
-  padding: 1rem 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: baseline;
+#headerNavToFixed >ul > li:nth-child(2) {
+  display: none;
+}
+
+#headerNavToFixed ul li{
+  padding: 0;
 }
 
 .headerNavLiToFixed {
@@ -366,10 +373,11 @@ header> nav> ul> li:nth-child(n+2)> a {
   -moz-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
   box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
   border: 1px solid #1ba7c3;
-
   border-radius: 10px;
   z-index: 1;
 }
+
+
 
 #ipNav, #speNav, .smallMenuNavLi >ul li{
   list-style: circle inside;
@@ -379,10 +387,10 @@ header> nav> ul> li:nth-child(n+2)> a {
   list-style: disc inside;
 }
 
-#smallMenuNav{
+#smallMenuNav {
   top:23.6rem;
-  left:15%;
-  width: 70%;
+  left: 5%;
+  width:85%;
   text-align: left;
 }
 
@@ -473,6 +481,7 @@ header> nav> ul> li:nth-child(n+2)> a {
 
 #specialisations li {
   width:25%;
+  flex-basis: 51%;
 }
 
 #specialisations li:hover h3{
@@ -510,6 +519,7 @@ header> nav> ul> li:nth-child(n+2)> a {
 #sophroTopArtPart01, #sophroTopArtPart02, #sophroPractice {
   flex: 1;
   padding: 1rem;
+  flex-basis: 100%;
 }
 
 #sophroTopArt article li:not(:last-child){
@@ -544,7 +554,7 @@ header> nav> ul> li:nth-child(n+2)> a {
 #sophroSectPart02 {
   margin: 3rem 0 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
   border-radius: 5px;
@@ -597,21 +607,14 @@ header> nav> ul> li:nth-child(n+2)> a {
 
 #violencesTopSect{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
 #violencesTopSect img, #bodyRel img, #douleur img{
   margin:2rem 2rem 1rem;
-}
-
-#violencesTopSect img{
-  width: 40%;
-}
-
-#bodyRel img, #imgDouleur{
-  width: 30%;
+  width: 50%;
 }
 
 #accompDouleur ul{
@@ -626,7 +629,7 @@ header> nav> ul> li:nth-child(n+2)> a {
 }
 
 #accompDouleur{
-  padding-right: 1rem;
+  padding-right: 0;
 }
 
 #plusLoinDouleur li{
@@ -684,8 +687,12 @@ header> nav> ul> li:nth-child(n+2)> a {
 #enSavoirPlusNav{
   flex-basis: 25%;
   padding: 1rem;
-  border-left: 1px solid #fabca2;
+  border: 0;
   margin: 1rem;
+}
+
+#enSavoirPlus article{
+  flex-basis: 100%;
 }
 
 #enSavoirPlusNav ul{
@@ -744,9 +751,6 @@ header> nav> ul> li:nth-child(n+2)> a {
 .clickable{
   width: 60%;
 }
-.fullSize {
-  width: 100%;
-}
 
 #bodyRelUl {
   justify-content: left;
@@ -778,11 +782,7 @@ header> nav> ul> li:nth-child(n+2)> a {
   border-bottom: 2px solid #fabca2;
 }
 
-#accompDouleur h2{
-  text-align: center;
-}
-
-#violenceEtSophro h2{
+#accompDouleur h2, #violenceEtSophro h2{
   text-align: center;
 }
 
@@ -790,15 +790,27 @@ header> nav> ul> li:nth-child(n+2)> a {
   margin: 1rem;
 }
 
-
+#douleursUl{
+  list-style: circle inside;
+  text-indent: 2rem;
+}
 
 /*QUI SUIS-JE*/
 
-#aboutMe, #me{
+#aboutMe{
   display: inline-block;
+  text-align: justify;
+  margin: 0 1rem;
+}
+
+#aboutMe, #me{
   vertical-align: top;
   padding-top: 2rem;
-  width: 65%;
+}
+
+#aboutMe, #aboutMeList{
+  max-width: 100%;
+  width: auto;
 }
 
 #quiSuisJe p{
@@ -806,19 +818,19 @@ header> nav> ul> li:nth-child(n+2)> a {
   text-indent: 2rem;
 }
 
-#aboutMe{
-  text-align: justify;
-  margin: 0 1rem;
-}
-
 #aboutMeList> ul{
   list-style: disc inside;
 }
 
-
-#douleursUl{
-  list-style: circle inside;
-  text-indent: 2rem;
+#me{
+  float: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 100%;
+  width: 100%;
 }
 
 #me h3{
@@ -827,25 +839,17 @@ header> nav> ul> li:nth-child(n+2)> a {
   padding: 0.25rem 0;
 }
 
-#me ul{
-  list-style: disc inside;
-  font-size: 1.4rem;
+#celiaRoubyPhoto{
+  max-width: 50%;
+  border-radius: 50%;
 }
 
 #quiSuisJeBtns li{
   list-style: none;
 }
 
-#me{
-  float: left;
-  max-width: 30%;
-  margin: 0 1rem;
-}
-
-#celiaRoubyPhoto{
-  border-radius: 50%;
-  width: 80%;
-  text-align: center;
+#formations{
+  margin-top: 2rem;
 }
 
 #formations, #ipPage ul:nth-child(-n+3) {
@@ -865,7 +869,6 @@ header> nav> ul> li:nth-child(n+2)> a {
   list-style: circle inside;
 }
 
-
 #ipBtns li{
   list-style: none;
 }
@@ -878,9 +881,6 @@ header> nav> ul> li:nth-child(n+2)> a {
 
 #ipPage p, #ipPage h4{
   margin: 1rem 0;
-}
-#ipPage iframe {
-  width: 100%;
 }
 
 /*CONTACT - PRENDRE RDV - ADMIN OFFICE - ADMIN LOGIN - GESTION DES FORMULAIRES*/
@@ -925,8 +925,7 @@ input, select {
 }
 
 #rdvForm{
-  width: 50%;
-  margin: 0 auto;
+  width:auto;
 }
 
 #userInfoForm{
@@ -935,6 +934,10 @@ input, select {
 
 fieldset, .dayOn, .dayOff, .dayPast{
   border-radius: 10px;
+}
+
+.dayOn, .dayOff, .dayPast{
+  padding: 0.5rem;
 }
 
 fieldset, .dayOn{
@@ -946,7 +949,6 @@ fieldset, .dayOn{
 }
 
 .dayPast{
-  padding: 1rem 2rem;
   border: 1px solid rgb(180, 180, 180);
   color: rgba(70, 70, 70, 0.84);
   background-color: rgba(180, 180, 180, 0.1);
@@ -963,7 +965,7 @@ fieldset{
 .alertBtnArt{
   position: absolute;
   top: 7%;
-  left: 93%;
+  left: 91%;
   color: #ffffff;
   background-color: #F3826B;
   padding: 1rem 1.4rem;
@@ -1142,21 +1144,20 @@ textarea{
   background-color: #F3826B;
 }
 
-.rdvDelete{
-  position: absolute;
-}
-
 #adminUl li{
   padding: 1rem;
   margin:1rem 0;
 }
 
 .rdvDelete{
-  margin:0.5rem 0 0 0.5rem;
+  margin: 1rem 0 0 0;
+  position: inherit;
 }
+
 #logoutBtn:hover, .rdvDelete:hover, .alertBtnArt:hover{
   background-color: #db322f;
 }
+
 #loginFieldset{
   display: inline-block;
   padding: 1rem;
@@ -1164,7 +1165,6 @@ textarea{
 
 .dayOn, .dayOff{
   background: none;
-  padding: 1rem 2rem;
 }
 
 .dayOn:hover{
@@ -1214,8 +1214,6 @@ textarea{
   position: relative;
 }
 
-
-
 #alertWindowContent, .alertWindowContentArt{
   line-height: 2;
 }
@@ -1240,7 +1238,10 @@ textarea{
   border: 0 #7FC8AB;
   background-color: #7FC8AB;
   color: #ffffff;
+  display: block;
+  margin: 0 auto;
 }
+
 
 span.red{
   color: #d61515;
@@ -1284,8 +1285,12 @@ footer{
   text-align: left;
 }
 
+#footerNav, footer>ul{
+  padding-bottom: 2rem;
+}
+
 #footerNav li{
-  list-style: disc;
+  list-style: disc inside;
 }
 
 #footerNav h3, #footerInfos h3{
@@ -1330,217 +1335,19 @@ footer{
 
 /**MEDIA SCREEN**/
 
-@media screen and (max-width: 1255px) {
-  #enSavoirPlus article{
-    flex-basis: 43%;
-  }
-}
-
-@media screen and (max-width: 1190px) {
-  #headerNavToFixed ul li{
-    padding: 0;
-  }
-}
-
-@media screen and (max-width: 1160px) {
-
-
-  #accompDouleur i {
-    top: 0;
-    left: 0;
-  }
-
-  #violenceEtSophro i {
-    top: 0;
-    right: 0;
-  }
-
-  #spe3 i:nth-child(1) {
-    top: 4%;
-    left: 0;
-    font-size: 10rem;
-  }
-
-  #spe3 i:nth-child(2) {
-    top: 0;
-    left: 7rem;
-    font-size: 3rem;
-  }
-
-  #spe4 i {
-    top: 0;
-    right: 0;
-  }
-
-  #spe4 li{
-    width:80%;
-  }
-}
-
-@media screen and (max-width: 1120px){
-  #headerNav ul li{
-    padding: 0 0 1rem 0;
-  }
-}
-
-@media screen and (max-width: 1105px) {
-  #headerNavToFixed >ul > li:nth-child(2) {
-    display: none;
-  }
-
-  #accompIndiv i, #accompColl i, #accompInstit i{
-    top: -58px;
-    left: 25%;
-    color: #1ba7c3;
-    font-size: 5rem;
-  }
-}
-
-@media screen and (max-width: 1069px) {
-
-  #indications h2{
-    font-size: 2rem;
-  }
-
-  #rdvForm{
-    width:auto;
-  }
-}
-
-@media screen and (max-width: 980px) {
-  #smallHeader{
-    display: block;
-  }
-  #headerToFixed {
-    border: 0;
-    background: none;
-  }
-
-  #sophroSectPart02{
-    flex-direction: column;
-  }
-
-  #headerNav, .headerNavLi, #headerNavToFixed, .headerNavLiToFixed {
-    display: none;
-  }
-
-  #smallMenuNav {
-    left: 5%;
-    width:85%;
-  }
-
-  #sophroPractice {
-    flex-basis: 100%;
-  }
-
-  #specialisation1, #specialisation2, #violencesTopSect{
-    flex-direction: column;
-  }
-
-  #enSavoirPlusNav{
-    border: 0;
-  }
-
-  #accompDouleur{
-    padding-right: 0;
-  }
-
-  #violenceEtSophro{
-    padding-left: 0;
-  }
-
-  #specialisation1 h2, #specialisation2 h2{
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 900px) {
-
-  footer{
-    flex-direction: column;
-  }
-
-  #footerNav, footer>ul{
-    padding-bottom: 2rem;
-  }
-}
-
-@media screen and (max-width: 890px) {
-
-  #specialisations li{
-    flex-basis: 35%;
-  }
-
-  #aboutMe, #aboutMeList{
-    max-width: 100%;
-    width: auto;
-  }
-
-  #me{
-    float: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-    max-width: 100%;
-    width: 100%;
-  }
-
-  #celiaRoubyPhoto{
-    max-width: 30%;
-  }
-
-  #me ul{
-    font-size: 1.5rem ;
-  }
-
-  #accompIndiv i, #accompColl i, #accompInstit i{
-    left: 0;
-  }
-
-  .accompDesc,.accompSeance{
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 700px) {
-
-  #specialisations li{
-    flex-basis: 51%;
-  }
-
-  #sophroTopArtPart01, #sophroTopArtPart02 {
-    flex-basis: 100%;
-  }
-
-  #violencesTopSect img, #bodyRel img, #douleur img  {
-    width: 50%;
-  }
-
-  #enSavoirPlus article{
-    flex-basis: 100%;
-  }
-
-  .dayPast, .dayOff, .dayOn{
-    padding: 0.5rem;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  #accompInstit h3 {
-    max-width: 70%;
-  }
-
-}
-
-@media screen and (max-width: 610px) {
-  #formations{
-    margin-top: 2rem;
-  }
-
+@media screen and (min-width: 475px) {
   #celiaRoubyPhoto{
     max-width: 40%;
+  }
+  #footerNav li{
+    list-style: disc;
+  }
+
+}
+
+@media screen and (min-width: 610px) {
+  #formations{
+    margin-top: 0;
   }
 
   #me ul{
@@ -1548,46 +1355,162 @@ footer{
   }
 
   .rdvDelete{
-    margin: 1rem 0 0 0;
-    position: inherit;
+    margin:0.5rem 0 0 0.5rem;
+    position: absolute;
   }
 
-  .bookedTime{
+  #celiaRoubyPhoto{
+    max-width: 30%;
+  }
+
+}
+
+@media screen and (min-width: 700px) {
+
+  #specialisations li{
+    flex-basis: 35%;
+  }
+
+  #sophroTopArtPart01, #sophroTopArtPart02 {
+    flex-basis: 0;
+  }
+
+
+  #violencesTopSect img{
+    width: 40%;
+  }
+
+  #bodyRel img, #imgDouleur{
+    width: 30%;
+  }
+
+  #enSavoirPlus article{
+    flex-basis: 0;
+  }
+
+  .dayPast, .dayOff, .dayOn{
+    padding: 1rem 2rem;
+  }
+
+  .alertBtnArt {
+    left: 93%;
+  }
+}
+
+@media screen and (min-width: 890px) {
+
+  #specialisations li{
+    flex-basis: 25%;
+  }
+
+  #aboutMe, #me{
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 2rem;
+    width: 65%;
+  }
+
+  #aboutMe{
+    text-align: justify;
+    margin: 0 1rem;
+  }
+
+  #me ul{
+    list-style: disc inside;
+    font-size: 1.4rem;
+  }
+
+  #me{
+    float: left;
+    max-width: 30%;
+    margin: 0 1rem;
+  }
+
+  #celiaRoubyPhoto{
+    border-radius: 50%;
+    width: 80%;
+    text-align: center;
+  }
+
+}
+
+
+@media screen and (min-width: 900px) {
+
+  #footerNav, footer>ul{
+    padding-bottom: 0;
+  }
+
+  #celiaRoubyPhoto{
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  #headerNavToFixed > ul {
+    font-size: 1.4rem;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+
+  #smallHeader {
+    display: none;
+  }
+
+  #headerToFixed {
+    border-bottom: 1px solid #1ba7c3;
+    background: linear-gradient(0deg, rgba(255,255,255,0.85) 50%,  rgba(255,255,255,1) 100%);
+  }
+  #sophroSectPart02{
+    flex-direction: row;
+  }
+  #headerNav, .headerNavLi, #headerNavToFixed, .headerNavLiToFixed {
     display: block;
+  }
+
+  #smallMenuNav {
+    left:15%;
+    width: 70%;
+  }
+
+  #sophroPractice {
+    flex-basis: 0;
+  }
+
+  #violencesTopSect{
+    flex-direction: row;
+  }
+
+  #enSavoirPlusNav{
+    border-left: 1px solid #fabca2;
+  }
+
+}
+
+@media screen and (min-width: 1069px) {
+  #rdvForm{
+    width: 50%;
     margin: 0 auto;
   }
 }
 
-@media screen and (max-width: 500px) {
-  #celiaRoubyPhoto{
-    max-width: 50%;
+@media screen and (min-width: 1120px){
+
+  #headerNav ul li{
+    padding: 0;
+
+  }
+  .headerNavLi:nth-child(n+2), .ipNav, .speNav{
+    padding: 0 1rem 2rem;
   }
 }
 
-@media screen and (max-width: 475px) {
-  #footerNav li{
-    list-style: disc inside;
-  }
-
-  /* #indexBtns, #sophroBtns, #quiSuisJeBtns{
-   flex-direction: column;
-   }*/
-
-  .btnsList li{
-    margin: 1rem 0;
-  }
-
-  #accompIndiv h3 {
-    max-width: 70%;
+@media screen and (min-width: 1190px) {
+  #headerNavToFixed{
+    padding: 0 1rem;
   }
 }
 
-@media screen and (max-width: 445px) {
-  #specialisations i{
-    display: none;
-  }
-
-  #spe4 li {
-    width: 100%;
-  }
-}

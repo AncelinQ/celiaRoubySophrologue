@@ -70,6 +70,24 @@ $(function() {
 
     });
 
+    //SI ON CLIQUE SUR UN LIEN AVEC ANCRAGE QUI NOUS DIRIGE AILLEURS QU'EN HAUT DE LA PAGE (PAR EXEMPLE ON CLIQUE DANS LA NAV SUR LA SOUS CATÉGORIE "SÉANCES" D'"INFOS PRATIQUES") , ON FAIT EN SORTE QUE LA NAV APPARAISSE BIEN//
+    $("#headerNav ul li a").each(function(){
+        if ($(this).attr('href').indexOf('#')>=0 && $(document).scrollTop() > 0) {
+            $('#header').attr('id', 'headerToFixed');
+            $('#headerNav').attr('id', 'headerNavToFixed');
+            $('#logo').attr('id', 'logoToFixed');
+            $('.headerNavLi').attr('class', 'headerNavLiToFixed');
+            $('#ipNav').css('margin-top', '0.5rem');
+            $('#apNav').css('margin-top', '0.5rem');
+
+            $('#smallHeaderUl').attr('id', 'smallHeaderUlToFixed');
+            $('#logoSmallMenu').attr('id', 'logoSmallToFixed');
+            $('#smallMenuBtn').css('padding', '0');
+            $('#smallMenuNav').css('top', '4.6rem');
+
+            $('html main').css("padding", '22rem 0 5rem');
+        }
+    });
 
     //AJOUTE UN FADE OUT SUR LES MESSAGES DE SUCCES OU D'ERREUR LORS DES ENVOIS DE MESSAGES DANS 'CONTACT' OU DES PRISES DE RDV//
     function requestFadeOut() {
@@ -645,7 +663,7 @@ $(function() {
             })
         }
     });
-
+    //QUAND ON CLIQUE SUR UN LIEN "EN SAVOIR PLUS" ON AFFICHE L'ARTICLE CORREPONDANT ET SI UN ARTICLE ETAIT DÉJÀ AFFICHÉ, ON CACHE CE DERNIER ET ON SCROLL JUSQU'À L'ARTICLE//
     $('.enSavoirPlusNav').click(function() {
         var key;
         var value;
@@ -666,6 +684,7 @@ $(function() {
         }, 500);
     });
 
+    //ON SCROLL VERS LE HAUT, AU NIVEAU DU MENU "EN SAVOIR PLUS"//
     $('#backToEspn').click(function() {
         if ($(document).width() > 980) {
             $('html, body').animate({
@@ -680,6 +699,7 @@ $(function() {
 
     });
 
+    //LORSQU'ON CLIQUE SUR UN ÉLÉMENT DE LA CLASSE "CLICKABLE" ON L'AFFICHE DANS UN MODAL EN LARGEUR 100%//
     $('.clickable').click(function(){
         var source = $(this).attr('src');
         var srcId = $(this).attr('id');
@@ -689,7 +709,7 @@ $(function() {
         $('.alertWindowBgArt').css({"width": '100%', 'height': '100%', "display": 'flex'});
     });
 
-    //ON CACHE #ALERTWINDOWBGART ET ON EFFACE LE CONTENU DE #AERTWINDOWCONTENTART//
+    //ON CACHE #ALERTWINDOWBGART ET ON EFFACE LE CONTENU DE #AERTWINDOWCONTENTART LORSQU'ON CLIQUE SUR LE "X" ROUGE//
     $('.alertBtnArt').click(function(e) {
         e.preventDefault();
         $('.alertWindowBgArt').css("display", 'none');
@@ -699,6 +719,8 @@ $(function() {
     var key = $(this).attr('id');
     var value = speList[key];
 
+
+    //LORSQU'ON PASSE LA SOURIS SUR UNE LI DE L'UL "SPECIFICATIONS", LES AUTRES LI PERDENT EN OPACITÉ, ELLES LA RÉCUPÈRENT TOUTES LORSQUE LA SOURIS SORT//
     $('#specialisations li').mouseenter(function(){
         for(key in speList)
         {
