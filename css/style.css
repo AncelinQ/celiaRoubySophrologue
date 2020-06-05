@@ -123,11 +123,6 @@ small {
   font-size: 1.4rem;
 }
 
-#backToEspn {
-  font-family: 'Quicksand', cursive;
-  margin-top: 1rem;
-}
-
 .italic{
   font-style: italic;
 }
@@ -144,11 +139,14 @@ small {
   display: block;
 }
 
-.mainTitle{
-
-  color:#1ba7c3;
-
+.hide {
+  display: none;
 }
+
+.mainTitle{
+  color:#1ba7c3;
+}
+
 
 article{
   border-radius: 5px;
@@ -158,12 +156,13 @@ article{
   flex-basis: 100%;
 }
 
-#sophroBottomArt, #sophroMidArt, #seances{
-  margin-top: 1rem;
-}
-
 .btnsList li{
   margin: 1rem 0;
+}
+
+.btnsList a {
+  display: inline-block;
+  margin-top: 1rem;
 }
 
 .btnsList a:hover, #backToEspn:hover{
@@ -187,6 +186,8 @@ article{
   background-color: #fdebe250;
   padding: 1rem;
 }
+
+
 
 /*HEADER & NAVS*/
 
@@ -444,6 +445,14 @@ header> nav> ul> li:nth-child(n+2)> a {
   padding: 1rem;
 }
 
+#indexList:hover, #enSavoirPlusNav ul li:hover  {
+  cursor: pointer;
+  background-color: #fdebe250;
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(251,214,197,1);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(251,214,197,1);
+  box-shadow: 0px 0px 5px 5px rgba(251,214,197,1);
+}
+
 .btnsList{
   margin: 2rem;
 }
@@ -496,6 +505,10 @@ header> nav> ul> li:nth-child(n+2)> a {
 }
 
 /*LA SOPHROLOGIE*/
+
+#sophroBottomArt, #sophroMidArt, #seances{
+  margin-top: 1rem;
+}
 
 #sophroSect li{
   list-style: circle inside;
@@ -605,6 +618,54 @@ header> nav> ul> li:nth-child(n+2)> a {
   font-size: 2.4rem;
 }
 
+#speDiv{
+  display: inline-block;
+  padding: 4rem 1rem 1rem;
+  width: 70%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#violenceEtSophro li:nth-child(-n+4):after, #bodyRelUl li:after, #sophroTopArt article > ul:after, #seances:after, #sophroSectPart02:after, #sophroMidArt:after, #douleur article:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  padding-top: 20px;
+  border-bottom:1.5px solid #fabca2;
+}
+
+#enSavoirPlus, #specialisations ul, #speEnd, #accompDouleur{
+  margin-bottom: 1rem;
+}
+
+.bulle, #bodyRelUl li, #douleur p, #sophroSect li{
+  text-align: justify;
+}
+
+.bulle p, #douleur p {
+  padding: 1rem;
+}
+
+.clickable{
+  width: 60%;
+}
+
+#speEnd{
+  text-align: justify;
+}
+
+#speEnd p{
+  padding: 1rem;
+  margin: 2rem;
+}
+
+#accompDouleur h2, #violenceEtSophro h2{
+  text-align: center;
+}
+
+/*VIOLENCES*/
+
 #violencesTopSect{
   display: flex;
   flex-direction: column;
@@ -617,23 +678,9 @@ header> nav> ul> li:nth-child(n+2)> a {
   width: 50%;
 }
 
-#accompDouleur ul{
-  padding-top: 1rem;
-  font-size: 2rem;
-  display: inline-block;
-}
-
-#accompDouleur ul li{
-  padding: 0.5rem 2rem;
-  text-align: left;
-}
-
-#accompDouleur{
-  padding-right: 0;
-}
-
-#plusLoinDouleur li{
-  margin: 1rem 0;
+#backToEspn {
+  font-family: 'Quicksand', cursive;
+  margin-top: 1rem;
 }
 
 #violenceEtSophro li{
@@ -647,37 +694,6 @@ header> nav> ul> li:nth-child(n+2)> a {
   margin-top: 2rem;
   border-radius: 0;
   background-color: #fdebe250;
-}
-
-#speDiv{
-  display: inline-block;
-  padding: 4rem 1rem 1rem;
-  width: 70%;
-  text-align: center;
-  font-size: 2rem;
-}
-
-#bodyRel article h1{
-  flex-basis: 100%;
-}
-
-#bodyRel img{
-  overflow:hidden;
-  min-height: 0;
-  min-width: 0;
-}
-
-#bodyRelUl li, #sophroSect li{
-  padding-top: 1.5rem;
-}
-
-#violenceEtSophro li:nth-child(-n+4):after, #bodyRelUl li:after, #sophroTopArt article > ul:after, #seances:after, #sophroSectPart02:after, #sophroMidArt:after, #douleur article:after {
-  content: "";
-  display: block;
-  margin: 0 auto;
-  width: 70%;
-  padding-top: 20px;
-  border-bottom:1.5px solid #fabca2;
 }
 
 #violencesMainContent{
@@ -709,14 +725,6 @@ header> nav> ul> li:nth-child(n+2)> a {
   margin: 1rem;
 }
 
-#enSavoirPlusNav ul li:hover, #indexList:hover {
-  cursor: pointer;
-  background-color: #fdebe250;
-  -webkit-box-shadow: 0px 0px 5px 5px rgba(251,214,197,1);
-  -moz-box-shadow: 0px 0px 5px 5px rgba(251,214,197,1);
-  box-shadow: 0px 0px 5px 5px rgba(251,214,197,1);
-}
-
 #enSavoirPlusNav ul li{
   flex-basis: 20%;
 }
@@ -732,24 +740,29 @@ header> nav> ul> li:nth-child(n+2)> a {
   margin-top: 85rem;
 }
 
-#enSavoirPlus, #specialisations ul, #speEnd, #accompDouleur{
-  margin-bottom: 1rem;
-}
-
-.bulle, #bodyRelUl li, #douleur p, #sophroSect li{
-  text-align: justify;
-}
-
-.bulle p, #douleur p {
-  padding: 1rem;
-}
-
 #imgCerveau{
   display: block;
   margin: 2rem auto;
 }
-.clickable{
-  width: 60%;
+
+.bulle{
+  margin: 1rem;
+}
+
+#violenceEtSophro ul{
+  border-bottom: 2px solid #fabca2;
+}
+
+/*RAPPORT AU CORPS*/
+
+#bodyRel article h1{
+  flex-basis: 100%;
+}
+
+#bodyRel img{
+  overflow:hidden;
+  min-height: 0;
+  min-width: 0;
 }
 
 #bodyRelUl {
@@ -759,35 +772,30 @@ header> nav> ul> li:nth-child(n+2)> a {
   margin: 0 1rem 2rem;
 }
 
-.btnsList a {
+#bodyRelUl li, #sophroSect li{
+  padding-top: 1.5rem;
+}
+
+
+/*GESTION DE LA DOULEUR*/
+
+#accompDouleur ul{
+  padding-top: 1rem;
+  font-size: 2rem;
   display: inline-block;
-  margin-top: 1rem;
 }
 
-
-#speEnd{
-  text-align: justify;
+#accompDouleur ul li{
+  padding: 0.5rem 2rem;
+  text-align: left;
 }
 
-#speEnd p{
-  padding: 1rem;
-  margin: 2rem;
+#accompDouleur{
+  padding-right: 0;
 }
 
-.hide {
-  display: none;
-}
-
-#violenceEtSophro ul{
-  border-bottom: 2px solid #fabca2;
-}
-
-#accompDouleur h2, #violenceEtSophro h2{
-  text-align: center;
-}
-
-.bulle{
-  margin: 1rem;
+#plusLoinDouleur li{
+  margin: 1rem 0;
 }
 
 #douleursUl{
@@ -1054,6 +1062,8 @@ textarea{
   width:90%;
 }
 
+/*RDV-CALENDRIER*/
+
 #rdvCal td, #adminRdvCal td{
   padding: 0.5rem;
 }
@@ -1144,6 +1154,8 @@ textarea{
   background-color: #F3826B;
 }
 
+/*ADMINISTRATION - ADMIN OFFICE*/
+
 #adminUl li{
   padding: 1rem;
   margin:1rem 0;
@@ -1179,43 +1191,6 @@ textarea{
 
 .calendarDate{
   line-height: 2rem;
-}
-
-#alertWindowBg, .alertWindowBgArt{
-  width: 100%;
-  height:100%;
-  position: fixed;
-  top:0;
-  left: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: rgba(255,255,255,0.5);
-  z-index: 1;
-  overflow: scroll;
-}
-
-#alertWindow{
-  background-color: #ffffff;
-  border: 1px solid #7FC8AB;
-  border-radius: 10px;
-  position: relative;
-  padding: 1rem;
-  line-height: 2rem;
-  text-align: center;
-  display: block;
-  width:50%;
-}
-
-.alertWindowArt{
-  padding: 1rem;
-  width:100%;
-  position: relative;
-}
-
-#alertWindowContent, .alertWindowContentArt{
-  line-height: 2;
 }
 
 .avTime, .adminAvTime{
@@ -1261,6 +1236,11 @@ span.red{
 
 .errorRequest, .deactivated{
   background-color: #F3826B;
+}
+
+/*MENTIONS LEGALES*/
+#mentionsLegales{
+  text-align: left;
 }
 
 /*FOOTER*/
@@ -1327,9 +1307,43 @@ footer{
   padding: 1rem 0;
 }
 
-/*MENTIONS LEGALES*/
-#mentionsLegales{
-  text-align: left;
+/*FENETRES DE MODAL*/
+
+#alertWindowBg, .alertWindowBgArt{
+  width: 100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(255,255,255,0.5);
+  z-index: 1;
+  overflow: scroll;
+}
+
+#alertWindow{
+  background-color: #ffffff;
+  border: 1px solid #7FC8AB;
+  border-radius: 10px;
+  position: relative;
+  padding: 1rem;
+  line-height: 2rem;
+  text-align: center;
+  display: block;
+  width:50%;
+}
+
+.alertWindowArt{
+  padding: 1rem;
+  width:100%;
+  position: relative;
+}
+
+#alertWindowContent, .alertWindowContentArt{
+  line-height: 2;
 }
 
 
@@ -1354,10 +1368,6 @@ footer{
     font-size: 1.4rem;
   }
 
-  .rdvDelete{
-    margin:0.5rem 0 0 0.5rem;
-    position: absolute;
-  }
 
   #celiaRoubyPhoto{
     max-width: 30%;
@@ -1374,7 +1384,6 @@ footer{
   #sophroTopArtPart01, #sophroTopArtPart02 {
     flex-basis: 0;
   }
-
 
   #violencesTopSect img{
     width: 40%;
@@ -1395,6 +1404,15 @@ footer{
   .alertBtnArt {
     left: 93%;
   }
+
+  .rdvDelete{
+    margin: 1rem 0 0 0.5rem;
+    position: absolute;
+  }
+  .bookedTime{
+    display: inline-block;
+  }
+
 }
 
 @media screen and (min-width: 890px) {
