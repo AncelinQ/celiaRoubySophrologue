@@ -2,10 +2,10 @@
   font-family: 'ElegantIcons';
   src: url('../fonts/ElegantIcons.eot');
   src: url('../fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/ElegantIcons.woff2') format('woff2'),
-  url('../fonts/ElegantIcons.woff') format('woff'),
-  url('../fonts/ElegantIcons.ttf') format('truetype'),
-  url('../fonts/ElegantIcons.svg#ElegantIcons') format('svg');
+    url('../fonts/ElegantIcons.woff2') format('woff2'),
+    url('../fonts/ElegantIcons.woff') format('woff'),
+    url('../fonts/ElegantIcons.ttf') format('truetype'),
+    url('../fonts/ElegantIcons.svg#ElegantIcons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,10 +14,10 @@
   font-family: 'ElegantIcons';
   src: url('../fonts/ElegantIcons_1.eot');
   src: url('../fonts/ElegantIcons_1.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/ElegantIcons_1.woff2') format('woff2'),
-  url('../fonts/ElegantIcons_1.woff') format('woff'),
-  url('../fonts/ElegantIcons_1.ttf') format('truetype'),
-  url('../fonts/ElegantIcons_1.svg#ElegantIcons') format('svg');
+    url('../fonts/ElegantIcons_1.woff2') format('woff2'),
+    url('../fonts/ElegantIcons_1.woff') format('woff'),
+    url('../fonts/ElegantIcons_1.ttf') format('truetype'),
+    url('../fonts/ElegantIcons_1.svg#ElegantIcons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,10 +26,10 @@
   font-family: 'ElegantIcons';
   src: url('../fonts/ElegantIcons_2.eot');
   src: url('../fonts/ElegantIcons_2.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/ElegantIcons_2.woff2') format('woff2'),
-  url('../fonts/ElegantIcons_2.woff') format('woff'),
-  url('../fonts/ElegantIcons_2.ttf') format('truetype'),
-  url('../fonts/ElegantIcons_2.svg#ElegantIcons') format('svg');
+    url('../fonts/ElegantIcons_2.woff2') format('woff2'),
+    url('../fonts/ElegantIcons_2.woff') format('woff'),
+    url('../fonts/ElegantIcons_2.ttf') format('truetype'),
+    url('../fonts/ElegantIcons_2.svg#ElegantIcons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -39,11 +39,92 @@
 
 /*ANIMATIONS*/
 
-.selectedTime, .selectedTime:hover, .bookedTime, .bookedTime:hover, #headerNav > ul > li > a, #headerNav > ul > li:hover > a, footer a, #footerNav a:hover, #ipNav li a, #ipNav li:hover a, #speNav li a, #speNav li:hover a, .avTime, .avTime:hover, .adminAvTime, .adminAvTime:hover, #contactBtn, #contactBtn:hover, #rdvBtn, #rdvBtn:hover, #previousWeek, #previousWeek:hover, #nextWeek, #nextWeek:hover, #rdvMessageButton, #rdvMessageButton:hover, #header, #headerToFixed, #headerNav, #headerNavToFixed, .headerNavLi, .headerNavLiTofixed, .headerNavLiToFixed:hover a, .headerNavLiToFixed a, #logo, #logoToFixed, #loginBtn, #loginBtn:hover, #logoutBtn, #logoutBtn:hover, .rdvDelete, .rdvDelete:hover, .dayOn, .dayOn:hover, .dayOff, .dayOff:hover, #alertBtn, #alertBtn:hover,.alertBtnArt, .alertBtnArt:hover, .alertWindowContentArt a:hover, .alertWindowContentArt a, #alertWindowContent a:hover, #alertWindowContent a, .deactivated, .deactivated:hover, #backToEspn, #backToEspn:hover, .btnsList a, .btnsList a:hover, #plusLoinDouleur a, #plusLoinDouleur a:hover, #rdvSect >article>h4 a:hover, #rdvSect >article>ul a:hover, #rdvSect p a:hover, #rdvSect >article>h4 a, #rdvSect >article>ul a, #rdvSect >article>h2 a:hover, #rdvSect >article>ul a:hover, #smallMenuBtn, #smallMenuBtn:hover, #smallMenuNav li a, #smallMenuNav li:hover a, .smallMenuNavLi, #smallMenuBtn div, #smallMenuBtn:hover div, .enSavoirPlusNav:hover, .enSavoirPlusNav, #specialisations li, #specialisations li:hover, #specialisations img, #specialisations img:hover{
+.selectedTime,
+.selectedTime:hover,
+.bookedTime,
+.bookedTime:hover,
+#headerNav>ul>li>a,
+#headerNav>ul>li:hover>a,
+footer a,
+#footerNav a:hover,
+#ipNav li a,
+#ipNav li:hover a,
+#speNav li a,
+#speNav li:hover a,
+.avTime,
+.avTime:hover,
+.adminAvTime,
+.adminAvTime:hover,
+#contactBtn,
+#contactBtn:hover,
+#rdvBtn,
+#rdvBtn:hover,
+#previousWeek,
+#previousWeek:hover,
+#nextWeek,
+#nextWeek:hover,
+#rdvMessageButton,
+#rdvMessageButton:hover,
+#header,
+#headerToFixed,
+#headerNav,
+#headerNavToFixed,
+.headerNavLi,
+.headerNavLiTofixed,
+.headerNavLiToFixed:hover a,
+.headerNavLiToFixed a,
+#logo,
+#logoToFixed,
+#loginBtn,
+#loginBtn:hover,
+#logoutBtn,
+#logoutBtn:hover,
+.rdvDelete,
+.rdvDelete:hover,
+.dayOn,
+.dayOn:hover,
+.dayOff,
+.dayOff:hover,
+#alertBtn,
+#alertBtn:hover,
+.alertBtnArt,
+.alertBtnArt:hover,
+.alertWindowContentArt a:hover,
+.alertWindowContentArt a,
+#alertWindowContent a:hover,
+#alertWindowContent a,
+.deactivated,
+.deactivated:hover,
+#backToEspn,
+#backToEspn:hover,
+.btnsList a,
+.btnsList a:hover,
+#plusLoinDouleur a,
+#plusLoinDouleur a:hover,
+#rdvSect>article>h4 a:hover,
+#rdvSect>article>ul a:hover,
+#rdvSect p a:hover,
+#rdvSect>article>h4 a,
+#rdvSect>article>ul a,
+#rdvSect>article>h2 a:hover,
+#rdvSect>article>ul a:hover,
+#smallMenuBtn,
+#smallMenuBtn:hover,
+#smallMenuNav li a,
+#smallMenuNav li:hover a,
+.smallMenuNavLi,
+#smallMenuBtn div,
+#smallMenuBtn:hover div,
+.enSavoirPlusNav:hover,
+.enSavoirPlusNav,
+#specialisations li,
+#specialisations li:hover,
+#specialisations img,
+#specialisations img:hover {
   transition: all 0.2s ease;
 }
 
-html{
+html {
   font-size: 62.5%;
 }
 
@@ -67,43 +148,49 @@ main {
   text-align: center;
 }
 
-h1, h2, h3, h4, h5{
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Handlee', cursive;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
   text-align: center;
   padding: 1rem;
 }
 
-h1{
+h1 {
   font-size: 3rem;
 
 }
 
-h2{
+h2 {
   font-size: 2.6rem;
   color: #1ba7c3;
 }
 
-h3{
+h3 {
   font-size: 2.4rem;
   color: #1ba7c3;
 }
 
-h4{
+h4 {
   font-size: 2.2rem;
   color: #1ba7c3;
   padding: 2rem;
 }
 
-h5{
+h5 {
   font-size: 2rem;
   color: #1ba7c3;
   padding: 2rem;
 }
 
-h6{
+h6 {
   font-size: 1.4rem;
 }
 
@@ -112,7 +199,7 @@ a {
   color: #1ba7c3;
 }
 
-i{
+i {
   margin-right: 1rem;
 }
 
@@ -123,11 +210,11 @@ small {
   font-size: 1.4rem;
 }
 
-.italic{
+.italic {
   font-style: italic;
 }
 
-.blue{
+.blue {
   color: #1ba7c3;
 }
 
@@ -143,20 +230,23 @@ small {
   display: none;
 }
 
-.mainTitle{
-  color:#1ba7c3;
+.mainTitle {
+  color: #1ba7c3;
 }
 
 
-article{
+article {
   border-radius: 5px;
 }
 
-.mainTitle, #sophroTopArt h1, #sophroTopArt h4, #sophroTopArt p{
+.mainTitle,
+#sophroTopArt h1,
+#sophroTopArt h4,
+#sophroTopArt p {
   flex-basis: 100%;
 }
 
-.btnsList li{
+.btnsList li {
   margin: 1rem 0;
 }
 
@@ -165,23 +255,52 @@ article{
   margin-top: 1rem;
 }
 
-.btnsList a:hover, #backToEspn:hover{
+.btnsList a:hover,
+#backToEspn:hover {
   background-color: #1ba7c3;
   color: #ffffff;
   border: 1px solid #1ba7c3;
 }
 
-#homePage, #indications, #specialisation1,#specialisation2, .btnsList, #rdvSect ul, #rdvSect article, #contactSect article, #contactInputs, #adminUl{
+#homePage,
+#indications,
+#specialisation1,
+#specialisation2,
+.btnsList,
+#rdvSect ul,
+#rdvSect article,
+#contactSect article,
+#contactInputs,
+#adminUl {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.mainTitle, #indexList, #sophroTopArt ul, #sophroPractice ul, #sophroBottomArt ul, .avTime, .adminAvTime, .deactivated, .unavTime, .bookedTime, .selectedTime, #defTrauma, #consequencesESPT, #sophroEtESPT, #priseEnCharge, #aboutMeList{
+.mainTitle,
+#indexList,
+#sophroTopArt ul,
+#sophroPractice ul,
+#sophroBottomArt ul,
+.avTime,
+.adminAvTime,
+.deactivated,
+.unavTime,
+.bookedTime,
+.selectedTime,
+#defTrauma,
+#consequencesESPT,
+#sophroEtESPT,
+#priseEnCharge,
+#aboutMeList {
   border-radius: 5px;
 }
 
-#defTrauma, #consequencesESPT, #sophroEtESPT, #priseEnCharge, #aboutMeList{
+#defTrauma,
+#consequencesESPT,
+#sophroEtESPT,
+#priseEnCharge,
+#aboutMeList {
   border: 1px solid #fabca2;
   background-color: #fdebe250;
   padding: 1rem;
@@ -191,16 +310,16 @@ article{
 
 /*HEADER & NAVS*/
 
-#header{
+#header {
   width: 100%;
   border-bottom: 1px solid #1ba7c3;
-  background-size: cover;
-  background: rgb(253,235,226);
-  background: linear-gradient(0deg, rgba(253,235,226,0) 0%, rgba(253,235,226,0.6) 100%);
+  background: rgb(253, 235, 226);
+  background: linear-gradient(0deg, rgba(253, 235, 226, 0) 0%, rgba(253, 235, 226, 0.6) 100%);
   font-family: "Handlee", cursive;
 }
 
-#headerToFixed, #smallHeaderUlToFixed{
+#headerToFixed,
+#smallHeaderUlToFixed {
   font-family: "Handlee", cursive;
 }
 
@@ -217,32 +336,32 @@ header img {
   margin-bottom: -2rem;
 }
 
-#smallHeader{
+#smallHeader {
   padding-top: 2rem;
   display: block;
 }
 
-#smallHeaderUl{
+#smallHeaderUl {
   display: block;
   text-align: center;
-  top:2rem;
-  left:50%;
+  top: 2rem;
+  left: 50%;
 }
 
-#smallMenu{
+#smallMenu {
   display: inline-block;
 }
 
-#logoSmallMenu img{
+#logoSmallMenu img {
   max-width: 150px;
 }
 
-#smallMenuBtn{
+#smallMenuBtn {
   display: inline-block;
   font-size: 2rem;
   background: none;
   border: 0;
-  padding:1rem 0 2rem;
+  padding: 1rem 0 2rem;
 }
 
 #smallMenuBtn div {
@@ -253,33 +372,36 @@ header img {
   border-radius: 5px;
 }
 
-#smallMenuBtn:hover div{
+#smallMenuBtn:hover div {
   background-color: #1b76d1;
 }
 
-.smallMenuNavLi{
+.smallMenuNavLi {
   padding: 1rem;
 }
 
-#logoSmallToFixed{
+#logoSmallToFixed {
   content: url(../img/logo-sophro-text-horizontal.png);
   max-width: 250px;
   margin-bottom: -0.5rem;
 }
 
-#headerNav, .headerNavLi, #headerNavToFixed, .headerNavLiToFixed {
+#headerNav,
+.headerNavLi,
+#headerNavToFixed,
+.headerNavLiToFixed {
   display: none;
 }
 
-#headerNav ul li{
+#headerNav ul li {
   padding: 0 0 1rem 0;
 }
 
-header> nav> ul> li:nth-child(n+2)> a {
-  padding: 1rem ;
+header>nav>ul>li:nth-child(n+2)>a {
+  padding: 1rem;
 }
 
-#headerNav > ul {
+#headerNav>ul {
   font-size: 1.6rem;
   padding: 0 1rem 1rem;
   display: flex;
@@ -288,51 +410,58 @@ header> nav> ul> li:nth-child(n+2)> a {
   align-items: baseline;
 }
 
-#headerNav > ul > li:hover > a, #ipNav li:hover a, #speNav li:hover a, .headerNavLiToFixed:hover > a, footer a:hover, #smallMenuNav li:hover > a, #plusLoinDouleur a:hover {
+#headerNav>ul>li:hover>a,
+#ipNav li:hover a,
+#speNav li:hover a,
+.headerNavLiToFixed:hover>a,
+footer a:hover,
+#smallMenuNav li:hover>a,
+#plusLoinDouleur a:hover {
   text-decoration: underline;
   color: #1b76d1;
 }
 
-#headerToFixed, #smallHeaderUlToFixed{
+#headerToFixed,
+#smallHeaderUlToFixed {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-around;
   position: fixed;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
   padding-top: 1rem;
   z-index: 1;
 }
 
-#headerToFixed{
+#headerToFixed {
   flex-direction: row;
   border: 0;
   background: none;
 }
 
-#smallHeaderUlToFixed{
+#smallHeaderUlToFixed {
   flex-direction: row-reverse;
   border-bottom: 1px solid #1ba7c3;
-  background: linear-gradient(0deg, rgba(255,255,255,0.85) 50%,  rgba(255,255,255,1) 100%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 1) 100%);
 }
 
-#smallHeaderUlToFixed li:nth-child(1){
+#smallHeaderUlToFixed li:nth-child(1) {
   flex-basis: 50%;
 }
 
-#logoToFixed{
+#logoToFixed {
   content: url(../img/logo-sophro-text-horizontal.png);
   max-width: 200px;
   margin-bottom: -0.5rem;
 }
 
-#headerNavToFixed >ul > li:nth-child(2) {
+#headerNavToFixed>ul>li:nth-child(2) {
   display: none;
 }
 
-#headerNavToFixed ul li{
+#headerNavToFixed ul li {
   padding: 0;
 }
 
@@ -340,39 +469,48 @@ header> nav> ul> li:nth-child(n+2)> a {
   padding: 0 1rem;
 }
 
-#infosPratiques, #specialisationsNav{
+#infosPratiques,
+#specialisationsNav {
   position: relative;
 }
 
-#infosPratiques > a, #specialisationsNav > a {
+#infosPratiques>a,
+#specialisationsNav>a {
   padding-right: 3rem;
 }
 
-#infosPratiques > a::after, #specialisationsNav > a::after, #specialisationsSmallNav > a::after, #infosPratiquesSmallNav > a::after{
+#infosPratiques>a::after,
+#specialisationsNav>a::after,
+#specialisationsSmallNav>a::after,
+#infosPratiquesSmallNav>a::after {
   position: absolute;
   font-family: 'ElegantIcons', cursive;
   content: "3";
 }
 
-#specialisationsSmallNav > a::after, #infosPratiquesSmallNav > a::after{
+#specialisationsSmallNav>a::after,
+#infosPratiquesSmallNav>a::after {
   padding-top: 0.3rem;
 }
 
-#ipNav, #speNav{
-  overflow:auto;
+#ipNav,
+#speNav {
+  overflow: auto;
   width: 100%;
 }
 
-#ipNav, #speNav, #smallMenuNav{
+#ipNav,
+#speNav,
+#smallMenuNav {
   display: none;
   position: absolute;
   padding: 1rem;
   margin-top: 1rem;
   background-color: #ffffff;
   color: #1ba7c3;
-  -webkit-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
-  -moz-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
-  box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
+  -webkit-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
   border: 1px solid #1ba7c3;
   border-radius: 10px;
   z-index: 1;
@@ -380,26 +518,29 @@ header> nav> ul> li:nth-child(n+2)> a {
 
 
 
-#ipNav, #speNav, .smallMenuNavLi >ul li{
+#ipNav,
+#speNav,
+.smallMenuNavLi>ul li {
   list-style: circle inside;
 }
 
-.smallMenuNavLi{
+.smallMenuNavLi {
   list-style: disc inside;
 }
 
 #smallMenuNav {
-  top:23.6rem;
+  top: 23.6rem;
   left: 5%;
-  width:85%;
+  width: 85%;
   text-align: left;
 }
 
-.smallMenuNavLi >a{
+.smallMenuNavLi>a {
   font-weight: bold;
 }
 
-#speNav li:last-child, #ipNav li:last-child{
+#speNav li:last-child,
+#ipNav li:last-child {
   padding-bottom: 0;
 }
 
@@ -408,29 +549,37 @@ header> nav> ul> li:nth-child(n+2)> a {
   text-indent: -1.6rem;
 }
 
-#ipNav li a, #speNav li a, #smallMenuNav li a{
+#ipNav li a,
+#speNav li a,
+#smallMenuNav li a {
   color: #1ba7c3;
   font-size: 1.6rem;
 }
 
-#ipSmallNav, #speSmallNav{
-  list-style: circle inside ;
+#ipSmallNav,
+#speSmallNav {
+  list-style: circle inside;
   padding-left: 2rem;
 }
 
-.active{
+.active {
   font-weight: bold;
   text-decoration: underline;
   color: #1ba7c3;
   letter-spacing: 1px;
 }
+
 /*ACCUEIL*/
 
-#homePage li{
+#homePage li {
   font-size: 2rem;
 }
 
-#homePage h1, #homePage p, #indexList li, #indexList, #topArticle{
+#homePage h1,
+#homePage p,
+#indexList li,
+#indexList,
+#topArticle {
   margin-bottom: 2rem;
 }
 
@@ -438,26 +587,28 @@ header> nav> ul> li:nth-child(n+2)> a {
   color: #000000;
 }
 
-#indexList{
+#indexList {
   display: inline-block;
   background-color: #fdebe250;
   border: 1px solid #fabca2;
   padding: 1rem;
 }
 
-#indexList:hover, #enSavoirPlusNav ul li:hover  {
+#indexList:hover,
+#enSavoirPlusNav ul li:hover {
   cursor: pointer;
   background-color: #fdebe250;
-  -webkit-box-shadow: 0px 0px 5px 5px rgba(251,214,197,1);
-  -moz-box-shadow: 0px 0px 5px 5px rgba(251,214,197,1);
-  box-shadow: 0px 0px 5px 5px rgba(251,214,197,1);
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(251, 214, 197, 1);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(251, 214, 197, 1);
+  box-shadow: 0px 0px 5px 5px rgba(251, 214, 197, 1);
 }
 
-.btnsList{
+.btnsList {
   margin: 2rem;
 }
 
-.btnsList a, #backToEspn{
+.btnsList a,
+#backToEspn {
   color: #1ba7c3;
   background-color: #ffffff50;
   border: 1px solid #1ba7c3;
@@ -467,11 +618,11 @@ header> nav> ul> li:nth-child(n+2)> a {
   font-size: 1.6rem;
 }
 
-.btnsList a{
-  margin:0 1rem;
+.btnsList a {
+  margin: 0 1rem;
 }
 
-#specialisations ul{
+#specialisations ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -479,25 +630,30 @@ header> nav> ul> li:nth-child(n+2)> a {
   margin-top: 1rem;
 }
 
-#specialisations ul:after, #speEnd:after, #accompDouleur:after, #enSavoirPlus:after, #sophroTopArt h4:after, #tarifs{
+#specialisations ul:after,
+#speEnd:after,
+#accompDouleur:after,
+#enSavoirPlus:after,
+#sophroTopArt h4:after,
+#tarifs {
   content: "";
   display: block;
   margin: 0 auto;
   width: 70%;
   padding-top: 20px;
-  border-bottom:1.5px solid #fabca2;
+  border-bottom: 1.5px solid #fabca2;
 }
 
 #specialisations li {
-  width:25%;
+  width: 25%;
   flex-basis: 51%;
 }
 
-#specialisations li:hover h3{
+#specialisations li:hover h3 {
   text-decoration: underline;
 }
 
-#specialisations li:hover img{
+#specialisations li:hover img {
   -webkit-box-shadow: 0px 0px 10px 5px #1ba7c350;
   -moz-box-shadow: 0px 0px 10px 5px #1ba7c350;
   box-shadow: 0px 0px 10px 5px #1ba7c350;
@@ -506,11 +662,14 @@ header> nav> ul> li:nth-child(n+2)> a {
 
 /*LA SOPHROLOGIE*/
 
-#sophroBottomArt, #sophroMidArt, #seances{
+#sophroBottomArt,
+#sophroMidArt,
+#seances,
+#cabinet {
   margin-top: 1rem;
 }
 
-#sophroSect li{
+#sophroSect li {
   list-style: circle inside;
 }
 
@@ -525,43 +684,45 @@ header> nav> ul> li:nth-child(n+2)> a {
   margin: 2rem;
 }
 
-#sophroTopArt h4{
+#sophroTopArt h4 {
   color: #000000;
 }
 
-#sophroTopArtPart01, #sophroTopArtPart02, #sophroPractice {
+#sophroTopArtPart01,
+#sophroTopArtPart02,
+#sophroPractice {
   flex: 1;
   padding: 1rem;
   flex-basis: 100%;
 }
 
-#sophroTopArt article li:not(:last-child){
+#sophroTopArt article li:not(:last-child) {
   padding-bottom: 1rem;
 }
 
-#sophroTopArt>p{
+#sophroTopArt>p {
   padding-bottom: 1rem;
 }
 
-#sophroTopArtPart01{
+#sophroTopArtPart01 {
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
   text-align: left;
 }
 
-#sophroTopArtPart02{
+#sophroTopArtPart02 {
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   text-align: right;
 }
 
-#sophroTopArt p{
+#sophroTopArt p {
   text-align: left;
   width: 30%;
 }
 
-#sophroPracticeSubList{
-  margin-left : 4rem;
+#sophroPracticeSubList {
+  margin-left: 4rem;
 }
 
 #sophroSectPart02 {
@@ -574,33 +735,36 @@ header> nav> ul> li:nth-child(n+2)> a {
   align-items: flex-start;
 }
 
-#sophroSectPart02 > article {
+#sophroSectPart02>article {
   flex-basis: 50%;
 }
-#sophroSectPart02 > article:nth-child(1) {
+
+#sophroSectPart02>article:nth-child(1) {
   background-color: #fdebe270;
 }
 
-#sophroSectPart02 img{
+#sophroSectPart02 img {
   border-radius: 5px;
   max-width: 80%;
   margin: 2rem;
 }
 
-#sophroSectPart02 h2, #sophroSectPart02 h4{
+#sophroSectPart02 h2,
+#sophroSectPart02 h4 {
   text-align: left;
 }
 
-#sophroBottomArt li, #sophroBottomArt p{
+#sophroBottomArt li,
+#sophroBottomArt p {
   text-align: justify;
   padding: 1rem;
 }
 
-#sophroMidArt p{
+#sophroMidArt p {
   text-align: center;
 }
 
-#sophroBottomArt ul{
+#sophroBottomArt ul {
   margin-bottom: 1rem;
 }
 
@@ -608,7 +772,7 @@ header> nav> ul> li:nth-child(n+2)> a {
   list-style: none;
 }
 
-#sophroMidArt p:last-child{
+#sophroMidArt p:last-child {
   text-decoration: underline;
 }
 
@@ -618,7 +782,7 @@ header> nav> ul> li:nth-child(n+2)> a {
   font-size: 2.4rem;
 }
 
-#speDiv{
+#speDiv {
   display: inline-block;
   padding: 4rem 1rem 1rem;
   width: 70%;
@@ -626,55 +790,72 @@ header> nav> ul> li:nth-child(n+2)> a {
   font-size: 2rem;
 }
 
-#violenceEtSophro li:nth-child(-n+4):after, #bodyRelUl li:after, #sophroTopArt article > ul:after, #seances:after, #sophroSectPart02:after, #sophroMidArt:after, #douleur article:after {
+#violenceEtSophro li:nth-child(-n+4):after,
+#bodyRelUl li:after,
+#sophroTopArt article>ul:after,
+#seances:after,
+#cabinet:after,
+#sophroSectPart02:after,
+#sophroMidArt:after,
+#douleur article:after {
   content: "";
   display: block;
   margin: 0 auto;
   width: 70%;
   padding-top: 20px;
-  border-bottom:1.5px solid #fabca2;
+  border-bottom: 1.5px solid #fabca2;
 }
 
-#enSavoirPlus, #specialisations ul, #speEnd, #accompDouleur{
+#enSavoirPlus,
+#specialisations ul,
+#speEnd,
+#accompDouleur {
   margin-bottom: 1rem;
 }
 
-.bulle, #bodyRelUl li, #douleur p, #sophroSect li{
+.bulle,
+#bodyRelUl li,
+#douleur p,
+#sophroSect li {
   text-align: justify;
 }
 
-.bulle p, #douleur p {
+.bulle p,
+#douleur p {
   padding: 1rem;
 }
 
-.clickable{
+.clickable {
   width: 60%;
 }
 
-#speEnd{
+#speEnd {
   text-align: justify;
 }
 
-#speEnd p{
+#speEnd p {
   padding: 1rem;
   margin: 2rem;
 }
 
-#accompDouleur h2, #violenceEtSophro h2{
+#accompDouleur h2,
+#violenceEtSophro h2 {
   text-align: center;
 }
 
 /*VIOLENCES*/
 
-#violencesTopSect{
+#violencesTopSect {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-#violencesTopSect img, #bodyRel img, #douleur img{
-  margin:2rem 2rem 1rem;
+#violencesTopSect img,
+#bodyRel img,
+#douleur img {
+  margin: 2rem 2rem 1rem;
   width: 50%;
 }
 
@@ -683,12 +864,12 @@ header> nav> ul> li:nth-child(n+2)> a {
   margin-top: 1rem;
 }
 
-#violenceEtSophro li{
+#violenceEtSophro li {
   text-align: left;
   padding-bottom: 2rem;
 }
 
-#violenceEtSophro{
+#violenceEtSophro {
   padding-left: 1rem;
   border-top: 2px solid #fabca2;
   margin-top: 2rem;
@@ -696,28 +877,28 @@ header> nav> ul> li:nth-child(n+2)> a {
   background-color: #fdebe250;
 }
 
-#violencesMainContent{
+#violencesMainContent {
   flex-basis: 70%;
 }
 
-#enSavoirPlusNav{
+#enSavoirPlusNav {
   flex-basis: 25%;
   padding: 1rem;
   border: 0;
   margin: 1rem;
 }
 
-#enSavoirPlus article{
+#enSavoirPlus article {
   flex-basis: 100%;
 }
 
-#enSavoirPlusNav ul{
+#enSavoirPlusNav ul {
   font-size: 1.8rem;
   font-family: "Handlee", cursive;
   padding-bottom: 2rem;
 }
 
-#enSavoirPlusNav ul li{
+#enSavoirPlusNav ul li {
   padding: 0.5rem;
   background-color: #fdebe250;
   border: 1px solid #fabca2;
@@ -725,42 +906,42 @@ header> nav> ul> li:nth-child(n+2)> a {
   margin: 1rem;
 }
 
-#enSavoirPlusNav ul li{
+#enSavoirPlusNav ul li {
   flex-basis: 20%;
 }
 
-#espnArtToFixed{
+#espnArtToFixed {
   position: fixed;
   margin-top: -19rem;
   padding-right: 7%;
 }
 
-#espnArtToFixedDown{
+#espnArtToFixedDown {
   position: relative;
   margin-top: 85rem;
 }
 
-#imgCerveau{
+#imgCerveau {
   display: block;
   margin: 2rem auto;
 }
 
-.bulle{
+.bulle {
   margin: 1rem;
 }
 
-#violenceEtSophro ul{
+#violenceEtSophro ul {
   border-bottom: 2px solid #fabca2;
 }
 
 /*RAPPORT AU CORPS*/
 
-#bodyRel article h1{
+#bodyRel article h1 {
   flex-basis: 100%;
 }
 
-#bodyRel img{
-  overflow:hidden;
+#bodyRel img {
+  overflow: hidden;
   min-height: 0;
   min-width: 0;
 }
@@ -772,65 +953,68 @@ header> nav> ul> li:nth-child(n+2)> a {
   margin: 0 1rem 2rem;
 }
 
-#bodyRelUl li, #sophroSect li{
+#bodyRelUl li,
+#sophroSect li {
   padding-top: 1.5rem;
 }
 
 
 /*GESTION DE LA DOULEUR*/
 
-#accompDouleur ul{
+#accompDouleur ul {
   padding-top: 1rem;
   font-size: 2rem;
   display: inline-block;
 }
 
-#accompDouleur ul li{
+#accompDouleur ul li {
   padding: 0.5rem 2rem;
   text-align: left;
 }
 
-#accompDouleur{
+#accompDouleur {
   padding-right: 0;
 }
 
-#plusLoinDouleur li{
+#plusLoinDouleur li {
   margin: 1rem 0;
 }
 
-#douleursUl{
+#douleursUl {
   list-style: circle inside;
   text-indent: 2rem;
 }
 
 /*QUI SUIS-JE*/
 
-#aboutMe{
+#aboutMe {
   display: inline-block;
   text-align: justify;
   margin: 0 1rem;
 }
 
-#aboutMe, #me{
+#aboutMe,
+#me {
   vertical-align: top;
   padding-top: 2rem;
 }
 
-#aboutMe, #aboutMeList{
+#aboutMe,
+#aboutMeList {
   max-width: 100%;
   width: auto;
 }
 
-#quiSuisJe p{
+#quiSuisJe p {
   padding-bottom: 1rem;
   text-indent: 2rem;
 }
 
-#aboutMeList> ul{
+#aboutMeList>ul {
   list-style: disc inside;
 }
 
-#me{
+#me {
   float: none;
   display: flex;
   flex-direction: row;
@@ -841,26 +1025,27 @@ header> nav> ul> li:nth-child(n+2)> a {
   width: 100%;
 }
 
-#me h3{
+#me h3 {
   font-size: 1.8rem;
   text-align: left;
   padding: 0.25rem 0;
 }
 
-#celiaRoubyPhoto{
+#celiaRoubyPhoto {
   max-width: 50%;
   border-radius: 50%;
 }
 
-#quiSuisJeBtns li{
+#quiSuisJeBtns li {
   list-style: none;
 }
 
-#formations{
+#formations {
   margin-top: 2rem;
 }
 
-#formations, #ipPage ul:nth-child(-n+3) {
+#formations,
+#ipPage ul:nth-child(-n+3) {
   padding: 1rem;
   background-color: #fdebe250;
   border: 1px solid #F3826B50;
@@ -870,40 +1055,47 @@ header> nav> ul> li:nth-child(n+2)> a {
 
 /*INFOS PRATIQUES*/
 
-#ipPage ul:nth-child(-n+3){
+#ipPage ul:nth-child(-n+3) {
   display: inline-block;
 }
-#ipPage li{
+
+#ipPage li {
   list-style: circle inside;
 }
 
-#ipBtns li{
+#ipBtns li {
   list-style: none;
 }
 
-#ipPage div{
+#ipPage div {
 
   text-align: center;
   padding: 1rem 0;
 }
 
-#ipPage p, #ipPage h4{
+#ipPage p,
+#ipPage h4 {
   margin: 1rem 0;
+}
+
+#ipPage iframe {
+  width: 100%;
 }
 
 /*CONTACT - PRENDRE RDV - ADMIN OFFICE - ADMIN LOGIN - GESTION DES FORMULAIRES*/
 
-label{
+label {
   display: block;
   padding-left: 1rem;
 }
 
-input, select {
+input,
+select {
   outline-color: #1ba7c3;
   outline-width: 2px;
 }
 
-.requestSent{
+.requestSent {
   opacity: 1;
   margin: 1rem;
   padding: 1rem;
@@ -911,66 +1103,78 @@ input, select {
   border-radius: 10px;
 }
 
-#contactSect h3{
+#contactSect h3 {
   font-weight: normal;
   color: #0a0a0a;
   margin: 1rem 0 0;
 }
 
-#rdvSect ul{
+#rdvSect ul {
   flex-direction: row;
   list-style: none;
   text-align: center;
 }
 
-#rdvSect article, #contactSect article{
+#rdvSect article,
+#contactSect article {
   flex-direction: column;
   align-items: center;
 }
 
-#rdvSect ul li{
+#rdvSect ul li {
   padding: 0 2rem;
 }
 
-#rdvForm{
-  width:auto;
+#rdvForm {
+  width: auto;
 }
 
-#userInfoForm{
+#userInfoForm {
   width: 100%;
 }
 
-fieldset, .dayOn, .dayOff, .dayPast{
+fieldset,
+.dayOn,
+.dayOff,
+.dayPast {
   border-radius: 10px;
 }
 
-.dayOn, .dayOff, .dayPast{
+.dayOn,
+.dayOff,
+.dayPast {
   padding: 0.5rem;
 }
 
-fieldset, .dayOn{
+fieldset,
+.dayOn {
   border: 1px solid #1ba7c3;
 }
 
-.dayOff{
+.dayOff {
   border: 1px solid #F3826B;
 }
 
-.dayPast{
+.dayPast {
   border: 1px solid rgb(180, 180, 180);
   color: rgba(70, 70, 70, 0.84);
   background-color: rgba(180, 180, 180, 0.1);
 }
 
-fieldset{
+fieldset {
   padding: 2rem 0;
 }
 
-.userInfo, #contactBtn,#rdvBtn, #rdvMotif, #loginForm input, #alertBtn{
+.userInfo,
+#contactBtn,
+#rdvBtn,
+#rdvMotif,
+#loginForm input,
+#alertBtn {
   border-radius: 20px;
 }
 
-.alertBtnArt{
+.alertBtnArt {
   position: absolute;
   top: 7%;
   left: 91%;
@@ -978,24 +1182,27 @@ fieldset{
   background-color: #F3826B;
   padding: 1rem 1.4rem;
   text-align: center;
-  border:0;
+  border: 0;
   border-radius: 20px;
 }
 
-.alertBtnArt i{
-  margin:0;
+.alertBtnArt i {
+  margin: 0;
 }
 
-#contactInputs, #adminUl{
+#contactInputs,
+#adminUl {
   flex-direction: row;
 
 }
 
-#contactInputs li{
+#contactInputs li {
   width: 50%;
 }
 
-#contactBtn, #rdvBtn, #rdvMotif{
+#contactBtn,
+#rdvBtn,
+#rdvMotif {
   width: 96.5%;
 }
 
@@ -1004,7 +1211,7 @@ fieldset{
   margin: 1rem 0;
 }
 
-#rdvMotif{
+#rdvMotif {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1016,65 +1223,98 @@ fieldset{
   background-origin: content-box;
 }
 
-#rdvCal, #userInfoForm, #adminRdvCal{
-  width:100%;
+#rdvCal,
+#userInfoForm,
+#adminRdvCal {
+  width: 100%;
 }
 
-#rdvCal, #rdvCal tr, #rdvCal td, #userInfoForm, #userInfoForm tr, #userInfoForm td, #adminRdvCal, #adminRdvCal tr, #adminRdvCal td{
+#rdvCal,
+#rdvCal tr,
+#rdvCal td,
+#userInfoForm,
+#userInfoForm tr,
+#userInfoForm td,
+#adminRdvCal,
+#adminRdvCal tr,
+#adminRdvCal td {
   margin: 0 auto;
   text-align: center;
 }
 
-textarea, .userInfo, #contactBtn, #rdvBtn, #loginForm input{
+textarea,
+.userInfo,
+#contactBtn,
+#rdvBtn,
+#loginForm input {
   border: 1px solid #1ba7c3;
   margin: 1rem 0;
   padding: 1rem;
 }
 
-#contactBtn, #rdvBtn, #loginBtn{
+#contactBtn,
+#rdvBtn,
+#loginBtn {
   color: #ffffff;
   background-color: #1ba7c3;
   padding: 1rem 2rem;
   text-align: center;
 }
 
-#alertBtn{
+#alertBtn {
   color: #ffffff;
   background-color: #7FC8AB;
   padding: 1rem 2rem;
   text-align: center;
-  border:1px solid #7FC8AB;
+  border: 1px solid #7FC8AB;
   margin: 1rem;
 }
 
-#contactBtn, #rdvBtn, #rdvMotif,.userInfo, .userInfo::placeholder, option, select, textarea, #loginForm input, #loginForm input::placeholder, #logoutBtn, .rdvDelete, .dayOn, .dayOff, .dayPast, #alertBtn{
+#contactBtn,
+#rdvBtn,
+#rdvMotif,
+.userInfo,
+.userInfo::placeholder,
+option,
+select,
+textarea,
+#loginForm input,
+#loginForm input::placeholder,
+#logoutBtn,
+.rdvDelete,
+.dayOn,
+.dayOff,
+.dayPast,
+#alertBtn {
   font-family: 'Quicksand', cursive;
   font-size: 1.4rem;
 }
 
-.userInfo{
+.userInfo {
   width: 85%;
 }
 
-textarea{
+textarea {
   border-radius: 10px;
   resize: none;
-  width:90%;
+  width: 90%;
 }
 
 /*RDV-CALENDRIER*/
 
-#rdvCal td, #adminRdvCal td{
+#rdvCal td,
+#adminRdvCal td {
   padding: 0.5rem;
 }
 
-.weekBtn{
+.weekBtn {
   vertical-align: middle;
   text-align: center;
 }
 
-#previousWeek, #nextWeek{
-  font-family: 'ElegantIcons', sans-serif ;
+#previousWeek,
+#nextWeek {
+  font-family: 'ElegantIcons', sans-serif;
   padding: 15rem 0;
   font-size: 4rem;
   border: none;
@@ -1082,7 +1322,8 @@ textarea{
   background: none;
 }
 
-#unavPreviousWeek, #unavNextWeek{
+#unavPreviousWeek,
+#unavNextWeek {
   font-family: 'ElegantIcons', sans-serif;
   padding: 15rem 0;
   font-size: 4rem;
@@ -1091,52 +1332,91 @@ textarea{
   background: none;
 }
 
-#previousWeek, #unavPreviousWeek{
+#previousWeek,
+#unavPreviousWeek {
   padding-left: 1rem;
 }
 
-#nextWeek, #unavNextWeek{
+#nextWeek,
+#unavNextWeek {
   padding-right: 1rem;
 }
 
-#rdvCal, #rdvCal tr, #rdvCal th{
+#rdvCal,
+#rdvCal tr,
+#rdvCal th {
   padding: 1rem;
 }
 
-#rdvCal th, .unavTime:hover, #unavPreviousWeek:hover, #unavNextWeek:hover {
+#rdvCal th,
+.unavTime:hover,
+#unavPreviousWeek:hover,
+#unavNextWeek:hover {
   cursor: default;
 }
 
-.avTime:hover, .selectedTime:hover, #contactBtn:hover, #rdvBtn:hover, .adminAvTime:hover, #loginBtn:hover{
+.avTime:hover,
+.selectedTime:hover,
+#contactBtn:hover,
+#rdvBtn:hover,
+.adminAvTime:hover,
+#loginBtn:hover {
   background-color: #1b76d1;
   border-color: #1b76d1;
 }
 
-.bookedTime:hover, #alertBtn:hover{
+.bookedTime:hover,
+#alertBtn:hover {
   background-color: #23c483;
   border-color: #23c483;
 }
 
-#previousWeek:hover, #nextWeek:hover{
+#previousWeek:hover,
+#nextWeek:hover {
   color: #1b76d1;
 }
 
-#previousWeek:hover, #nextWeek:hover, .avTime:hover, .adminAvTime:hover, .selectedTime, .bookedTime, #contactBtn:hover, #rdvBtn:hover, select:hover, #loginBtn, .bookedTime:hover, #logoutBtn:hover, .rdvDelete:hover, .dayOn:hover, .dayOff:hover, #alertBtn:hover, .deactivated:hover, #backToEspn:hover , #smallMenuBtn, .clickable, #ipBtns a:hover, .alertBtnArt:hover{
+#previousWeek:hover,
+#nextWeek:hover,
+.avTime:hover,
+.adminAvTime:hover,
+.selectedTime,
+.bookedTime,
+#contactBtn:hover,
+#rdvBtn:hover,
+select:hover,
+#loginBtn,
+.bookedTime:hover,
+#logoutBtn:hover,
+.rdvDelete:hover,
+.dayOn:hover,
+.dayOff:hover,
+#alertBtn:hover,
+.deactivated:hover,
+#backToEspn:hover,
+#smallMenuBtn,
+.clickable,
+#ipBtns a:hover,
+.alertBtnArt:hover {
   cursor: pointer;
 }
 
-.avTime, .adminAvTime, .deactivated, .unavTime, .bookedTime{
+.avTime,
+.adminAvTime,
+.deactivated,
+.unavTime,
+.bookedTime {
   padding: 0.5rem 1rem;
 }
 
-.unavTime{
+.unavTime {
   border: 0 #BEBEBE;
   background-color: #BEBEBE;
   color: #ffffff;
 }
 
-.selectedTime{
-  border:0;
+.selectedTime {
+  border: 0;
   background-color: #1b76d1;
   color: #ffffff;
   padding: 0.5rem 0.7rem;
@@ -1144,7 +1424,8 @@ textarea{
   font-weight: bolder;
 }
 
-#logoutBtn, .rdvDelete{
+#logoutBtn,
+.rdvDelete {
   text-align: right;
   border: 0;
   border-radius: 0.5rem;
@@ -1156,55 +1437,59 @@ textarea{
 
 /*ADMINISTRATION - ADMIN OFFICE*/
 
-#adminUl li{
+#adminUl li {
   padding: 1rem;
-  margin:1rem 0;
+  margin: 1rem 0;
 }
 
-.rdvDelete{
+.rdvDelete {
   margin: 1rem 0 0 0;
   position: inherit;
 }
 
-#logoutBtn:hover, .rdvDelete:hover, .alertBtnArt:hover{
+#logoutBtn:hover,
+.rdvDelete:hover,
+.alertBtnArt:hover {
   background-color: #db322f;
 }
 
-#loginFieldset{
+#loginFieldset {
   display: inline-block;
   padding: 1rem;
 }
 
-.dayOn, .dayOff{
+.dayOn,
+.dayOff {
   background: none;
 }
 
-.dayOn:hover{
+.dayOn:hover {
   border-color: #1ba7c3;
   background-color: #1ba7c310;
 }
 
-.dayOff:hover{
+.dayOff:hover {
   border-color: #F3826B;
   background-color: #F1707C10;
 }
 
-.calendarDate{
+.calendarDate {
   line-height: 2rem;
 }
 
-.avTime, .adminAvTime{
+.avTime,
+.adminAvTime {
   border: 0 #1ba7c3;
   color: #ffffff;
   background-color: #1ba7c3;
 }
 
-.deactivated{
+.deactivated {
   border: 0 #F3826B;
   color: #ffffff;
 }
 
-.deactivated:hover{
+.deactivated:hover {
   border-color: #F3826B;
   background-color: #ff4348;
 }
@@ -1218,39 +1503,42 @@ textarea{
 }
 
 
-span.red{
+span.red {
   color: #d61515;
 }
 
-.errorInput, .errorRequest{
+.errorInput,
+.errorRequest {
   border: 1px solid #d61515;
 }
 
-.okInput, .successRequest{
+.okInput,
+.successRequest {
   border: 1px solid green;
 }
 
-.successRequest{
+.successRequest {
   background-color: #95ff77;
 }
 
-.errorRequest, .deactivated{
+.errorRequest,
+.deactivated {
   background-color: #F3826B;
 }
 
 /*MENTIONS LEGALES*/
-#mentionsLegales{
+#mentionsLegales {
   text-align: left;
 }
 
 /*FOOTER*/
 
-footer{
-  background: rgb(253,235,226);
-  background: linear-gradient(0deg, rgba(253,235,226,1) 10%, rgba(253,235,226,0) 100%);
+footer {
+  background: rgb(253, 235, 226);
+  background: linear-gradient(0deg, rgba(253, 235, 226, 1) 10%, rgba(253, 235, 226, 0) 100%);
 }
 
-#footerMain{
+#footerMain {
   padding: 3rem 0;
   display: flex;
   flex-wrap: nowrap;
@@ -1261,28 +1549,33 @@ footer{
   text-align: center;
 }
 
-#footerNav, #footerInfos, #footerNav h3, #footerInfos h3{
+#footerNav,
+#footerInfos,
+#footerNav h3,
+#footerInfos h3 {
   text-align: left;
 }
 
-#footerNav, footer>ul{
+#footerNav,
+footer>ul {
   padding-bottom: 2rem;
 }
 
-#footerNav li{
+#footerNav li {
   list-style: disc inside;
 }
 
-#footerNav h3, #footerInfos h3{
+#footerNav h3,
+#footerInfos h3 {
   padding: 1rem 0;
 }
 
 
-#footerNav li:nth-child(n+1){
-  color:#1ba7c3;
+#footerNav li:nth-child(n+1) {
+  color: #1ba7c3;
 }
 
-#legalInfos{
+#legalInfos {
   text-align: center;
   padding-bottom: 1rem;
   font-size: 1.4rem;
@@ -1296,35 +1589,40 @@ footer{
   padding: 1rem 0;
 }
 
-#rdvMessageButton:hover, #alertWindowContent a:hover, .alertWindowContentArt a:hover, #rdvSect >article>h4 a:hover, #rdvSect >article>ul a:hover{
+#rdvMessageButton:hover,
+#alertWindowContent a:hover,
+.alertWindowContentArt a:hover,
+#rdvSect>article>h4 a:hover,
+#rdvSect>article>ul a:hover {
   color: #1b76d1;
   text-decoration: #1b76d1 underline;
   cursor: pointer;
 }
 
-#selectedTimeSlotInfo{
+#selectedTimeSlotInfo {
   text-align: center;
   padding: 1rem 0;
 }
 
 /*FENETRES DE MODAL*/
 
-#alertWindowBg, .alertWindowBgArt{
+#alertWindowBg,
+.alertWindowBgArt {
   width: 100%;
-  height:100%;
+  height: 100%;
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   display: none;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   z-index: 1;
   overflow: scroll;
 }
 
-#alertWindow{
+#alertWindow {
   background-color: #ffffff;
   border: 1px solid #7FC8AB;
   border-radius: 10px;
@@ -1333,16 +1631,17 @@ footer{
   line-height: 2rem;
   text-align: center;
   display: block;
-  width:50%;
+  width: 50%;
 }
 
-.alertWindowArt{
+.alertWindowArt {
   padding: 1rem;
-  width:100%;
+  width: 100%;
   position: relative;
 }
 
-#alertWindowContent, .alertWindowContentArt{
+#alertWindowContent,
+.alertWindowContentArt {
   line-height: 2;
 }
 
@@ -1350,26 +1649,27 @@ footer{
 /**MEDIA SCREEN**/
 
 @media screen and (min-width: 475px) {
-  #celiaRoubyPhoto{
+  #celiaRoubyPhoto {
     max-width: 40%;
   }
-  #footerNav li{
+
+  #footerNav li {
     list-style: disc;
   }
 
 }
 
 @media screen and (min-width: 610px) {
-  #formations{
+  #formations {
     margin-top: 0;
   }
 
-  #me ul{
+  #me ul {
     font-size: 1.4rem;
   }
 
 
-  #celiaRoubyPhoto{
+  #celiaRoubyPhoto {
     max-width: 30%;
   }
 
@@ -1377,27 +1677,31 @@ footer{
 
 @media screen and (min-width: 700px) {
 
-  #specialisations li{
+  #specialisations li {
     flex-basis: 35%;
   }
 
-  #sophroTopArtPart01, #sophroTopArtPart02 {
+  #sophroTopArtPart01,
+  #sophroTopArtPart02 {
     flex-basis: 0;
   }
 
-  #violencesTopSect img{
+  #violencesTopSect img {
     width: 40%;
   }
 
-  #bodyRel img, #imgDouleur{
+  #bodyRel img,
+  #imgDouleur {
     width: 30%;
   }
 
-  #enSavoirPlus article{
+  #enSavoirPlus article {
     flex-basis: 0;
   }
 
-  .dayPast, .dayOff, .dayOn{
+  .dayPast,
+  .dayOff,
+  .dayOn {
     padding: 1rem 2rem;
   }
 
@@ -1405,11 +1709,12 @@ footer{
     left: 93%;
   }
 
-  .rdvDelete{
+  .rdvDelete {
     margin: 1rem 0 0 0.5rem;
     position: absolute;
   }
-  .bookedTime{
+
+  .bookedTime {
     display: inline-block;
   }
 
@@ -1417,34 +1722,35 @@ footer{
 
 @media screen and (min-width: 890px) {
 
-  #specialisations li{
+  #specialisations li {
     flex-basis: 25%;
   }
 
-  #aboutMe, #me{
+  #aboutMe,
+  #me {
     display: inline-block;
     vertical-align: top;
     padding-top: 2rem;
     width: 65%;
   }
 
-  #aboutMe{
+  #aboutMe {
     text-align: justify;
     margin: 0 1rem;
   }
 
-  #me ul{
+  #me ul {
     list-style: disc inside;
     font-size: 1.4rem;
   }
 
-  #me{
+  #me {
     float: left;
     max-width: 30%;
     margin: 0 1rem;
   }
 
-  #celiaRoubyPhoto{
+  #celiaRoubyPhoto {
     border-radius: 50%;
     width: 80%;
     text-align: center;
@@ -1455,17 +1761,18 @@ footer{
 
 @media screen and (min-width: 900px) {
 
-  #footerNav, footer>ul{
+  #footerNav,
+  footer>ul {
     padding-bottom: 0;
   }
 
-  #celiaRoubyPhoto{
+  #celiaRoubyPhoto {
     max-width: 100%;
   }
 }
 
 @media screen and (min-width: 980px) {
-  #headerNavToFixed > ul {
+  #headerNavToFixed>ul {
     font-size: 1.4rem;
     padding: 1rem 1rem;
     display: flex;
@@ -1480,17 +1787,22 @@ footer{
 
   #headerToFixed {
     border-bottom: 1px solid #1ba7c3;
-    background: linear-gradient(0deg, rgba(255,255,255,0.85) 50%,  rgba(255,255,255,1) 100%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 1) 100%);
   }
-  #sophroSectPart02{
+
+  #sophroSectPart02 {
     flex-direction: row;
   }
-  #headerNav, .headerNavLi, #headerNavToFixed, .headerNavLiToFixed {
+
+  #headerNav,
+  .headerNavLi,
+  #headerNavToFixed,
+  .headerNavLiToFixed {
     display: block;
   }
 
   #smallMenuNav {
-    left:15%;
+    left: 15%;
     width: 70%;
   }
 
@@ -1498,37 +1810,39 @@ footer{
     flex-basis: 0;
   }
 
-  #violencesTopSect{
+  #violencesTopSect {
     flex-direction: row;
   }
 
-  #enSavoirPlusNav{
+  #enSavoirPlusNav {
     border-left: 1px solid #fabca2;
   }
 
 }
 
 @media screen and (min-width: 1069px) {
-  #rdvForm{
+  #rdvForm {
     width: 50%;
     margin: 0 auto;
   }
 }
 
-@media screen and (min-width: 1120px){
+@media screen and (min-width: 1120px) {
 
-  #headerNav ul li{
+  #headerNav ul li {
     padding: 0;
 
   }
-  .headerNavLi:nth-child(n+2), .ipNav, .speNav{
+
+  .headerNavLi:nth-child(n+2),
+  .ipNav,
+  .speNav {
     padding: 0 1rem 2rem;
   }
 }
 
 @media screen and (min-width: 1190px) {
-  #headerNavToFixed{
+  #headerNavToFixed {
     padding: 0 1rem;
   }
 }
-
