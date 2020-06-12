@@ -1829,11 +1829,6 @@ footer>ul {
 
 @media screen and (min-width: 1120px) {
 
-  #headerNav ul li {
-    padding: 0;
-
-  }
-
   .headerNavLi:nth-child(n+2),
   .ipNav,
   .speNav {
