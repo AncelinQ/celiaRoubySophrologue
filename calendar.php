@@ -12,8 +12,8 @@ require_once 'class/rdvClass.php';
 $calendar = new calendarClass($_GET['week'] ?? null, $_GET['month'] ?? null, $_GET['year'] ?? null);
 
 $monday = $calendar->getWeekDay(1);
-$friday = $calendar->getWeekDay(5);
+$saturday = $calendar->getWeekDay(6);
 
-$weekRdvs = rdvClass::getRdvsBetweenByDay($monday, $friday);
+$weekRdvs = rdvClass::getRdvsBetweenByDay($monday, $saturday);
 
 require_once 'calendar.phtml';

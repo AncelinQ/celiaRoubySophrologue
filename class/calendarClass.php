@@ -27,7 +27,7 @@ class calendarClass {
             $year = intval(date("Y"));
         }
         if ($week === null || $week < 1 || $week > 52 ){
-            if (/*date('N')== 5 || */date('N')== 6 || date('N')== 7){
+            if (date('N')== 7){
                 $week = intval(date("W"))+1;
             }else{
                 $week = intval(date("W"));
@@ -87,8 +87,8 @@ class calendarClass {
      * VERIFIE SI C'EST UN JOUR DE WEEK END : VENDREDI, SAMEDI, OU DIMANCHE
      * @return bool
      */
-    public function weekendCheck(){
-        if(date('N')==5 || date('N')==6 || date('N')==7){
+    public function sundayCheck(){
+        if(date('N')==7){
             return true;
         }
         else{
@@ -299,9 +299,9 @@ class calendarClass {
         $weeksEnd = $this->getWeeksEnd();
 
         //SI LE NUMERO DE LA SEMAINE EST SUPÉRIEUR AU NUMÉRO DE LA DERNIÈRE SEMAINE DU MOIS, ON AJOUTE 1 AU MOIS//
-       if($week > $weeksEnd){
-             $month += 1;
-         }
+        if($week > $weeksEnd){
+            $month += 1;
+        }
         //SI LE NUMERO DE LA SEMAINE EST SUPÉRIEUR À 52 ON RAJOUTE 1 A L'ANNÉE, LES NUMEROS DE LA SEMAINE ET DU MOIS SONT REINITIALISÉS ET REMIS À 1//
         if($week > 52){
             $year += 1;

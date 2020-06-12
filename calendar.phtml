@@ -7,7 +7,7 @@
                 <a href="prendre-rdv.php?week=<?= $calendar->previousWeek()->week; ?>&month=<?= $calendar->previousWeek()->month; ?>&year=<?= $calendar->previousWeek()->year; ?>#rdvSect"
                     <?php
                     //SI LE LUNDI AFFICHÉ EST INFÉRIEUR À AUJOURD'HUI OU SI ON EST UN JOUR DE WEEK-END ET QUE LE LUNDI AFFICHÉ EST LE LUNDI QUI VIENT APRÈS AUJOURD'HUI OU SI ON EST UNE SEMAINE ANTÉRIEUR À CELLE D'AUJOURD'HUI, ALORS ON AJOUTE L'ID UNAVPREVIOUSWEEK POUR QU'IL NE SOIT PAS POSSIBLE DE CLIQUER DESSUS//
-                    if($calendar->getDayToString(1) <= $calendar->getDayToday() || ($calendar->weekendCheck()==true && $calendar->mondayCheck()==true) || $calendar->previousWeek()->week < date('W')): ?>
+                    if($calendar->getDayToString(1) <= $calendar->getDayToday() || ($calendar->sundayCheck()==true && $calendar->mondayCheck()==true) || $calendar->previousWeek()->week < date('W')): ?>
                         id="unavPreviousWeek"
                     <?php
                     //SINON L'ID EST PREVIOUSWEEK,ON PEUT CLIQUER DESSUS//
