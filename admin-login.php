@@ -21,9 +21,7 @@ else if (isset($_POST['loginData'])){
     echo adminClass::login($_POST['login'], $_POST['password']);
 
 }
-
-
-
+var_dump('test');
 $template = 'admin-login';
 require_once 'layout.phtml';
 
