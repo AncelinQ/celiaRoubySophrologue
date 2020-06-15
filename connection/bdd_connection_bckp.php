@@ -5,7 +5,7 @@ function newDatabase()
 {
     return new PDO
     (
-        'mysql:host=localhost;dbname=celiaRoubySophrologue;charset=UTF8',
+        'mysql:host=localhost;dbname=celia_rouby_sophrologue;charset=UTF8',
         'root',
         'root',
         [

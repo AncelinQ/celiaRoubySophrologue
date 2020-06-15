@@ -5,70 +5,44 @@ require_once 'userClass.php';
 require_once 'patientClass.php';
 require_once 'emailSenderClass.php';
 
-Class rdvClass{
+Class rdvClass extends patientClass{
 
     protected $rdvId;
-    protected $patientId;
     protected $timeSlotDateTime;
     protected $timeSlotFull;
     protected $motif;
     protected $message;
 
-    public function __construct($patientId, $timeSlotDateTime, $timeSlotFull, $motif, $message)
+
+    /**
+     * ON INSTENCIE LA CLASSE À PARTIR DE LA CLASSE PARENTE AVEC LES PRENOM, NOM, TELEPHONE, EMAIL, MOTIF, CRÉNEAU AU FORMAT DATETIME, CRÉNEAU AU FORMAT TEXTE PLEIN ET LE MESSAGE DE L'UTILISATEUR
+     * rdvClass constructor.
+     * @param $firstName
+     * @param $lastName
+     * @param $phone
+     * @param $email
+     * @param $message
+     * @param $motif
+     * @param $timeSlotDateTime
+     * @param $timeSlotFull
+     */
+    public function __construct($userId, $firstName, $lastName, $phone, $email, $patientId, $nbOfSeances, $rdvId, $message, $motif, $timeSlotDateTime, $timeSlotFull)
     {
-        $this->patientId = $patientId;
+        parent::__construct($patientId, $nbOfSeances, $userId, $firstName, $lastName, $phone, $email);
+        $this->rdvId = $rdvId;
         $this->timeSlotDateTime = $timeSlotDateTime;
         $this->timeSlotFull = $timeSlotFull;
         $this->motif = $motif;
-        $this->message = trim(htmlspecialchars($message));
+        $this->message = $message;
     }
 
-
-    public function setRdvId($val) {
-        $this->rdvId = $val;
-    }
-
-    public function setTimeSlotDateTime($val) {
-        $this->timeSlotDateTime = $val;
-    }
-
-    public function setTimeSlotFull($val) {
-        $this->timeSlotFull = $val;
-    }
-
-    public function setMotif($val) {
-        $this->motif = $val;
-    }
-
-    public function setMessage($val) {
-        $this->message = $val;
-    }
-
-    public function getRdvId() {
-        return $this->rdvId;
-    }
-
-    public function getTimeSlotDateTime() {
-        return $this->timeSlotDateTime;
-    }
-
-    public function getTimeSlotFull() {
-        return $this->timeSlotFull;
-    }
-
-    public function getMotif() {
-        return $this->motif;
-    }
-
-    public function getMessage() {
-        return $this->message;
-    }
     /**
      *  ON CRÉE UN NOUVEAU RENDEZ VOUS EN INSÉRANT LES INFOS DANS LA BASE DE DONNÉE ET ON ENVOIE UN MAIL RÉCAPITULATIF À L'UTILISATEUR ET AU PROFESSIONNEL, ON RETOURNE ENFIN LE STATUT
      * @return false|string
      */
     public function newRdv()
     {
+
         $pdo = newDatabase();
 
         $patientCheck = $this->checkPatient($patientId);

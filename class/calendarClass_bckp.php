@@ -27,7 +27,7 @@ class calendarClass {
             $year = intval(date("Y"));
         }
         if ($week === null || $week < 1 || $week > 52 ){
-            if (date('N')== 6 || date('N')== 7){
+            if (date('N')== 7){
                 $week = intval(date("W"))+1;
             }else{
                 $week = intval(date("W"));
@@ -84,11 +84,11 @@ class calendarClass {
     }
 
     /**
-     * VERIFIE SI C'EST UN JOUR DE WEEK END : SAMEDI, OU DIMANCHE
+     * VERIFIE SI C'EST UN JOUR DE WEEK END : VENDREDI, SAMEDI, OU DIMANCHE
      * @return bool
      */
-    public function weekendCheck(){
-        if(date('N')== 6 || date('N')==7){
+    public function sundayCheck(){
+        if(date('N')==7){
             return true;
         }
         else{
@@ -136,10 +136,12 @@ class calendarClass {
         $week =[];
         for ($day= 1; $day<=5; $day++ ){
             $weekDay = $this->getWeekDay($day);
-            array_push($week, $weekDay);
+           array_push($week, $weekDay);
         }
         return $week;
     }
+
+
 
     /**
      * retourne la date en fonction du jour au format timestamp

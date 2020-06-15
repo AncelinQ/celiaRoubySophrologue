@@ -1,107 +1,51 @@
 <?php
 
 require_once "connection/bdd_connection.php";
-require_once 'userClass.php';
-require_once 'patientClass.php';
+require_once "contactClass.php";
 require_once 'emailSenderClass.php';
 
-Class rdvClass{
+Class rdvClass extends contactClass{
 
-    protected $rdvId;
-    protected $patientId;
     protected $timeSlotDateTime;
     protected $timeSlotFull;
     protected $motif;
-    protected $message;
 
-    public function __construct($patientId, $timeSlotDateTime, $timeSlotFull, $motif, $message)
+    /**
+     * ON INSTENCIE LA CLASSE À PARTIR DE LA CLASSE PARENTE AVEC LES PRENOM, NOM, TELEPHONE, EMAIL, MOTIF, CRÉNEAU AU FORMAT DATETIME, CRÉNEAU AU FORMAT TEXTE PLEIN ET LE MESSAGE DE L'UTILISATEUR
+     * rdvClass constructor.
+     * @param $firstName
+     * @param $lastName
+     * @param $phone
+     * @param $email
+     * @param $message
+     * @param $motif
+     * @param $timeSlotDateTime
+     * @param $timeSlotFull
+     */
+    public function __construct($firstName, $lastName, $phone, $email, $message, $motif, $timeSlotDateTime, $timeSlotFull)
     {
-        $this->patientId = $patientId;
+        parent::__construct($firstName, $lastName, $phone, $email, $message);
+
         $this->timeSlotDateTime = $timeSlotDateTime;
         $this->timeSlotFull = $timeSlotFull;
         $this->motif = $motif;
-        $this->message = trim(htmlspecialchars($message));
     }
 
-
-    public function setRdvId($val) {
-        $this->rdvId = $val;
-    }
-
-    public function setTimeSlotDateTime($val) {
-        $this->timeSlotDateTime = $val;
-    }
-
-    public function setTimeSlotFull($val) {
-        $this->timeSlotFull = $val;
-    }
-
-    public function setMotif($val) {
-        $this->motif = $val;
-    }
-
-    public function setMessage($val) {
-        $this->message = $val;
-    }
-
-    public function getRdvId() {
-        return $this->rdvId;
-    }
-
-    public function getTimeSlotDateTime() {
-        return $this->timeSlotDateTime;
-    }
-
-    public function getTimeSlotFull() {
-        return $this->timeSlotFull;
-    }
-
-    public function getMotif() {
-        return $this->motif;
-    }
-
-    public function getMessage() {
-        return $this->message;
-    }
     /**
      *  ON CRÉE UN NOUVEAU RENDEZ VOUS EN INSÉRANT LES INFOS DANS LA BASE DE DONNÉE ET ON ENVOIE UN MAIL RÉCAPITULATIF À L'UTILISATEUR ET AU PROFESSIONNEL, ON RETOURNE ENFIN LE STATUT
      * @return false|string
      */
     public function newRdv()
     {
+
         $pdo = newDatabase();
 
-        $patientCheck = $this->checkPatient($patientId);
-
-        if($patientCheck === false){
-            $patient = $this->newPatient();
-            $patientId = $patient['id'];
-        }else {
-            $patientId = $this->patientId;
-        }
-
-        $query = $pdo->prepare('SELECT id FROM `patient` INNER JOIN `user` ON patient.userId = user.id WHERE firstName = :firstname, lastName = :lastname, phone = :phone, email = :email), ');
+        $query = $pdo->prepare('INSERT INTO rdv (firstName, lastName, phone, email, motif, timeSlotDateTime, timeSlotFull, message, creationTimestamp)
+        VALUES ( :firstname, :lastname, :phone, :email, :motif, :timeSlotDateTime, :timeSlotFull, :message, NOW())');
         $query->bindValue(":firstname", $this->firstName);
         $query->bindValue(":lastname", $this->lastName);
         $query->bindValue(":phone", $this->phone);
         $query->bindValue(":email", $this->email);
-        $query->execute();
-        $patientId = $query->fetch();
-
-        if($patientId == false)
-        {
-            $newPatient = $this->newPatient();
-            if ($newPatient['status'] == "OK"){
-                $patientId = $newPatient['id'];
-            }
-            else {
-                return $newPatient['id'];
-            }
-        }
-
-        $query = $pdo->prepare('INSERT INTO rdv (userId, motif, timeSlotDateTime, timeSlotFull, message, creationTimestamp)
-        VALUES ( :userId, :motif, :timeSlotDateTime, :timeSlotFull, :message, NOW())');
-        $query->bindValue(":userId", $userId);
         $query->bindValue(":motif", $this->motif);
         $query->bindValue(":timeSlotDateTime", $this->timeSlotDateTime);
         $query->bindValue(":timeSlotFull", $this->timeSlotFull);
@@ -152,7 +96,7 @@ Class rdvClass{
             }
             else
                 //SI LE CRENEAU EXISTE DÉJÀ DANS LE TABLEAU ON RETOURNE UNE ERREUR//
-                {
+            {
                 echo "ERREUR INTERNE --- CE CRÉNEAU EST DÉJÀ PRIS.";
             }
         }
@@ -434,7 +378,7 @@ Class rdvClass{
                 }
                 //SI ELLE NE RETOURNE PAS TRUE, C'EST ANORMAL, IL Y A UNE ERREUR INTERNE//
                 else
-                    {
+                {
                     $status = ["status"=>"error", "msg"=>"ERREUR INTERNE --- Le rendez vous n'a pas pu être annulé."];
                 }
             }
