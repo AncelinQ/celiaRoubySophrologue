@@ -608,8 +608,6 @@ footer a:hover,
 
 #homePage h1,
 #homePage p,
-#covidList,
-#covidList li,
 #indexList li,
 #indexList,
 #topArticle {
@@ -641,16 +639,30 @@ footer a:hover,
   padding: 1rem;
 }
 
-#covidList {
-  display: inline-block;
-  background-color: #1ba7c330;
-  border: 1px solid #1ba7c3;
-  padding: 1rem;
+
+#covidList li {
+  color: #F3826B;
+  font-size: 1.6rem;
 }
 
-#covidList span {
-  color: #ff4348;
+#covidList:before {
+  content: "";
+  display: block;
+  margin: 0.5rem auto;
+  width: 30%;
+  padding-top: 20px;
+  border-bottom: 1px solid #fabca2;
 }
+
+#covidList:after {
+  content: "";
+  display: block;
+  margin: 0.5rem auto;
+  width: 30%;
+  padding-top: 20px;
+  border-top: 1px solid #fabca2;
+}
+
 
 #indexList:hover,
 #enSavoirPlusNav ul li:hover {
