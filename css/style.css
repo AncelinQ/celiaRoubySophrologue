@@ -117,10 +117,16 @@ footer a,
 #smallMenuBtn:hover div,
 .enSavoirPlusNav:hover,
 .enSavoirPlusNav,
+#enSavoirPlusNav a,
+#enSavoirPlusNav a:hover,
 #specialisations li,
 #specialisations li:hover,
 #specialisations img,
-#specialisations img:hover {
+#specialisations img:hover,
+#homePage>p a,
+#homePage>p a:hover,
+#cabMap,
+#cabMap:hover {
   transition: all 0.2s ease;
 }
 
@@ -218,8 +224,21 @@ small {
   color: #1ba7c3;
 }
 
+.black {
+  color: #000000;
+}
+
 .bold {
   font-weight: 600;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.regularFont {
+  font-size: 2rem;
+  font-family: 'Quicksand', cursive;
 }
 
 .block {
@@ -240,6 +259,8 @@ article {
 }
 
 .mainTitle,
+#homePage p,
+#covidList,
 #sophroTopArt h1,
 #sophroTopArt h4,
 #sophroTopArt p {
@@ -252,11 +273,11 @@ article {
 
 .btnsList a {
   display: inline-block;
-  margin-top: 1rem;
 }
 
 .btnsList a:hover,
-#backToEspn:hover {
+#backToEspn:hover,
+#enSavoirPlusNav a:hover {
   background-color: #1ba7c3;
   color: #ffffff;
   border: 1px solid #1ba7c3;
@@ -279,6 +300,7 @@ article {
 
 .mainTitle,
 #indexList,
+#covidList,
 #sophroTopArt ul,
 #sophroPractice ul,
 #sophroBottomArt ul,
@@ -441,6 +463,10 @@ footer a:hover,
   background: none;
 }
 
+#headerNavToFixed {
+  width: 100%;
+}
+
 #smallHeaderUlToFixed {
   flex-direction: row-reverse;
   border-bottom: 1px solid #1ba7c3;
@@ -571,20 +597,41 @@ footer a:hover,
 
 /*ACCUEIL*/
 
+#homePage .mainTitle {
+  line-height: 1.4;
+  margin: 0;
+}
+
 #homePage li {
   font-size: 2rem;
 }
 
 #homePage h1,
 #homePage p,
+#covidList,
+#covidList li,
 #indexList li,
 #indexList,
 #topArticle {
   margin-bottom: 2rem;
 }
 
-#indexList li:nth-child(even) {
+#indexList li:nth-child(even),
+#homePage>p a {
   color: #000000;
+}
+
+#cabMap {
+  color: #000000;
+}
+
+#homePage>p a:hover,
+#cabMap:hover {
+  color: #1ba7c3;
+}
+
+#cabMap:hover {
+  text-decoration: underline;
 }
 
 #indexList {
@@ -592,6 +639,17 @@ footer a:hover,
   background-color: #fdebe250;
   border: 1px solid #fabca2;
   padding: 1rem;
+}
+
+#covidList {
+  display: inline-block;
+  background-color: #1ba7c330;
+  border: 1px solid #1ba7c3;
+  padding: 1rem;
+}
+
+#covidList span {
+  color: #ff4348;
 }
 
 #indexList:hover,
@@ -608,7 +666,8 @@ footer a:hover,
 }
 
 .btnsList a,
-#backToEspn {
+#backToEspn,
+#enSavoirPlusNav a {
   color: #1ba7c3;
   background-color: #ffffff50;
   border: 1px solid #1ba7c3;
@@ -618,7 +677,8 @@ footer a:hover,
   font-size: 1.6rem;
 }
 
-.btnsList a {
+.btnsList a,
+.btnsList button {
   margin: 0 1rem;
 }
 
@@ -658,6 +718,10 @@ footer a:hover,
   -moz-box-shadow: 0px 0px 10px 5px #1ba7c350;
   box-shadow: 0px 0px 10px 5px #1ba7c350;
   border-radius: 100%;
+}
+
+#syndic {
+  flex-basis: 100%;
 }
 
 /*LA SOPHROLOGIE*/
@@ -809,7 +873,8 @@ footer a:hover,
 #enSavoirPlus,
 #specialisations ul,
 #speEnd,
-#accompDouleur {
+#accompDouleur,
+#accompViolences {
   margin-bottom: 1rem;
 }
 
@@ -838,8 +903,9 @@ footer a:hover,
   margin: 2rem;
 }
 
-#accompDouleur h2,
-#violenceEtSophro h2 {
+
+#violenceEtSophro h2,
+#accompViolences h4 {
   text-align: center;
 }
 
@@ -852,16 +918,16 @@ footer a:hover,
   justify-content: space-around;
 }
 
-#violencesTopSect img,
-#bodyRel img,
-#douleur img {
+#imgViolences,
+#imgCorps,
+#imgDouleur {
   margin: 2rem 2rem 1rem;
   width: 50%;
 }
 
 #backToEspn {
   font-family: 'Quicksand', cursive;
-  margin-top: 1rem;
+  height: 100%;
 }
 
 #violenceEtSophro li {
@@ -940,7 +1006,7 @@ footer a:hover,
   flex-basis: 100%;
 }
 
-#bodyRel img {
+#imgCorps {
   overflow: hidden;
   min-height: 0;
   min-width: 0;
@@ -961,18 +1027,21 @@ footer a:hover,
 
 /*GESTION DE LA DOULEUR*/
 
-#accompDouleur ul {
+
+#accompViolences ul {
   padding-top: 1rem;
   font-size: 2rem;
   display: inline-block;
 }
 
-#accompDouleur ul li {
+
+#accompViolences ul li {
   padding: 0.5rem 2rem;
   text-align: left;
 }
 
-#accompDouleur {
+
+#accompViolences {
   padding-right: 0;
 }
 
@@ -1686,11 +1755,11 @@ footer>ul {
     flex-basis: 0;
   }
 
-  #violencesTopSect img {
+  #imgViolences {
     width: 40%;
   }
 
-  #bodyRel img,
+  #imgCorps,
   #imgDouleur {
     width: 30%;
   }
@@ -1773,7 +1842,7 @@ footer>ul {
 
 @media screen and (min-width: 980px) {
   #headerNavToFixed>ul {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     padding: 1rem 1rem;
     display: flex;
     flex-wrap: wrap;
