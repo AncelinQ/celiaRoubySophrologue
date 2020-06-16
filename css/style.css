@@ -332,8 +332,6 @@ article {
   padding: 1rem;
 }
 
-
-
 /*HEADER & NAVS*/
 
 #header {
@@ -1078,6 +1076,10 @@ footer a:hover,
   text-indent: 2rem;
 }
 
+#plusLoinDouleur iframe {
+  width: 100%;
+}
+
 /*QUI SUIS-JE*/
 
 #aboutMe {
@@ -1144,6 +1146,11 @@ footer a:hover,
   border: 1px solid #F3826B50;
   border-radius: 5px;
   text-align: left;
+}
+
+#formations ul li:last-child {
+  text-indent: -9.3rem;
+  padding-left: 9.3rem;
 }
 
 /*INFOS PRATIQUES*/
@@ -1397,7 +1404,7 @@ textarea {
 
 #rdvCal td,
 #adminRdvCal td {
-  padding: 0.5rem;
+  padding: 0.1rem;
 }
 
 .weekBtn {
@@ -1409,7 +1416,7 @@ textarea {
 #nextWeek {
   font-family: 'ElegantIcons', sans-serif;
   padding: 15rem 0;
-  font-size: 4rem;
+  font-size: 3rem;
   border: none;
   color: #1ba7c3;
   background: none;
@@ -1419,7 +1426,7 @@ textarea {
 #unavNextWeek {
   font-family: 'ElegantIcons', sans-serif;
   padding: 15rem 0;
-  font-size: 4rem;
+  font-size: 3rem;
   border: none;
   color: #BEBEBE;
   background: none;
@@ -1427,12 +1434,16 @@ textarea {
 
 #previousWeek,
 #unavPreviousWeek {
-  padding-left: 1rem;
+  padding-left: 0rem;
+}
+
+#rdvSect fieldset {
+  display: contents;
 }
 
 #nextWeek,
 #unavNextWeek {
-  padding-right: 1rem;
+  padding-right: 0rem;
 }
 
 #rdvCal,
@@ -1499,7 +1510,7 @@ select:hover,
 .deactivated,
 .unavTime,
 .bookedTime {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
 }
 
 .unavTime {
@@ -1512,8 +1523,7 @@ select:hover,
   border: 0;
   background-color: #1b76d1;
   color: #ffffff;
-  padding: 0.5rem 0.7rem;
-  transform: scale(1.2);
+  padding: 0.5rem 0.5rem;
   font-weight: bolder;
 }
 
@@ -1752,15 +1762,79 @@ footer>ul {
 
 }
 
+@media screen and (min-width: 535px) {
+
+  #rdvSect fieldset {
+    display: block;
+  }
+
+  #rdvCal td,
+  #adminRdvCal td {
+    padding: 0.5rem;
+  }
+
+  .avTime,
+  .adminAvTime,
+  .deactivated,
+  .unavTime,
+  .bookedTime {
+    padding: 0.5rem 1rem;
+  }
+
+  .selectedTime {
+    border: 0;
+    background-color: #1b76d1;
+    color: #ffffff;
+    padding: 0.5rem 0.7rem;
+    transform: scale(1.2);
+    font-weight: bolder;
+  }
+}
+
+#previousWeek,
+#nextWeek {
+  font-family: 'ElegantIcons', sans-serif;
+  padding: 15rem 0;
+  font-size: 4rem;
+  border: none;
+  color: #1ba7c3;
+  background: none;
+}
+
+#unavPreviousWeek,
+#unavNextWeek {
+  font-family: 'ElegantIcons', sans-serif;
+  padding: 15rem 0;
+  font-size: 4rem;
+  border: none;
+  color: #BEBEBE;
+  background: none;
+}
+
+#previousWeek,
+#unavPreviousWeek {
+  padding-left: 1rem;
+}
+
+#nextWeek,
+#unavNextWeek {
+  padding-right: 1rem;
+}
+
+
 @media screen and (min-width: 610px) {
   #formations {
     margin-top: 0;
   }
 
+  #plusLoinDouleur iframe {
+    width: 560px;
+    height: 315px;
+  }
+
   #me ul {
     font-size: 1.4rem;
   }
-
 
   #celiaRoubyPhoto {
     max-width: 30%;
