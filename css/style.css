@@ -99,6 +99,8 @@ footer a,
 #backToEspn:hover,
 .btnsList a,
 .btnsList a:hover,
+#plusLoinViolences a,
+#plusLoinViolences a:hover,
 #plusLoinDouleur a,
 #plusLoinDouleur a:hover,
 #rdvSect>article>h4 a:hover,
@@ -126,7 +128,9 @@ footer a,
 #homePage>p a,
 #homePage>p a:hover,
 #cabMap,
-#cabMap:hover {
+#cabMap:hover,
+#covidList a,
+#covidList a:hover {
   transition: all 0.2s ease;
 }
 
@@ -438,6 +442,7 @@ header>nav>ul>li:nth-child(n+2)>a {
 .headerNavLiToFixed:hover>a,
 footer a:hover,
 #smallMenuNav li:hover>a,
+#plusLoinViolences a:hover,
 #plusLoinDouleur a:hover {
   text-decoration: underline;
   color: #1b76d1;
@@ -640,9 +645,15 @@ footer a:hover,
 }
 
 
-#covidList li {
+#covidList li,
+#covidList a {
   color: #F3826B;
   font-size: 1.6rem;
+}
+
+#covidList a:hover {
+  text-decoration: underline;
+  color: #ce533a;
 }
 
 #covidList:before {
@@ -704,6 +715,7 @@ footer a:hover,
 
 #specialisations ul:after,
 #speEnd:after,
+#plusLoinViolences:after,
 #accompDouleur:after,
 #enSavoirPlus:after,
 #sophroTopArt h4:after,
