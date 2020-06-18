@@ -10,7 +10,7 @@ $(function () {
             $(this).addClass("active");
         }
         //ON AJOUTE LA CLASSE ACTIVE À L'ONGLET PRINCIPAL "Mes Spécialisation" EN PLUS DE L'AJOUT SUR L'ONGLET SECONDAIRE//
-        if (adresse === 'violences.php' || adresse === 'rapport_au_corps.php' || adresse === 'gestion_de_la_douleur.php') {
+        if (adresse === 'violences.php' || adresse === 'rapport-au-corps.php' || adresse === 'gestion-de-la-douleur.php') {
             $('#specialisationsNav > a').addClass("active");
         }
         //MEME CHOSE ICI SAUF QU'IL S'AGIT DE DIFFÉRENTES SECTIONS D'UNE MEME PAGE//
