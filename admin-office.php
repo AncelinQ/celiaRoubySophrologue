@@ -61,7 +61,7 @@ else if(isset($_SESSION) && isset($_SESSION['id']) && $_SESSION['id'] === "113Hd
             $saturday = $calendar->getWeekDay(6);
             $allWeek = $calendar->getMondayToFriday();
 
-            $weekRdvs = rdvClass::getRdvsBetweenByDay($monday, $saturday);
+            $weekRdvs = rdvClass::getDayRdvs($monday, $saturday);
 
 
             $template = 'admin-office';

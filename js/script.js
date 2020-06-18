@@ -2,8 +2,17 @@
 var phoneChecker;
 var emailChecker;
 var request;
-var violencesArticlesArray = {'btnTrauma01':'#defTrauma','btnTrauma02':'#consequencesESPT','btnTrauma03':'#sophroEtESPT','btnTrauma04':'#priseEnCharge'};
-var speList = {'liViolences':'#imgViolences','liCorps':'#imgCorps','liDouleur':'#imgDouleur'};
+var violencesArticlesArray = {
+    'btnTrauma01': '#defTrauma',
+    'btnTrauma02': '#consequencesESPT',
+    'btnTrauma03': '#sophroEtESPT',
+    'btnTrauma04': '#priseEnCharge'
+};
+var speList = {
+    'liViolences': '#imgViolences',
+    'liCorps': '#imgCorps',
+    'liDouleur': '#imgDouleur'
+};
 
 //ON CRÉE UNE FONCTION DE REGEX POUR VÉRIFIER LA VALIDITÉ DU FORMAT DE L'EMAIL//
 function regEx(email) {
@@ -21,7 +30,7 @@ function phoneFormat(phoneNumber) {
     }
 }
 
-$(function() {
+$(function () {
     //CHANGE L'ASPECT DU HEADER SELON LE SCROLL//
     $(window).scroll(function () {
         //SI ON DESCEND DE PLUS DE 135PX LE HEADER PASSE EN FIXED ET LE LOGO CHANGE POUR S'ADAPTER//
@@ -71,8 +80,8 @@ $(function() {
     });
 
     //SI ON CLIQUE SUR UN LIEN AVEC ANCRAGE QUI NOUS DIRIGE AILLEURS QU'EN HAUT DE LA PAGE (PAR EXEMPLE ON CLIQUE DANS LA NAV SUR LA SOUS CATÉGORIE "SÉANCES" D'"INFOS PRATIQUES") , ON FAIT EN SORTE QUE LA NAV APPARAISSE BIEN//
-    $("#headerNav ul li a").each(function(){
-        if ($(this).attr('href').indexOf('#')>=0 && $(document).scrollTop() > 0) {
+    $("#headerNav ul li a").each(function () {
+        if ($(this).attr('href').indexOf('#') >= 0 && $(document).scrollTop() > 0) {
             $('#header').attr('id', 'headerToFixed');
             $('#headerNav').attr('id', 'headerNavToFixed');
             $('#logo').attr('id', 'logoToFixed');
@@ -91,7 +100,9 @@ $(function() {
 
     //AJOUTE UN FADE OUT SUR LES MESSAGES DE SUCCES OU D'ERREUR LORS DES ENVOIS DE MESSAGES DANS 'CONTACT' OU DES PRISES DE RDV//
     function requestFadeOut() {
-        $('.requestSent').animate({'opacity': 0});
+        $('.requestSent').animate({
+            'opacity': 0
+        });
     }
 
     //ACTIVE LA FONCTION CLICK LORSQUE L'ON PRESSE 'ENTER'//
@@ -111,9 +122,9 @@ $(function() {
     pressEnter('.userInfo', '#rdvBtn');
 
     //ACTIVE LA VERIFICATION DU FORMAT DU NUMERO DE TELEPHONE LORSQUE L'ON QUITTE L'INPUT//
-    $('.phone').blur(function(){
+    $('.phone').blur(function () {
         var phone = $(".phone").val();
-        if(phone !== '') {
+        if (phone !== '') {
             //SI LE CHAMPS EST REMPLI ON VÉRIFIE LE FORMAT ET ON RETOURNE TRUE OU FALSE EN FONCTION DU RÉSULTAT//
             if (phoneFormat(phone) === false) {
                 phoneChecker = false;
@@ -127,10 +138,10 @@ $(function() {
     });
 
     //ACTIVE LA VERIFICATION DU FORMAT DU MAIL LORSQUE L'ON QUITTE L'INPUT//
-    $('.email').blur(function(){
+    $('.email').blur(function () {
         var email = $(".email").val();
         //SI LE CHAMPS EST REMPLI ON VÉRIFIE LE FORMAT ET ON RETOURNE TRUE OU FALSE EN FONCTION DU RÉSULTAT//
-        if(email !=="") {
+        if (email !== "") {
             if (regEx(email) === false) {
                 emailChecker = false;
                 $('.email').addClass("errorInput").removeClass("okInput");
@@ -143,7 +154,7 @@ $(function() {
     });
 
     //ACTIVE LA VERIFICATION ET L'ENVOIE DES DONNÉES EN AJAX LORS DE L'ENVOI D'UN MESSAGE VIA LE FORMULAIRE PAGE 'CONTACT'//
-    $('#contactBtn').click(function(e) {
+    $('#contactBtn').click(function (e) {
         e.preventDefault();
 
         //CONTACTDATA SERVIRA DE VERIFICATEUR PRINCIPAL LORS DE L'ENVOI EN AJAX//
@@ -156,17 +167,16 @@ $(function() {
         var error = 0;
 
         //SI LES CHAMPS SONT REMPLIS ET AU BON FORMAT ON AJOUTE UNE BORDURE VERTE, SINON UNE BORDURE ROUGE ET ON INCRÉMENTE ERROR//
-        $('input[type=text]').each(function() {
-            if ( $(this).val() === ''){
+        $('input[type=text]').each(function () {
+            if ($(this).val() === '') {
                 $(this).addClass('errorInput').removeClass('okInput');
                 error++;
-            }
-            else {
+            } else {
                 $(this).removeClass('errorInput').addClass('okInput');
             }
         });
 
-        if ( phoneChecker === false || phone === "") {
+        if (phoneChecker === false || phone === "") {
             $("#contactPhone").addClass("errorInput").removeClass("okInput");
             error++;
         } else {
@@ -199,7 +209,7 @@ $(function() {
                     'email': email,
                     'message': message
                 },
-                success: function() {
+                success: function () {
 
                     //ON RÉINITIALISE LES CHAMPS DU FORMULAIRE ET ON FAIT APPARAÎTRE UN MESSAGE DE SUCCES//
                     $("#contactFirstName").val('');
@@ -211,19 +221,22 @@ $(function() {
                     $('#contactForm textarea').removeClass('okInput');
                     $('.requestSent').addClass('successRequest').removeClass('errorRequest');
                     $('.requestSent').html('Votre message a bien été envoyé, merci beaucoup !<br>Vous allez recevoir un email récapitulatif.');
-                    $('.requestSent').animate({'opacity': 1}, setTimeout(requestFadeOut, 5000));
+                    $('.requestSent').animate({
+                        'opacity': 1
+                    }, setTimeout(requestFadeOut, 5000));
                     $('html, body').animate({
                         scrollTop: $("#contactSect").offset().top
                     }, 500);
 
                 }
             });
-        }
-        else {
+        } else {
             //ON FAIT APPARAÎTRE UN MESSAGE D'ERREUR AVEC UNE BORDURE ROUGE SUR LES CHAMPS À PROBLÈME//
             $('.requestSent').removeClass('successRequest').addClass('errorRequest');
             $('.requestSent').text("Une erreur s'est produite, veuillez vérifier les informations demandées, merci. ");
-            $('.requestSent').animate({'opacity':1}, setTimeout(requestFadeOut, 5000));
+            $('.requestSent').animate({
+                'opacity': 1
+            }, setTimeout(requestFadeOut, 5000));
             $('html, body').animate({
                 scrollTop: $("#contactSect").offset().top
             }, 500);
@@ -269,7 +282,7 @@ $(function() {
     });
 
     //ACTIVE LA VERIFICATION ET L'ENVOIE DES DONNÉES EN AJAX LORS DE LA PRISE DE RDV VIA LE FORMULAIRE PAGE 'PRENDRE RDV'//
-    $('#rdvBtn').click(function(e) {
+    $('#rdvBtn').click(function (e) {
         e.preventDefault();
 
         //RDVDATA SERVIRA DE VERIFICATEUR PRINCIPAL LORS DE L'ENVOI EN AJAX//
@@ -285,12 +298,11 @@ $(function() {
         var error = 0;
 
         //SI LES CHAMPS SONT REMPLIS ET AU BON FORMAT ON AJOUTE UNE BORDURE VERTE, SINON UNE BORDURE ROUGE ET ON INCRÉMENTE ERROR//
-        $('input[type=text]').each(function() {
-            if ( $(this).val() === ''){
+        $('input[type=text]').each(function () {
+            if ($(this).val() === '') {
                 $(this).addClass('errorInput').removeClass('okInput');
                 error++;
-            }
-            else {
+            } else {
                 $(this).removeClass('errorInput').addClass('okInput');
             }
         });
@@ -345,7 +357,9 @@ $(function() {
                     $('#rdvForm input, #rdvForm select').removeClass('okInput');
                     $('.requestSent').addClass('successRequest').removeClass('errorRequest');
                     $('.requestSent').html('Votre rendez-vous a bien été pris en compte, merci beaucoup !<br>Vous allez recevoir un e-mail de confirmation');
-                    $('.requestSent').animate({'opacity':1}, setTimeout(requestFadeOut, 5000));
+                    $('.requestSent').animate({
+                        'opacity': 1
+                    }, setTimeout(requestFadeOut, 5000));
                     $('html, body').animate({
                         scrollTop: $("#rdvSect").offset().top
                     }, 500);
@@ -355,12 +369,13 @@ $(function() {
                 }
 
             });
-        }
-        else{
+        } else {
             //ON FAIT APPARAÎTRE UN MESSAGE D'ERREUR AVEC UNE BORDURE ROUGE SUR LES CHAMPS À PROBLÈME//
             $('.requestSent').removeClass('successRequest').addClass('errorRequest');
             $('.requestSent').text("Une erreur s'est produite, veuillez vérifier les informations demandées, merci. ")
-            $('.requestSent').animate({'opacity':1}, setTimeout(requestFadeOut, 5000));
+            $('.requestSent').animate({
+                'opacity': 1
+            }, setTimeout(requestFadeOut, 5000));
             $('html, body').animate({
                 scrollTop: $("#rdvSect").offset().top
             }, 500);
@@ -369,32 +384,32 @@ $(function() {
 
 
     //ON ENLÈVE LA BORDURE ROUGE DU CHAMPS DE TEXTE À PROBLÈME LORSQUE L'ON CLIQUE À L'INTERIEUR//
-    $('input[type=text]').keydown(function() {
+    $('input[type=text]').keydown(function () {
         if ($(this).hasClass('errorInput')) {
             $(this).removeClass('errorInput');
         }
     });
 
     //ON ENLÈVE LA BORDURE ROUGE DU CHAMPS SELECT À PROBLÈME LORSQUE L'ON CLIQUE À L'INTERIEUR//
-    $('#rdvMotif').change(function() {
+    $('#rdvMotif').change(function () {
         if ($(this).hasClass('errorInput')) {
             $(this).removeClass('errorInput');
         }
     });
 
     //SUR LE CALENDRIER HEBDOMADAIRE, ON EMPÊCHE L'UTILISATEUR D'ALLER À UNE SEMAINE ANTÉRIEURE À L'ACTUELLE //
-    $('#unavPreviousWeek').click(function(e) {
+    $('#unavPreviousWeek').click(function (e) {
         e.preventDefault();
     });
 
     //SUR LE CALENDRIER HEBDOMADAIRE, ON EMPÊCHE L'UTILISATEUR D'ALLER À UNE SEMAINE POSTÉRIEURE À CELLE DÉFINIE EN LIMITE //
-    $('#unavNextWeek').click(function(e) {
+    $('#unavNextWeek').click(function (e) {
         e.preventDefault();
     });
 
 
     //FAIT APPARAÎTRE / DISPARAÎTRE L'OPTION D'AJOUT DE MESSAGE LORS DE LA PRISE DE RDV ET CENTRE LA FENÊTRE DESSUS//
-    $('#rdvMessageButton').click(function(e) {
+    $('#rdvMessageButton').click(function (e) {
         e.preventDefault();
         $('.rdvMessage').toggle();
         $('html, body').animate({
@@ -404,28 +419,28 @@ $(function() {
 
 
     //FAIT APPARAÎTRE LE MENU DE NAVIGATION 'INFOS PRATIQUES'//
-    $('#infosPratiques').hover(function(){
+    $('#infosPratiques').hover(function () {
             $('#ipNav').fadeIn(100);
         },
-        function(){
+        function () {
             $('#ipNav').fadeOut(100);
         });
 
     //FAIT APPARAÎTRE LE MENU DE NAVIGATION 'SPECIALISATIONS'//
-    $('#specialisationsNav').hover(function(){
+    $('#specialisationsNav').hover(function () {
             $('#speNav').fadeIn(100);
         },
-        function(){
+        function () {
             $('#speNav').fadeOut(100);
         });
 
     //FAIT APPARAÎTRE LE MENU PRINCIPAL DANS LE CAS OÙ LA LARGEUR EST BASSE(SUR SMARTPHONE OU TABLETTE)//
-    $('#smallMenuBtn').click(function(){
+    $('#smallMenuBtn').click(function () {
         $('#smallMenuNav').fadeToggle(200);
     });
 
     //ACTIVE LA VERIFICATION ET L'ENVOIE DES DONNÉES EN AJAX LORS DE LA TENTATIVE DE CONNEXION UTILISATEUR//
-    $('#loginBtn').click(function(e) {
+    $('#loginBtn').click(function (e) {
         e.preventDefault();
         var loginData = $("#loginForm").serializeArray();
         var login = $("#login").val();
@@ -450,7 +465,7 @@ $(function() {
                     'login': login,
                     'password': password
                 },
-                success: function(data) {
+                success: function (data) {
                     var status = JSON.parse(data);
                     //ON EFFACE LES CHAMPS//
                     $("#login").val('');
@@ -458,12 +473,17 @@ $(function() {
                     //SI 'ADMIN' OU 'MOT DE PASSE' ERRONNÉ, ON AFFICHE UN MESSAGE D'ERREUR, SINON ON RECHARGE LA PAGE EN VUE D'UNE REDIRECTION//
                     if (status.status === 'KO') {
                         $('#loginStatus').html('identifiant ou mot de passe incorrect.');
-                        $('#loginStatus').addClass('errorRequest').css({'margin': '1rem auto', 'display': 'inline-block'});
-                        $('.requestSent').animate({'opacity':1}, setTimeout(requestFadeOut, 5000));
+                        $('#loginStatus').addClass('errorRequest').css({
+                            'margin': '1rem auto',
+                            'display': 'inline-block'
+                        });
+                        $('.requestSent').animate({
+                            'opacity': 1
+                        }, setTimeout(requestFadeOut, 5000));
                         $('html, body').animate({
                             scrollTop: $("html header").offset().top
                         }, 500);
-                    }else{
+                    } else {
                         window.location.reload();
                     }
                 },
@@ -478,10 +498,15 @@ $(function() {
             });
         }
         //SINON CELA SIGNIFIE QUE TOUT LES CHAMPS NE SONT PAS REMPLIS, ON ALERTE DONC AVEC UN MESSAGE D'ERREUR//
-        else{
+        else {
             $('#loginStatus').html('Veuillez remplir tous les champs.');
-            $('#loginStatus').addClass('errorRequest').css({'margin': '1rem auto', 'display': 'inline-block'});
-            $('.requestSent').animate({'opacity':1}, setTimeout(requestFadeOut, 5000));
+            $('#loginStatus').addClass('errorRequest').css({
+                'margin': '1rem auto',
+                'display': 'inline-block'
+            });
+            $('.requestSent').animate({
+                'opacity': 1
+            }, setTimeout(requestFadeOut, 5000));
             $('html, body').animate({
                 scrollTop: $("html header").offset().top
             }, 500);
@@ -494,7 +519,7 @@ $(function() {
     });
 
     //RÉCUPÈRE LES DONNÉES LIÉES AU CRÉNEAU RÉSERVÉ (FONCTION DISPONIBLE DANS L'ESPACE ADMIN)//
-    $('.bookedTime').click(function(e){
+    $('.bookedTime').click(function (e) {
         e.preventDefault();
         var rdvTimeSlot = $(this).attr('id');
         //ON SÉPARE LES INFOS DU NAME EN TABLEAU POUR RÉCUPÉRER LE JOUR, SON NUMBRE ET LE MOIS//
@@ -513,14 +538,18 @@ $(function() {
             success: function (data) {
                 //ON RÉCUPÈRE ET RÉPARTIT LES DONNÉES AVEC UNE MISE EN FORME DANS LA VARIABLE INFOS//
                 var rdv = JSON.parse(data);
-                var infos = "<span class='bold' style='text-transform: capitalize'>"+dayName+"</span> <span class='bold'>"+dayNumber+"</span> <span class='bold'>"+month+"</span> <br> <span class='bold'>"+rdvTime+"</span><br><span class='bold block'>"+rdv.firstName+" "+rdv.lastName+"</span>"+rdv.motif+"<br>"+"<a href=tel:'"+rdv.phone+"'>"+"<i class='fas fa-phone-alt'></i>"+rdv.phone+"</a>"+"<br>"+"<a href=mailto:'"+rdv.email+"'>"+"<i class='fas fa-envelope'></i>"+rdv.email+"</a>";
+                var infos = "<span class='bold' style='text-transform: capitalize'>" + dayName + "</span> <span class='bold'>" + dayNumber + "</span> <span class='bold'>" + month + "</span> <br> <span class='bold'>" + rdvTime + "</span><br><span class='bold block'>" + rdv.firstName + " " + rdv.lastName + "</span>" + rdv.motif + "<br>" + "<a href=tel:'" + rdv.phone + "'>" + "<i class='fas fa-phone-alt'></i>" + rdv.phone + "</a>" + "<br>" + "<a href=mailto:'" + rdv.email + "'>" + "<i class='fas fa-envelope'></i>" + rdv.email + "</a>";
                 //SI L'UTILISATEUR A AJOUTÉ UN MESSAGE ON LE RÉCUPÈRE ET L'AJOUTE À LA SUITE//
-                if(rdv.message){
-                    infos += "<span class='bold block' style='margin-top: 1rem'>Message :</span>"+rdv.message+"<br>";
+                if (rdv.message) {
+                    infos += "<span class='bold block' style='margin-top: 1rem'>Message :</span>" + rdv.message + "<br>";
                 }
                 //ON AFFICHE LES INFOS DANS "ALERTWINDOWCONTENT" ET ON AFFICHE "ALERTWINDOWBG"//
                 $('#alertWindowContent').prepend(infos);
-                $('#alertWindowBg').css({"width": '100%', 'height': '100%', "display": 'flex'});
+                $('#alertWindowBg').css({
+                    "width": '100%',
+                    'height': '100%',
+                    "display": 'flex'
+                });
                 //ON ÔTE LE FOCUS AU CRÉNEAU SELECTIONNÉ ET ON L'AJOUTE AU BOUTON DU MODAL POUR QUE LA FONCTION PRESSENTER() SOIT POSSIBLE SUR #ALERTBTN//
                 $('.bookedTime').blur();
                 $('#alertBtn').focus();
@@ -534,14 +563,14 @@ $(function() {
     });
 
     //ON CACHE #ALERTWINDOWBG ET ON EFFACE LE CONTENU DE #AERTWINDOWCONTENT//
-    $('#alertBtn').click(function(e) {
+    $('#alertBtn').click(function (e) {
         e.preventDefault();
         $('#alertWindowBg').css("display", 'none');
         $('#alertWindowContent').html('');
     });
 
     //L'ADMIN ACTIVE OU DESACTIVE LA DISPONIBILITÉ DES CRÉNEAUX D'UNE JOURNÉE//
-    $('.adminDaySwitch').click(function(e){
+    $('.adminDaySwitch').click(function (e) {
         e.preventDefault();
         //NE FONCTIONNE QUE SUR LES JOURS QUI NE SONT PAS PASSÉS//
         if (!$(this).hasClass('dayPast')) {
@@ -598,7 +627,7 @@ $(function() {
     });
 
     //L'ADMIN ACTIVE OU DESACTIVE LA DISPONIBILITÉ D'UN CRÉNEAU EN PARTICULIER//
-    $('.adminTimeSlot').click(function(e){
+    $('.adminTimeSlot').click(function (e) {
         e.preventDefault();
         //NE FONCTIONNE PAS SUR LES CRÉNEAUX DES JOURS PASSÉS OU RÉSERVÉS//
         if (!$(this).hasClass('unavTime') && !$(this).hasClass('bookedTime')) {
@@ -630,7 +659,7 @@ $(function() {
     });
 
     //ON SUPPRIME LE RENDEZ-VOUS LIÉ AU BOUTON//
-    $('.rdvDelete').click(function(e){
+    $('.rdvDelete').click(function (e) {
         e.preventDefault();
         //ON RÉCUPÈRE LE NAME ET ON ENREGISTRE LE BOUTON SUR LEQUEL ON VIENT DE CLIQUER//
         var rdvToDelete = $(this).attr('name');
@@ -650,7 +679,7 @@ $(function() {
                     //ON RÉCUPÈRE LES DONNÉES JSON//
                     var rdv = JSON.parse(data);
                     //SI LE RDV A ÉTÉ SUPPRIMMÉ ON CACHE LE BOUTON DELETE ET ON RÉINITIALISE LE CRÉNEAU COMME DISPONIBLE//
-                    if(rdv.status==='success'){
+                    if (rdv.status === 'success') {
                         $(deleteBtn).hide();
                         $(deleteBtn).siblings('input').addClass('adminAvTime').removeClass('bookedTime');
                     }
@@ -664,12 +693,11 @@ $(function() {
         }
     });
     //QUAND ON CLIQUE SUR UN LIEN "EN SAVOIR PLUS" ON AFFICHE L'ARTICLE CORREPONDANT ET SI UN ARTICLE ETAIT DÉJÀ AFFICHÉ, ON CACHE CE DERNIER ET ON SCROLL JUSQU'À L'ARTICLE//
-    $('.enSavoirPlusNav').click(function() {
+    $('.enSavoirPlusNav').click(function () {
         var key;
         var value;
 
-        for(key in violencesArticlesArray)
-        {
+        for (key in violencesArticlesArray) {
             value = violencesArticlesArray[key];
             $(value).hide();
         }
@@ -685,13 +713,12 @@ $(function() {
     });
 
     //ON SCROLL VERS LE HAUT, AU NIVEAU DU MENU "EN SAVOIR PLUS"//
-    $('#backToEspn').click(function() {
+    $('#backToEspn').click(function () {
         if ($(document).width() > 980) {
             $('html, body').animate({
                 scrollTop: 150
             }, 500);
-        }
-        else {
+        } else {
             $('html, body').animate({
                 scrollTop: $("#enSavoirPlusNav").offset().top
             }, 500);
@@ -700,17 +727,21 @@ $(function() {
     });
 
     //LORSQU'ON CLIQUE SUR UN ÉLÉMENT DE LA CLASSE "CLICKABLE" ON L'AFFICHE DANS UN MODAL EN LARGEUR 100%//
-    $('.clickable').click(function(){
+    $('.clickable').click(function () {
         var source = $(this).attr('src');
         var srcId = $(this).attr('id');
         var srcAlt = $(this).attr('alt');
 
-        $('.alertWindowContentArt').prepend('<img src="'+source+'" id="'+srcId+'" alt="'+srcAlt+'" style="width: 100%; cursor: default;">');
-        $('.alertWindowBgArt').css({"width": '100%', 'height': '100%', "display": 'flex'});
+        $('.alertWindowContentArt').prepend('<img src="' + source + '" id="' + srcId + '" alt="' + srcAlt + '" style="width: 100%; cursor: default;">');
+        $('.alertWindowBgArt').css({
+            "width": '100%',
+            'height': '100%',
+            "display": 'flex'
+        });
     });
 
     //ON CACHE #ALERTWINDOWBGART ET ON EFFACE LE CONTENU DE #AERTWINDOWCONTENTART LORSQU'ON CLIQUE SUR LE "X" ROUGE//
-    $('.alertBtnArt').click(function(e) {
+    $('.alertBtnArt').click(function (e) {
         e.preventDefault();
         $('.alertWindowBgArt').css("display", 'none');
         $('.alertWindowContentArt').html('');
@@ -721,19 +752,17 @@ $(function() {
 
 
     //LORSQU'ON PASSE LA SOURIS SUR UNE LI DE L'UL "SPECIFICATIONS", LES AUTRES LI PERDENT EN OPACITÉ, ELLES LA RÉCUPÈRENT TOUTES LORSQUE LA SOURIS SORT//
-    $('#specialisations li').mouseenter(function(){
-        for(key in speList)
-        {
-            if(key !== $(this).attr('id')){
+    $('#specialisations li').mouseenter(function () {
+        for (key in speList) {
+            if (key !== $(this).attr('id')) {
                 value = speList[key];
-                $('#'+key).css('opacity', '70%');
+                $('#' + key).css('opacity', '70%');
             }
         }
-    }).mouseleave(function(){
-        for(key in speList)
-        {
+    }).mouseleave(function () {
+        for (key in speList) {
             value = speList[key];
-            $('#'+key).css('opacity', '100%');
+            $('#' + key).css('opacity', '100%');
         }
     });
 

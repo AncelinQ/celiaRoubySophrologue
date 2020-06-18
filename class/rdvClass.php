@@ -68,7 +68,7 @@ Class rdvClass extends contactClass{
      * @param Datetime $end
      * @return array
      */
-    public static function getRdvsBetween(Datetime $start, Datetime $end)
+    public static function getRdvs(Datetime $start, Datetime $end)
     {
 
         $pdo = newDatabase();
@@ -84,9 +84,9 @@ Class rdvClass extends contactClass{
      * @param Datetime $end
      * @return array
      */
-    public static function getRdvsBetweenByDay(Datetime $start, Datetime $end)
+    public static function getDayRdvs(Datetime $start, Datetime $end)
     {
-        $rdvs = self::getRdvsBetween($start, $end);
+        $rdvs = self::getRdvs($start, $end);
         $days = [];
 
         //POUR CHAQUE RDV TROUVÉ ON REGARDE LA COLONNE AVEC LES INFORMATIONS DU CRÉNEAU EN DATETIME PUIS S'IL N'EST PAS DÉJÀ DANS LE TABLEAU $DAYS, ON L'Y AJOUTE ET ON RETOURNE LE TABLEAU//

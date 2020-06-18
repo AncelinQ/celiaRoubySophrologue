@@ -14,6 +14,6 @@ $calendar = new calendarClass($_GET['week'] ?? null, $_GET['month'] ?? null, $_G
 $monday = $calendar->getWeekDay(1);
 $saturday = $calendar->getWeekDay(6);
 
-$weekRdvs = rdvClass::getRdvsBetweenByDay($monday, $saturday);
+$weekRdvs = rdvClass::getDayRdvs($monday, $saturday);
 
 require_once 'calendar.phtml';
