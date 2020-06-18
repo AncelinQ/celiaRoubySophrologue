@@ -6,10 +6,11 @@ require_once "connection/bdd_connection.php";
 class emailSender {
 
     //CONST TO À CHANGER, C'EST ICI MON ADRESSE MAIL POUR LES TESTS, CONST FROM À MODIFIER, ELLE N'EXISTE PAS POUR LE MOMENT//
-    const TO = 'ancelin.quinton@gmail.com';
-    const FROM = 'From: no-reply@celiarouby-sophrologue.fr';
+    const TO = 'celia.rouby@gmail.com';
+    const FROM = 'From: Célia Rouby - Sophrologue <celia.rouby@gmail.com>';
     const HEADERS = 'MIME-Version: 1.0' . "\r\n".'Content-type: text/html; charset=UTF8' . "\r\n";
     const SUBJECT = 'Message envoyé à Célia Rouby Sophrologue.';
+    
 
     /**
      * Récupère les données du contact dans la table "contact" de la base de donnée d'après l'Id.
@@ -41,6 +42,9 @@ class emailSender {
 
         //ON REMPLACE CHAQUE ESPACE ENTOURÉ PAR DES {{}} DANS LE TEMPLATE PAR LA VALEUR VENANT DE LA TABLE 'CONTACT'. ON PROTÈGE DU HACK LES VALEURS À LA LECTURE//
         foreach ($contactData as $key => $value) {
+            if($key === 'firstName' || $key === 'lastName' ){
+                $value = ucwords($value);
+            }
             $message = str_replace('{{ ' . $key . ' }}', htmlspecialchars($value), $message);
         }
         $message = nl2br($message);
@@ -58,14 +62,15 @@ class emailSender {
     {
         $contactData = self::getContactMailData($contactId);
         $message = self::createContactMail($contactId, 'Pro');
-        $subject = 'Nouveau message de ' . $contactData['firstName'] . ' ' . $contactData['lastName'] . '.';
+        $subject = 'Nouveau message de ' . ucwords($contactData['firstName']) . ' ' . ucwords($contactData['lastName']) . '.';
         $headers = self::HEADERS;
-        $headers .= 'From: ' . $contactData['firstName'] . ' ' . $contactData['lastName'] . ' - ' . $contactData['email'];
+        $headers .= 'From:'.$contactData['email'];
 
         $mail = mail(self::TO, htmlspecialchars($subject), $message, htmlspecialchars($headers));
 
         if ($mail){
             return true;
+            
         } else{
             return false;
         }
@@ -132,6 +137,9 @@ class emailSender {
 
         //ON REMPLACE CHAQUE ESPACE ENTOURÉ PAR DES {{}} DANS LE TEMPLATE PAR LA VALEUR VENANT DE LA TABLE 'CONTACT'. ON PROTÈGE DU HACK LES VALEURS À LA LECTURE//
         foreach ($rdvData as $key => $value) {
+            if($key === 'firstName' || $key === 'lastName' ){
+                $value = ucwords($value);
+            }
             $message = str_replace('{{ ' . $key . ' }}', htmlspecialchars($value), $message);
         }
 
@@ -158,9 +166,9 @@ class emailSender {
     {
         $rdvData = self::getRdvMailData($rdvId);
         $message = self::createRdvMail($rdvId, 'Pro');
-        $subject = 'Nouveau rendez-vous avec ' . $rdvData['firstName'] . ' ' . $rdvData['lastName'] . '.';
+        $subject = 'Nouveau rendez-vous avec ' . ucwords($rdvData['firstName']) . ' ' . ucwords($rdvData['lastName']) . '.';
         $headers = self::HEADERS;
-        $headers .= 'From: ' . $rdvData['firstName'] . ' ' . $rdvData['lastName'] . ' - ' . $rdvData['email'];
+        $headers .= 'From: ' . $rdvData['email'];
 
         $mail = mail(self::TO, htmlspecialchars($subject), $message, htmlspecialchars($headers));
 
@@ -231,6 +239,9 @@ class emailSender {
 
         //ON REMPLACE CHAQUE ESPACE ENTOURÉ PAR DES {{}} DANS LE TEMPLATE PAR LA VALEUR VENANT DE LA TABLE 'CONTACT'. ON PROTÈGE DU HACK LES VALEURS À LA LECTURE//
         foreach ($rdvData as $key => $value) {
+            if($key === 'firstName' || $key === 'lastName' ){
+                $value = ucwords($value);
+            }
             $message = str_replace('{{ ' . $key . ' }}', htmlspecialchars($value), $message);
         }
 
@@ -275,7 +286,7 @@ class emailSender {
     {
         $rdvData = self::getRdvDeleteMailData($timeSlot);
         $message = self::createRdvDeleteMailData($timeSlot, 'Pro');
-        $subject = ' Rendez-vous annulé avec ' . $rdvData['firstName'] . ' ' . $rdvData['lastName'] . '.';
+        $subject = ' Rendez-vous annulé avec ' . ucwords($rdvData['firstName']) . ' ' . ucwords($rdvData['lastName']) . '.';
         $headers = self::HEADERS;
         $headers .= self::FROM;
 

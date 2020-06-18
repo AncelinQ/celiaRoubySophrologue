@@ -23,7 +23,7 @@
             <td class ='calendarDate'>
                 <!--ON RÉCUPÈRE LES NOMS NUMEROS ET MOIS ET ON LES AFFICHE-->
                 <span class='bold block'> <?= $calendar->getDayNameCal($day); ?> </span>
-                <?= $calendar->getDayNumber($day); ?>  <?= $calendar->getMonthNameCal($day); ?>
+                <span class='block'><?= $calendar->getDayNumber($day); ?> </span> <?= $calendar->getMonthNameCal($day); ?>
             </td>
             <?php endfor ?>
             <!--LE BOUTON PREVIOUS CHARGE LA PAGE EN FONCTION DES GET PRESENTS DANS L'URL-->
@@ -60,7 +60,7 @@
                     else :?>
                         class="avTime timeSlot"
                     <?php endif; ?>
-                       name="<?= $calendar->getDayName($day); ?> <?= $calendar->getDayNumber($day); ?> <?= $calendar->getMonthName($day); ?> <?php $calendar->getYear($day); ?><?= $calendar->timeSlots[$timeSlot]; //LE NAME CORRESPOND À LA DATE COMPLETE EX: LUNDI 09 MARS 2020//?>" value="<?= $calendar->timeSlots[$timeSlot]; ?>">
+                       name="<?= $calendar->getDayName($day); ?> <?= $calendar->getDayNumber($day); ?> <?= $calendar->getMonthName($day); ?> <?= $calendar->getYear($day); ?> <?= $calendar->timeSlots[$timeSlot]; //LE NAME CORRESPOND À LA DATE COMPLETE EX: LUNDI 09 MARS 2020//?>" value="<?= $calendar->timeSlots[$timeSlot]; ?>">
 
             </td>
                         <?php endfor; ?>

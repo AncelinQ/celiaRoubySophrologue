@@ -6,6 +6,6 @@ error_reporting(E_ALL);
 session_start();
 require_once 'connection/bdd_connection.php';
 
-$template = 'gestion_de_la_douleur';
+$template = 'rapport-au-corps';
 require_once 'layout.phtml';
 

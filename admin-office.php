@@ -58,10 +58,10 @@ else if(isset($_SESSION) && isset($_SESSION['id']) && $_SESSION['id'] === "113Hd
 
             $start = $calendar->getFirstDay()->modify('last monday');
             $monday = $calendar->getWeekDay(1);
-            $friday = $calendar->getWeekDay(5);
+            $saturday = $calendar->getWeekDay(6);
             $allWeek = $calendar->getMondayToFriday();
 
-            $weekRdvs = rdvClass::getRdvsBetweenByDay($monday, $friday);
+            $weekRdvs = rdvClass::getRdvsBetweenByDay($monday, $saturday);
 
 
             $template = 'admin-office';

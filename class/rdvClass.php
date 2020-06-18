@@ -3,6 +3,7 @@
 require_once "connection/bdd_connection.php";
 require_once "contactClass.php";
 require_once 'emailSenderClass.php';
+require_once "calendarClass.php";
 
 Class rdvClass extends contactClass{
 
@@ -94,9 +95,8 @@ Class rdvClass extends contactClass{
             if(!isset($days[$timeSlot])){
                 $days[$timeSlot] = [$rdv];
             }
-            else
+            else {
                 //SI LE CRENEAU EXISTE DÉJÀ DANS LE TABLEAU ON RETOURNE UNE ERREUR//
-            {
                 echo "ERREUR INTERNE --- CE CRÉNEAU EST DÉJÀ PRIS.";
             }
         }
@@ -125,6 +125,8 @@ Class rdvClass extends contactClass{
         }
     }
 
+
+    
     /**
      * ON RETOURNE LES INFOS DU RDV SELECTIONNÉ EN JSON
      * @param $timeSlot
@@ -166,7 +168,7 @@ Class rdvClass extends contactClass{
         $pdo = newDatabase();
 
         //ON DÉFINI UN TABLEAU AVEC LES DIFFÉRENTS CRÉNEAUX JOURNALIERS EN MODE FORMAT 'TIME'//
-        $TimeSlotArray = ['09:00:00', '10:00:00', '11:00:00', '14:00:00', '15:00:00', '16:00:00', '17:00:00', '18:00:00'];
+        $TimeSlotArray = ['08:30:00', '10:00:00', '11:30:00', '14:00:00', '15:30:00', '17:00:00', '18:30:00', '20:00:00'];
 
         //ON RÉCUPÈRE TOUS LES CRÉNEAUX INDISPONIBLES DU JOUR $THISDAY ENVOYÉ//
         $query = $pdo->prepare("SELECT * FROM unavailable WHERE `date` = :thisDay");
@@ -197,9 +199,9 @@ Class rdvClass extends contactClass{
                 }
             }
             return false;
-        }
+            }
     }
-
+    
     /**
      * ON VÉRIFIE SI LE JOUR SÉLECTIONNÉ A DES CRÉNEAUX DISPONIBLES OU INDISPONIBLES, RETOURNE FALSE OU BIEN UN TABLEAU AVEC TOUS LES CRÉNEAUX INDISPONIBLES DE CE JOUR
      * @param $thisDay
@@ -238,13 +240,14 @@ Class rdvClass extends contactClass{
 
         }
         //SINON LE JOUR EST DONC (ENTIEREMENT OU PARTIELLEMENT) INDISPONIBLE//
-        else{
+        else {
             //SI IL N'Y A PAS 8 ELEMENTS DANS LE TABLEAU, IL N'Y A PAS 8 CRÉNEAUX INDISPONIBLES, IL Y A DONC UN RDV D'ENREGISTRÉ//
             if(!isset($dayRdvs[7])){
                 $status = ["status" => "rdvDay", "msg" => "Des rendez vous sont enregistrés ce jour-ci"];
             }
-            //SINON TOUTE LA JOURNÉE EST INDISPONIBLE//
+            
             else{
+                //SINON TOUTE LA JOURNÉE EST INDISPONIBLE//
                 $status = ["status"=>"unavDay", "msg"=>"Journée désactivée"];
             }
         }
@@ -403,4 +406,26 @@ Class rdvClass extends contactClass{
         return json_encode($status);
     }
 
+  /*  public function goToNextAvailability()
+    {
+        $thisDay = calendarClass::getDayToday();
+        $dayStatus = self::getDayAvailability($thisDay);
+        $timeSlotStatus = self::getTimeSlotAvailability();
+        $TimeSlotArray = ['08:30:00', '10:00:00', '11:30:00', '14:00:00', '15:30:00', '17:00:00', '18:30:00', '20:00:00'];
+
+        foreach ($TimeSlotArray as $thisTimeSlot){
+            //ON VERIFIE SI DES RDVS NE SONT PAS ENREGISTRÉS SUR CES CRÉNEAUX//
+            $checkRdv = self::getRdv($thisDay.' '.$thisTimeSlot);
+
+            //SI LES CRÉNEAUX SONT VIDES, ON LES INSERT (ILS DEVIENNENT DONC INDISPONIBLES)//
+            if($checkRdv === false) {
+                
+            }
+        }
+
+        if ($dayStatus != false && count($timeSlotStatus)===7 && $checkRdv === false){
+
+        }
+
+    }*/
 }
