@@ -405,7 +405,7 @@ header img {
 }
 
 #logoSmallToFixed {
-  content: url(../img/logo-sophro-text-horizontal.png);
+  content: url('../img/logo-sophro-text-horizontal.png');
   max-width: 250px;
   margin-bottom: -0.5rem;
 }
@@ -481,7 +481,7 @@ footer a:hover,
 }
 
 #logoToFixed {
-  content: url(../img/logo-sophro-text-horizontal.png);
+  content: url('../img/logo-sophro-text-horizontal.png');
   max-width: 200px;
   margin-bottom: -0.5rem;
 }
@@ -1316,7 +1316,7 @@ fieldset {
   -moz-appearance: none;
   appearance: none;
   text-align: center;
-  background-image: url(../img/arrow-3.png);
+  background-image: url('../img/arrow-3.png');
   background-size: 1.4rem;
   background-position: 95% 50%;
   background-repeat: no-repeat;
