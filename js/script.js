@@ -1,4 +1,5 @@
 'use strict';
+
 var phoneChecker;
 var emailChecker;
 var request;
@@ -265,7 +266,7 @@ $(function () {
             var timeSlotTime = $('.selectedTime').val();
 
             //ON AFFICHE UNE PHRASE RÉCAPITULATRICE EN Y INTÉGRANT LES INFORMATIONS DU CRÉNEAU AVEC UN MISE EN FORME//
-            $('#selectedTimeSlotInfo').html('Vous avez choisi le <span class="bold" style ="color: #1b76d1">' + timeSlotDayName + ' ' + timeSlotDayNumber + ' ' + timeSlotMonth + '</span> à <span class="bold" style ="color: #1b76d1">' + timeSlotTime + '</span>.').css('color', 'black')
+            $('#selectedTimeSlotInfo').html('Vous avez choisi le <span class="bold" style ="color: #1b76d1">' + timeSlotDayName + ' ' + timeSlotDayNumber + ' ' + timeSlotMonth + '</span> à <span class="bold" style ="color: #1b76d1">' + timeSlotTime + '</span>.').css('color', 'black');
         }
         //SI AUCUN CRÉNEAU N'EST SÉLECTIONNÉ (OU LE CRÉNEAU A ÉTÉ DÉSELECTIONNÉ) ON DEMANDE DE SELECTIONNER UN CRÉNEAU (ON NE L'AFFICHE PAS SI ON CLIQUE SUR UN CRÉNEAU INDISPONIBLE EN PREMIER LIEU)//
         else if ($('.selectedTime').length === 0 && !$(this).hasClass('unavTime')) {
@@ -372,7 +373,7 @@ $(function () {
         } else {
             //ON FAIT APPARAÎTRE UN MESSAGE D'ERREUR AVEC UNE BORDURE ROUGE SUR LES CHAMPS À PROBLÈME//
             $('.requestSent').removeClass('successRequest').addClass('errorRequest');
-            $('.requestSent').text("Une erreur s'est produite, veuillez vérifier les informations demandées, merci. ")
+            $('.requestSent').text("Une erreur s'est produite, veuillez vérifier les informations demandées, merci. ");
             $('.requestSent').animate({
                 'opacity': 1
             }, setTimeout(requestFadeOut, 5000));
@@ -556,10 +557,10 @@ $(function () {
             },
             error: function () {
                 //SI ERREUR D'ENVOI IL Y A, ON AFFICHE UN MESSAGE//
-                $('#adminCalStatus').html("Une erreur interne s'est produite.")
+                $('#adminCalStatus').html("Une erreur interne s'est produite.");
 
             }
-        })
+        });
     });
 
     //ON CACHE #ALERTWINDOWBG ET ON EFFACE LE CONTENU DE #AERTWINDOWCONTENT//
@@ -582,7 +583,7 @@ $(function () {
             if ($("." + dayToSwitch).hasClass('bookedTime')) {
                 request = confirm("Des rendez-vous sont enregistrés, ils seront conservés, voulez-vous continuer ?");
                 if (request === false) {
-                    error++
+                    error++;
                 }
             }
             //SI PAS D'ERREUR ON ENVOI EN AJAX//
@@ -618,10 +619,10 @@ $(function () {
                     },
                     error: function () {
                         //SI PROBLÈME D'ENVOI, ON AFFICHE N MESSAGE D'ERREUR//
-                        $('#adminCalStatus').html("Une erreur interne s'est produite.")
+                        $('#adminCalStatus').html("Une erreur interne s'est produite.");
 
                     }
-                })
+                });
             }
         }
     });
@@ -652,9 +653,9 @@ $(function () {
                 },
                 error: function () {
                     //SI PROBLÈME D'ENVOI, ON AFFICHE N MESSAGE D'ERREUR//
-                    $('#adminCalStatus').html("Une erreur interne s'est produite.")
+                    $('#adminCalStatus').html("Une erreur interne s'est produite.");
                 }
-            })
+            });
         }
     });
 
@@ -686,10 +687,10 @@ $(function () {
                 },
                 error: function () {
                     //SI PROBLÈME D'ENVOI, ON AFFICHE N MESSAGE D'ERREUR//
-                    $('#adminCalStatus').html("Une erreur interne s'est produite.")
+                    $('#adminCalStatus').html("Une erreur interne s'est produite.");
 
                 }
-            })
+            });
         }
     });
     //QUAND ON CLIQUE SUR UN LIEN "EN SAVOIR PLUS" ON AFFICHE L'ARTICLE CORREPONDANT ET SI UN ARTICLE ETAIT DÉJÀ AFFICHÉ, ON CACHE CE DERNIER ET ON SCROLL JUSQU'À L'ARTICLE//
