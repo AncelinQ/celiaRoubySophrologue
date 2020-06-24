@@ -1276,10 +1276,10 @@ fieldset {
 
 .alertBtnArt {
   position: absolute;
-  top: 7%;
-  left: 91%;
+  top: 12%;
+  left: 84%;
   color: #ffffff;
-  background-color: #F3826B;
+  background-color: #F3826B99;
   padding: 1rem 1.4rem;
   text-align: center;
   border: 0;
@@ -1760,6 +1760,10 @@ footer>ul {
     list-style: disc;
   }
 
+  .alertBtnArt {
+    top: 8%;
+    left: 90%;
+  }
 }
 
 @media screen and (min-width: 535px) {
@@ -1819,6 +1823,7 @@ footer>ul {
   #unavNextWeek {
     padding-right: 1rem;
   }
+
 }
 
 @media screen and (min-width: 610px) {
@@ -1837,6 +1842,11 @@ footer>ul {
 
   #celiaRoubyPhoto {
     max-width: 30%;
+  }
+
+  .alertBtnArt {
+    top: 7%;
+    left: 91%;
   }
 
 }
@@ -1872,6 +1882,7 @@ footer>ul {
   }
 
   .alertBtnArt {
+    top: 7%;
     left: 93%;
   }
 
