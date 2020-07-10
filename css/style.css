@@ -252,7 +252,6 @@ article {
   border-radius: 5px;
 }
 
-.mainTitle,
 #homePage p,
 #covidList,
 #sophroTopArt h1,
@@ -292,7 +291,6 @@ article {
   justify-content: center;
 }
 
-.mainTitle,
 #indexList,
 #covidList,
 #sophroTopArt ul,
@@ -590,11 +588,6 @@ footer a:hover,
 }
 
 /*ACCUEIL*/
-
-#homePage .mainTitle {
-  line-height: 1.4;
-  margin: 0;
-}
 
 #homePage>h2 {
   width: 100%;
