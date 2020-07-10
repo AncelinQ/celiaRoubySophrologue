@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +15,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -22,161 +23,166 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans|Alata|Ibarra+Real+Nova|Lora|Noto+Serif|Playfair+Display|Cookie|Damion|Pacifico|Neucha|Handlee|Quicksand:400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Handlee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/93fd608975.js"></script>
     <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
+    <script src="js/hide.js"></script>
 
 </head>
+
 <body class="container">
-<!--HEADER-->
-<header id="header">
-    <!--DEUX NAV SONT PRESENTES ET S'AFFICHERONT SELON LA LARGEUR DE L'ECRAN, LARGE OU SMALL-->
-    <div id="smallHeader">
-        <ul id="smallHeaderUl">
-            <li>
-                <a href="index.php" id="logoSmallMenu"><img src="img/logo-sophro-v03.png" alt="logo"></a>
-            </li>
-            <li id="smallMenu">
-                <div id="smallMenuBtn">
-                    <div id="smallMenuBar1"></div>
-                    <div id="smallMenuBar2"></div>
-                    <div id="smallMenuBar3"></div>
-                </div>
-                <ul id="smallMenuNav">
-                    <li class="smallMenuNavLi">
-                        <a href="index.php">Accueil</a>
-                    </li>
-                    <li class="smallMenuNavLi">
-                        <a href="la-sophrologie.php">La Sophrologie</a>
-                    </li>
-                    <li class="smallMenuNavLi">
-                        <a href="qui-suis-je.php">Qui Suis-Je ?</a>
-                    </li>
-                    <li class="smallMenuNavLi" id="specialisationsSmallNav">
-                        <a href="index.php#speAnchor">Mes Spécialisations</a>
-                        <ul id="speSmallNav" class="subMenu">
-                            <li class="speSmallNav"><a href="violences.php">Violences, traumatismes & État de stress post-traumatique</a></li>
-                            <li class="speSmallNav"><a href="rapport-au-corps.php">Rapport au corps & Féminité</a></li>
-                            <li class="speSmallNav"><a href="gestion-de-la-douleur.php">Gestion de la Douleur</a></li>
-                        </ul>
-                    </li>
-                    <li class="smallMenuNavLi" id="infosPratiquesSmallNav">
-                        <a href="infos-pratiques.php" >Infos Pratiques</a>
-                        <ul id="ipSmallNav" class="subMenu">
-                            <li class="ipSmallNav"><a href="infos-pratiques.php#tarifs">Les Tarifs</a></li>
-                            <li class="ipSmallNav"><a href="infos-pratiques.php#seances">Les Séances</a></li>
-                            <li class="ipSmallNav"><a href="infos-pratiques.php#cabinet">Le Cabinet</a></li>
-                        </ul>
-                    </li>
-                    <li class="smallMenuNavLi">
-                        <a href="contact.php">Contact</a>
-                    </li>
-                    <li class="smallMenuNavLi">
-                        <a href="prendre-rdv.php">Prendre Rdv</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <nav id="headerNav">
-        <ul>
-            <li class="headerNavLi">
-                <a href="index.php" id="logo"><img src="img/logo-sophro-v03.png" alt="logo"></a>
-            </li>
-            <li class="headerNavLi">
-                <a href="index.php">Accueil</a>
-            </li>
-            <li class="headerNavLi">
-                <a href="la-sophrologie.php">La Sophrologie</a>
-            </li>
-            <li class="headerNavLi">
-                <a href="qui-suis-je.php">Qui Suis-Je ?</a>
-            </li>
-            <li class="headerNavLi" id="specialisationsNav">
-                <a href="index.php#speAnchor">Mes Spécialisations</a>
-                <ul id="speNav" class="speNav subMenu">
-                    <li class="speNav"><a href="violences.php">Violences, traumatismes & État de stress post-traumatique</a></li>
-                    <li class="speNav"><a href="rapport-au-corps.php">Rapport au corps & Féminité</a></li>
-                    <li class="speNav"><a href="gestion-de-la-douleur.php">Gestion de la Douleur</a></li>
-                </ul>
-            </li>
-            <li class="headerNavLi" id="infosPratiques">
-                <a href="infos-pratiques.php" >Infos Pratiques</a>
-                <ul id="ipNav" class="ipNav subMenu">
-                    <li class="ipNav"><a href="infos-pratiques.php#tarifs">Les Tarifs</a></li>
-                    <li class="ipNav"><a href="infos-pratiques.php#seances">Les Séances</a></li>
-                    <li class="ipNav"><a href="infos-pratiques.php#cabinet">Le Cabinet</a></li>
-                </ul>
-            </li>
-            <li class="headerNavLi">
-                <a href="contact.php">Contact</a>
-            </li>
-            <li class="headerNavLi">
-                <a href="prendre-rdv.php">Prendre Rdv</a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<!--MAIN CONTENT-->
-<main>
-    <!-- Chargement du template PHTML spécifié par le programme PHP -->
-    <?php include $template.'.phtml' ?>
-</main>
-<!--FOOTER-->
-<footer>
-    <?php if (isset($_SESSION['id'])): ?>
-        <?php if ($_SESSION['id'] === "113HdB* "): ?>
-            <ul id="adminUl">
-                <li><a href="admin-office.php">Administration</a></li>
-                <li><input type="button" name="button" id="logoutBtn" value="x"></li>
-            </ul>
-        <?php endif; ?>
-    <?php endif; ?>
-    <ul id="footerMain">
-        <nav id="footerNav">
-            <h3>Plan du site</h3>
-            <ul>
+    <!--HEADER-->
+    <header id="header">
+        <!--DEUX NAV SONT PRESENTES ET S'AFFICHERONT SELON LA LARGEUR DE L'ECRAN, LARGE OU SMALL-->
+        <div id="smallHeader">
+            <ul id="smallHeaderUl">
                 <li>
+                    <a href="index.php" id="logoSmallMenu"><img src="img/logo-sophro-v03.png" alt="logo"></a>
+                </li>
+                <li id="smallMenu">
+                    <div id="smallMenuBtn">
+                        <div id="smallMenuBar1"></div>
+                        <div id="smallMenuBar2"></div>
+                        <div id="smallMenuBar3"></div>
+                    </div>
+                    <ul id="smallMenuNav">
+                        <li class="smallMenuNavLi">
+                            <a href="index.php">Accueil</a>
+                        </li>
+                        <li class="smallMenuNavLi">
+                            <a href="la-sophrologie.php">La Sophrologie</a>
+                        </li>
+                        <li class="smallMenuNavLi">
+                            <a href="qui-suis-je.php">Qui Suis-Je ?</a>
+                        </li>
+                        <li class="smallMenuNavLi" id="specialisationsSmallNav">
+                            <a href="index.php#speAnchor">Mes Spécialisations</a>
+                            <ul id="speSmallNav" class="subMenu">
+                                <li class="speSmallNav"><a href="violences.php">Violences, traumatismes & État de stress post-traumatique</a></li>
+                                <li class="speSmallNav"><a href="rapport-au-corps.php">Rapport au corps & Féminité</a></li>
+                                <li class="speSmallNav"><a href="gestion-de-la-douleur.php">Gestion de la Douleur</a></li>
+                            </ul>
+                        </li>
+                        <li class="smallMenuNavLi" id="infosPratiquesSmallNav">
+                            <a href="infos-pratiques.php">Infos Pratiques</a>
+                            <ul id="ipSmallNav" class="subMenu">
+                                <li class="ipSmallNav"><a href="infos-pratiques.php#tarifs">Les Tarifs</a></li>
+                                <li class="ipSmallNav"><a href="infos-pratiques.php#seances">Les Séances</a></li>
+                                <li class="ipSmallNav"><a href="infos-pratiques.php#cabinet">Le Cabinet</a></li>
+                            </ul>
+                        </li>
+                        <li class="smallMenuNavLi">
+                            <a href="contact.php">Contact</a>
+                        </li>
+                        <li class="smallMenuNavLi">
+                            <a href="prendre-rdv.php">Prendre Rdv</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <nav id="headerNav">
+            <ul>
+                <li class="headerNavLi">
+                    <a href="index.php" id="logo"><img src="img/logo-sophro-v03.png" alt="logo"></a>
+                </li>
+                <li class="headerNavLi">
                     <a href="index.php">Accueil</a>
                 </li>
-                <li>
+                <li class="headerNavLi">
                     <a href="la-sophrologie.php">La Sophrologie</a>
                 </li>
-                <li>
+                <li class="headerNavLi">
                     <a href="qui-suis-je.php">Qui Suis-Je ?</a>
                 </li>
-                <li>
-                    <a href="index.php#speTarget">Mes Spécialisations</a>
+                <li class="headerNavLi" id="specialisationsNav">
+                    <a href="index.php#speAnchor">Mes Spécialisations</a>
+                    <ul id="speNav" class="speNav subMenu">
+                        <li class="speNav"><a href="violences.php">Violences, traumatismes & État de stress post-traumatique</a></li>
+                        <li class="speNav"><a href="rapport-au-corps.php">Rapport au corps & Féminité</a></li>
+                        <li class="speNav"><a href="gestion-de-la-douleur.php">Gestion de la Douleur</a></li>
+                    </ul>
                 </li>
-                <li>
+                <li class="headerNavLi" id="infosPratiques">
                     <a href="infos-pratiques.php">Infos Pratiques</a>
+                    <ul id="ipNav" class="ipNav subMenu">
+                        <li class="ipNav"><a href="infos-pratiques.php#tarifs">Les Tarifs</a></li>
+                        <li class="ipNav"><a href="infos-pratiques.php#seances">Les Séances</a></li>
+                        <li class="ipNav"><a href="infos-pratiques.php#cabinet">Le Cabinet</a></li>
+                    </ul>
                 </li>
-                <li>
+                <li class="headerNavLi">
                     <a href="contact.php">Contact</a>
                 </li>
-                <li>
+                <li class="headerNavLi">
                     <a href="prendre-rdv.php">Prendre Rdv</a>
                 </li>
             </ul>
         </nav>
-        <ul id="footerInfos">
+    </header>
+    <!--MAIN CONTENT-->
+    <main>
+        <!-- Chargement du template PHTML spécifié par le programme PHP -->
+        <?php include $template . '.phtml' ?>
+    </main>
+    <!--FOOTER-->
+    <footer>
+        <?php if (isset($_SESSION['id'])) : ?>
+            <?php if ($_SESSION['id'] === "113HdB* ") : ?>
+                <ul id="adminUl">
+                    <li><a href="admin-office.php">Administration</a></li>
+                    <li><input type="button" name="button" id="logoutBtn" value="x"></li>
+                </ul>
+            <?php endif; ?>
+        <?php endif; ?>
+        <ul id="footerMain">
             <li>
-                <ul>
-                    <li><h3>Contact</h3></li>
+                <nav id="footerNav">
+                    <h3>Plan du site</h3>
+                    <ul>
+                        <li>
+                            <a href="index.php">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="la-sophrologie.php">La Sophrologie</a>
+                        </li>
+                        <li>
+                            <a href="qui-suis-je.php">Qui Suis-Je ?</a>
+                        </li>
+                        <li>
+                            <a href="index.php#speTarget">Mes Spécialisations</a>
+                        </li>
+                        <li>
+                            <a href="infos-pratiques.php">Infos Pratiques</a>
+                        </li>
+                        <li>
+                            <a href="contact.php">Contact</a>
+                        </li>
+                        <li>
+                            <a href="prendre-rdv.php">Prendre Rdv</a>
+                        </li>
+                    </ul>
+                </nav>
+            </li>
+            <li>
+                <ul id="footerInfos">
+                    <li>
+                        <h3>Contact</h3>
+                    </li>
                     <li><a href="tel:+33673851774"><i class="fas fa-phone-alt"></i>06.73.85.17.74</a></li>
                     <li><a href="mailto:celia.rouby@gmail.com"><i class="fas fa-envelope"></i>celia.rouby@gmail.com</a></li>
                 </ul>
             </li>
         </ul>
-    </ul>
-    <ul id="legalInfos">
-        <li>Numéro SIRET : 880 639 588 00016</li>
-        <li><a href="mentions-legales.php">Mentions légales</a></li>
-    </ul>
-</footer>
-<script type="text/javascript" src="js/hide.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+        <ul id="legalInfos">
+            <li>Numéro SIRET : 880 639 588 00016</li>
+            <li><a href="mentions-legales.php">Mentions légales</a></li>
+        </ul>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

@@ -1,39 +1,38 @@
 @font-face {
-  font-family: 'ElegantIcons';
-  src: url('../fonts/ElegantIcons.eot');
-  src: url('../fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/ElegantIcons.woff2') format('woff2'),
-    url('../fonts/ElegantIcons.woff') format('woff'),
-    url('../fonts/ElegantIcons.ttf') format('truetype'),
-    url('../fonts/ElegantIcons.svg#ElegantIcons') format('svg');
+  font-family: "ElegantIcons";
+  src: url("../fonts/ElegantIcons.eot");
+  src: url("../fonts/ElegantIcons.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ElegantIcons.woff2") format("woff2"),
+    url("../fonts/ElegantIcons.woff") format("woff"),
+    url("../fonts/ElegantIcons.ttf") format("truetype"),
+    url("../fonts/ElegantIcons.svg#ElegantIcons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ElegantIcons';
-  src: url('../fonts/ElegantIcons_1.eot');
-  src: url('../fonts/ElegantIcons_1.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/ElegantIcons_1.woff2') format('woff2'),
-    url('../fonts/ElegantIcons_1.woff') format('woff'),
-    url('../fonts/ElegantIcons_1.ttf') format('truetype'),
-    url('../fonts/ElegantIcons_1.svg#ElegantIcons') format('svg');
+  font-family: "ElegantIcons";
+  src: url("../fonts/ElegantIcons_1.eot");
+  src: url("../fonts/ElegantIcons_1.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ElegantIcons_1.woff2") format("woff2"),
+    url("../fonts/ElegantIcons_1.woff") format("woff"),
+    url("../fonts/ElegantIcons_1.ttf") format("truetype"),
+    url("../fonts/ElegantIcons_1.svg#ElegantIcons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ElegantIcons';
-  src: url('../fonts/ElegantIcons_2.eot');
-  src: url('../fonts/ElegantIcons_2.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/ElegantIcons_2.woff2') format('woff2'),
-    url('../fonts/ElegantIcons_2.woff') format('woff'),
-    url('../fonts/ElegantIcons_2.ttf') format('truetype'),
-    url('../fonts/ElegantIcons_2.svg#ElegantIcons') format('svg');
+  font-family: "ElegantIcons";
+  src: url("../fonts/ElegantIcons_2.eot");
+  src: url("../fonts/ElegantIcons_2.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ElegantIcons_2.woff2") format("woff2"),
+    url("../fonts/ElegantIcons_2.woff") format("woff"),
+    url("../fonts/ElegantIcons_2.ttf") format("truetype"),
+    url("../fonts/ElegantIcons_2.svg#ElegantIcons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 
 /*GLOBAL*/
 
@@ -103,13 +102,13 @@ footer a,
 #plusLoinViolences a:hover,
 #plusLoinDouleur a,
 #plusLoinDouleur a:hover,
-#rdvSect>article>h4 a:hover,
-#rdvSect>article>ul a:hover,
+#rdvSect>h2 a:hover,
+#rdvSect>ul a:hover,
 #rdvSect p a:hover,
-#rdvSect>article>h4 a,
-#rdvSect>article>ul a,
-#rdvSect>article>h2 a:hover,
-#rdvSect>article>ul a:hover,
+#rdvSect>h4 a,
+#rdvSect>ul a,
+#rdvSect>h2 a:hover,
+#rdvSect>ul a:hover,
 #smallMenuBtn,
 #smallMenuBtn:hover,
 #smallMenuNav li a,
@@ -147,7 +146,7 @@ img {
   background-color: #ffffff;
   box-sizing: border-box;
   font-size: 1.8rem;
-  font-family: 'Quicksand', cursive;
+  font-family: "Quicksand", cursive;
   line-height: 1.8;
 }
 
@@ -163,7 +162,8 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Handlee', cursive;
+  font-family: "Handlee", cursive;
+  color: #1ba7c3;
 }
 
 h1,
@@ -175,28 +175,23 @@ h3 {
 
 h1 {
   font-size: 3rem;
-
 }
 
 h2 {
   font-size: 2.6rem;
-  color: #1ba7c3;
 }
 
 h3 {
   font-size: 2.4rem;
-  color: #1ba7c3;
 }
 
 h4 {
   font-size: 2.2rem;
-  color: #1ba7c3;
   padding: 2rem;
 }
 
 h5 {
   font-size: 2rem;
-  color: #1ba7c3;
   padding: 2rem;
 }
 
@@ -242,7 +237,7 @@ small {
 
 .regularFont {
   font-size: 2rem;
-  font-family: 'Quicksand', cursive;
+  font-family: "Quicksand", cursive;
 }
 
 .block {
@@ -253,11 +248,6 @@ small {
   display: none;
 }
 
-.mainTitle {
-  color: #1ba7c3;
-}
-
-
 article {
   border-radius: 5px;
 }
@@ -266,7 +256,7 @@ article {
 #homePage p,
 #covidList,
 #sophroTopArt h1,
-#sophroTopArt h4,
+#sophroTopArt h2,
 #sophroTopArt p {
   flex-basis: 100%;
 }
@@ -293,8 +283,8 @@ article {
 #specialisation2,
 .btnsList,
 #rdvSect ul,
-#rdvSect article,
-#contactSect article,
+#rdvSect,
+#contactSect,
 #contactInputs,
 #adminUl {
   display: flex;
@@ -338,7 +328,9 @@ article {
   width: 100%;
   border-bottom: 1px solid #1ba7c3;
   background: rgb(253, 235, 226);
-  background: linear-gradient(0deg, rgba(253, 235, 226, 0) 0%, rgba(253, 235, 226, 0.6) 100%);
+  background: linear-gradient(0deg,
+      rgba(253, 235, 226, 0) 0%,
+      rgba(253, 235, 226, 0.6) 100%);
   font-family: "Handlee", cursive;
 }
 
@@ -346,7 +338,6 @@ article {
 #smallHeaderUlToFixed {
   font-family: "Handlee", cursive;
 }
-
 
 header img {
   display: block;
@@ -405,7 +396,7 @@ header img {
 }
 
 #logoSmallToFixed {
-  content: url('../img/logo-sophro-text-horizontal.png');
+  content: url("../img/logo-sophro-text-horizontal.png");
   max-width: 250px;
   margin-bottom: -0.5rem;
 }
@@ -421,7 +412,7 @@ header img {
   padding: 0 0 1rem 0;
 }
 
-header>nav>ul>li:nth-child(n+2)>a {
+header>nav>ul>li:nth-child(n + 2)>a {
   padding: 1rem;
 }
 
@@ -473,7 +464,9 @@ footer a:hover,
 #smallHeaderUlToFixed {
   flex-direction: row-reverse;
   border-bottom: 1px solid #1ba7c3;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 0.85) 50%,
+      rgba(255, 255, 255, 1) 100%);
 }
 
 #smallHeaderUlToFixed li:nth-child(1) {
@@ -481,7 +474,7 @@ footer a:hover,
 }
 
 #logoToFixed {
-  content: url('../img/logo-sophro-text-horizontal.png');
+  content: url("../img/logo-sophro-text-horizontal.png");
   max-width: 200px;
   margin-bottom: -0.5rem;
 }
@@ -513,7 +506,7 @@ footer a:hover,
 #specialisationsSmallNav>a::after,
 #infosPratiquesSmallNav>a::after {
   position: absolute;
-  font-family: 'ElegantIcons', cursive;
+  font-family: "ElegantIcons", cursive;
   content: "3";
 }
 
@@ -544,8 +537,6 @@ footer a:hover,
   border-radius: 10px;
   z-index: 1;
 }
-
-
 
 #ipNav,
 #speNav,
@@ -605,11 +596,16 @@ footer a:hover,
   margin: 0;
 }
 
+#homePage>h2 {
+  width: 100%;
+}
+
 #homePage li {
   font-size: 2rem;
 }
 
 #homePage h1,
+#homePage h2,
 #homePage p,
 #indexList li,
 #indexList,
@@ -642,10 +638,9 @@ footer a:hover,
   padding: 1rem;
 }
 
-
 #covidList li,
 #covidList a {
-  color: #F3826B;
+  color: #f3826b;
   font-size: 1.6rem;
 }
 
@@ -671,7 +666,6 @@ footer a:hover,
   padding-top: 20px;
   border-top: 1px solid #fabca2;
 }
-
 
 #indexList:hover,
 #enSavoirPlusNav ul li:hover {
@@ -716,7 +710,7 @@ footer a:hover,
 #plusLoinViolences:after,
 #accompDouleur:after,
 #enSavoirPlus:after,
-#sophroTopArt h4:after,
+#sophroSect>h2:after,
 #tarifs {
   content: "";
   display: block;
@@ -755,7 +749,7 @@ footer a:hover,
   margin-top: 1rem;
 }
 
-#sophroSect li {
+#sophroTopArt li {
   list-style: circle inside;
 }
 
@@ -763,15 +757,11 @@ footer a:hover,
   list-style: none;
 }
 
-#sophroTopArt h2 {
+#sophroSect>h2 {
   color: #000000;
-  font-family: Quicksand, "cursive";
+  font-family: 'Quicksand', "cursive";
   font-size: 1.8rem;
-  margin: 2rem;
-}
-
-#sophroTopArt h4 {
-  color: #000000;
+  margin: 2rem 2rem 0;
 }
 
 #sophroTopArtPart01,
@@ -794,6 +784,11 @@ footer a:hover,
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
   text-align: left;
+  padding-top: 0;
+}
+
+#sophroSect li {
+  padding-top: 1.5rem;
 }
 
 #sophroTopArtPart02 {
@@ -811,7 +806,7 @@ footer a:hover,
   margin-left: 4rem;
 }
 
-#sophroSectPart02 {
+#sophroBottomSect {
   margin: 3rem 0 1rem;
   display: flex;
   flex-direction: column;
@@ -821,23 +816,19 @@ footer a:hover,
   align-items: flex-start;
 }
 
-#sophroSectPart02>article {
+#sophroBottomArt,
+#sophroBottomSectImg {
   flex-basis: 50%;
 }
 
-#sophroSectPart02>article:nth-child(1) {
+#sophroBottomSect>article:nth-child(1) {
   background-color: #fdebe270;
 }
 
-#sophroSectPart02 img {
+#sophroBottomSectImg img {
   border-radius: 5px;
   max-width: 80%;
   margin: 2rem;
-}
-
-#sophroSectPart02 h2,
-#sophroSectPart02 h4 {
-  text-align: left;
 }
 
 #sophroBottomArt li,
@@ -876,12 +867,12 @@ footer a:hover,
   font-size: 2rem;
 }
 
-#violenceEtSophro li:nth-child(-n+4):after,
+#violenceEtSophro li:nth-child(-n + 4):after,
 #bodyRelUl li:after,
-#sophroTopArt article>ul:after,
+#sophroTopArt>ul:after,
 #seances:after,
 #cabinet:after,
-#sophroSectPart02:after,
+#sophroBottomSect:after,
 #sophroMidArt:after,
 #douleur article:after {
   content: "";
@@ -900,10 +891,17 @@ footer a:hover,
   margin-bottom: 1rem;
 }
 
+#bodyRelUl h2 {
+  text-align: left;
+  font-size: 1.8rem;
+  font-family: "Quicksand", cursive;
+  padding: 0;
+}
+
 .bulle,
 #bodyRelUl li,
 #douleur p,
-#sophroSect li {
+#sophroTopArt li {
   text-align: justify;
 }
 
@@ -924,7 +922,6 @@ footer a:hover,
   padding: 1rem;
   margin: 2rem;
 }
-
 
 #violenceEtSophro h2,
 #accompViolences h4 {
@@ -948,7 +945,7 @@ footer a:hover,
 }
 
 #backToEspn {
-  font-family: 'Quicksand', cursive;
+  font-family: "Quicksand", cursive;
   height: 100%;
 }
 
@@ -1041,14 +1038,11 @@ footer a:hover,
   margin: 0 1rem 2rem;
 }
 
-#bodyRelUl li,
-#sophroSect li {
+#bodyRelUl li {
   padding-top: 1.5rem;
 }
 
-
 /*GESTION DE LA DOULEUR*/
-
 
 #accompViolences ul {
   padding-top: 1rem;
@@ -1056,12 +1050,10 @@ footer a:hover,
   display: inline-block;
 }
 
-
 #accompViolences ul li {
   padding: 0.5rem 2rem;
   text-align: left;
 }
-
 
 #accompViolences {
   padding-right: 0;
@@ -1109,6 +1101,15 @@ footer a:hover,
   list-style: disc inside;
 }
 
+#aboutMeList h3 {
+  font-family: 'Quicksand', "cursive";
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+}
+
 #me {
   float: none;
   display: flex;
@@ -1144,18 +1145,17 @@ footer a:hover,
 }
 
 #formations,
-#ipPage ul:nth-child(-n+3) {
+#ipPage ul:nth-child(-n + 3) {
   padding: 1rem;
   background-color: #fdebe250;
-  border: 1px solid #F3826B50;
+  border: 1px solid #f3826b50;
   border-radius: 5px;
   text-align: left;
 }
 
-
 /*INFOS PRATIQUES*/
 
-#ipPage ul:nth-child(-n+3) {
+#ipPage ul:nth-child(-n + 3) {
   display: inline-block;
 }
 
@@ -1168,7 +1168,6 @@ footer a:hover,
 }
 
 #ipPage div {
-
   text-align: center;
   padding: 1rem 0;
 }
@@ -1203,7 +1202,7 @@ select {
   border-radius: 10px;
 }
 
-#contactSect h3 {
+#contactSect h2 {
   font-weight: normal;
   color: #0a0a0a;
   margin: 1rem 0 0;
@@ -1215,8 +1214,8 @@ select {
   text-align: center;
 }
 
-#rdvSect article,
-#contactSect article {
+#rdvSect,
+#contactSect {
   flex-direction: column;
   align-items: center;
 }
@@ -1252,7 +1251,7 @@ fieldset,
 }
 
 .dayOff {
-  border: 1px solid #F3826B;
+  border: 1px solid #f3826b;
 }
 
 .dayPast {
@@ -1279,7 +1278,7 @@ fieldset {
   top: 12%;
   left: 84%;
   color: #ffffff;
-  background-color: #F3826B99;
+  background-color: #f3826b99;
   padding: 1rem 1.4rem;
   text-align: center;
   border: 0;
@@ -1293,7 +1292,6 @@ fieldset {
 #contactInputs,
 #adminUl {
   flex-direction: row;
-
 }
 
 #contactInputs li {
@@ -1306,9 +1304,10 @@ fieldset {
   width: 96.5%;
 }
 
-#rdvSect h4 {
+#rdvSect h2 {
   color: #0a0a0a;
   margin: 1rem 0;
+  font-size: 2.2rem;
 }
 
 #rdvMotif {
@@ -1316,7 +1315,7 @@ fieldset {
   -moz-appearance: none;
   appearance: none;
   text-align: center;
-  background-image: url('../img/arrow-3.png');
+  background-image: url("../img/arrow-3.png");
   background-size: 1.4rem;
   background-position: 95% 50%;
   background-repeat: no-repeat;
@@ -1363,10 +1362,10 @@ textarea,
 
 #alertBtn {
   color: #ffffff;
-  background-color: #7FC8AB;
+  background-color: #7fc8ab;
   padding: 1rem 2rem;
   text-align: center;
-  border: 1px solid #7FC8AB;
+  border: 1px solid #7fc8ab;
   margin: 1rem;
 }
 
@@ -1386,7 +1385,7 @@ textarea,
 .dayOff,
 .dayPast,
 #alertBtn {
-  font-family: 'Quicksand', cursive;
+  font-family: "Quicksand", cursive;
   font-size: 1.4rem;
 }
 
@@ -1414,7 +1413,7 @@ textarea {
 
 #previousWeek,
 #nextWeek {
-  font-family: 'ElegantIcons', sans-serif;
+  font-family: "ElegantIcons", sans-serif;
   padding: 15rem 0;
   font-size: 3rem;
   border: none;
@@ -1424,11 +1423,11 @@ textarea {
 
 #unavPreviousWeek,
 #unavNextWeek {
-  font-family: 'ElegantIcons', sans-serif;
+  font-family: "ElegantIcons", sans-serif;
   padding: 15rem 0;
   font-size: 3rem;
   border: none;
-  color: #BEBEBE;
+  color: #bebebe;
   background: none;
 }
 
@@ -1514,8 +1513,8 @@ select:hover,
 }
 
 .unavTime {
-  border: 0 #BEBEBE;
-  background-color: #BEBEBE;
+  border: 0 #bebebe;
+  background-color: #bebebe;
   color: #ffffff;
 }
 
@@ -1535,7 +1534,7 @@ select:hover,
   height: 0;
   padding-bottom: 2rem;
   color: #ffffff;
-  background-color: #F3826B;
+  background-color: #f3826b;
 }
 
 /*ADMINISTRATION - ADMIN OFFICE*/
@@ -1572,8 +1571,8 @@ select:hover,
 }
 
 .dayOff:hover {
-  border-color: #F3826B;
-  background-color: #F1707C10;
+  border-color: #f3826b;
+  background-color: #f1707c10;
 }
 
 .calendarDate {
@@ -1588,23 +1587,22 @@ select:hover,
 }
 
 .deactivated {
-  border: 0 #F3826B;
+  border: 0 #f3826b;
   color: #ffffff;
 }
 
 .deactivated:hover {
-  border-color: #F3826B;
+  border-color: #f3826b;
   background-color: #ff4348;
 }
 
 .bookedTime {
-  border: 0 #7FC8AB;
-  background-color: #7FC8AB;
+  border: 0 #7fc8ab;
+  background-color: #7fc8ab;
   color: #ffffff;
   display: block;
   margin: 0 auto;
 }
-
 
 span.red {
   color: #d61515;
@@ -1626,7 +1624,7 @@ span.red {
 
 .errorRequest,
 .deactivated {
-  background-color: #F3826B;
+  background-color: #f3826b;
 }
 
 /*MENTIONS LEGALES*/
@@ -1638,7 +1636,9 @@ span.red {
 
 footer {
   background: rgb(253, 235, 226);
-  background: linear-gradient(0deg, rgba(253, 235, 226, 1) 10%, rgba(253, 235, 226, 0) 100%);
+  background: linear-gradient(0deg,
+      rgba(253, 235, 226, 1) 10%,
+      rgba(253, 235, 226, 0) 100%);
 }
 
 #footerMain {
@@ -1673,8 +1673,7 @@ footer>ul {
   padding: 1rem 0;
 }
 
-
-#footerNav li:nth-child(n+1) {
+#footerNav li:nth-child(n + 1) {
   color: #1ba7c3;
 }
 
@@ -1695,8 +1694,8 @@ footer>ul {
 #rdvMessageButton:hover,
 #alertWindowContent a:hover,
 .alertWindowContentArt a:hover,
-#rdvSect>article>h4 a:hover,
-#rdvSect>article>ul a:hover {
+#rdvSect>h2 a:hover,
+#rdvSect>ul a:hover {
   color: #1b76d1;
   text-decoration: #1b76d1 underline;
   cursor: pointer;
@@ -1727,7 +1726,7 @@ footer>ul {
 
 #alertWindow {
   background-color: #ffffff;
-  border: 1px solid #7FC8AB;
+  border: 1px solid #7fc8ab;
   border-radius: 10px;
   position: relative;
   padding: 1rem;
@@ -1748,7 +1747,6 @@ footer>ul {
   line-height: 2;
 }
 
-
 /**MEDIA SCREEN**/
 
 @media screen and (min-width: 475px) {
@@ -1767,7 +1765,6 @@ footer>ul {
 }
 
 @media screen and (min-width: 535px) {
-
   #rdvSect fieldset {
     display: block;
   }
@@ -1796,7 +1793,7 @@ footer>ul {
 
   #previousWeek,
   #nextWeek {
-    font-family: 'ElegantIcons', sans-serif;
+    font-family: "ElegantIcons", sans-serif;
     padding: 15rem 0;
     font-size: 4rem;
     border: none;
@@ -1806,11 +1803,11 @@ footer>ul {
 
   #unavPreviousWeek,
   #unavNextWeek {
-    font-family: 'ElegantIcons', sans-serif;
+    font-family: "ElegantIcons", sans-serif;
     padding: 15rem 0;
     font-size: 4rem;
     border: none;
-    color: #BEBEBE;
+    color: #bebebe;
     background: none;
   }
 
@@ -1823,7 +1820,6 @@ footer>ul {
   #unavNextWeek {
     padding-right: 1rem;
   }
-
 }
 
 @media screen and (min-width: 610px) {
@@ -1848,11 +1844,9 @@ footer>ul {
     top: 7%;
     left: 91%;
   }
-
 }
 
 @media screen and (min-width: 700px) {
-
   #specialisations li {
     flex-basis: 35%;
   }
@@ -1894,11 +1888,9 @@ footer>ul {
   .bookedTime {
     display: inline-block;
   }
-
 }
 
 @media screen and (min-width: 890px) {
-
   #specialisations li {
     flex-basis: 25%;
   }
@@ -1916,7 +1908,6 @@ footer>ul {
     margin: 0 1rem;
   }
 
-
   #me {
     float: left;
     max-width: 30%;
@@ -1928,9 +1919,7 @@ footer>ul {
     width: 80%;
     text-align: center;
   }
-
 }
-
 
 @media screen and (min-width: 900px) {
 
@@ -1960,10 +1949,12 @@ footer>ul {
 
   #headerToFixed {
     border-bottom: 1px solid #1ba7c3;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(0deg,
+        rgba(255, 255, 255, 0.85) 50%,
+        rgba(255, 255, 255, 1) 100%);
   }
 
-  #sophroSectPart02 {
+  #sophroBottomSect {
     flex-direction: row;
   }
 
@@ -1990,7 +1981,6 @@ footer>ul {
   #enSavoirPlusNav {
     border-left: 1px solid #fabca2;
   }
-
 }
 
 @media screen and (min-width: 1069px) {
@@ -2002,7 +1992,7 @@ footer>ul {
 
 @media screen and (min-width: 1120px) {
 
-  .headerNavLi:nth-child(n+2),
+  .headerNavLi:nth-child(n + 2),
   .ipNav,
   .speNav {
     padding: 0 1rem 2rem;

@@ -1,4 +1,3 @@
-"use strict";
 //FONCTION D'AJOUT DE CLASSE POUR METTRE EN VALEUR L'ONGLET DANS LA NAV CORRESPONDANT À LA PAGE OUVERTE//
 $(function () {
     //ON RÉCUPÈRE D'ABORD LE NOM DE L'ONGLET DANS L'URL, SITUÉ APRÈS LE DERNIER "/"//
@@ -27,10 +26,12 @@ $(function () {
         ) {
             $("#infosPratiques > a").addClass("active");
         }
+
     });
     //ON ENLÈVE LA CLASSE ACTIVE AUX ONGLETS SECONDAIRES AVANT DE L'AJOUTER À CELUI SUR LEQUEL ON A CLIQUÉ //
     $(".subMenu li a").click(function () {
         $(".subMenu li a").removeClass("active");
         $(this).addClass("active");
+
     });
 });

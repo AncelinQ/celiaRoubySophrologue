@@ -294,6 +294,7 @@ $(function () {
         var email = $("#rdvEmail").val();
         var motif = $("#rdvMotif").val();
         var timeSlotDateTime = $(".selectedTime").attr('id');
+        timeSlotDateTime = timeSlotDateTime.replace('_', ' ');
         var timeSlotFull = $(".selectedTime").attr('name');
         var message = $("#rdvMessage").val();
         var error = 0;
@@ -322,7 +323,7 @@ $(function () {
             $("#rdvEmail").addClass("okInput").removeClass("errorInput");
         }
 
-        if (motif === "0") {
+        if (motif === "") {
             $("#rdvMotif").addClass("errorInput").removeClass("okInput");
             error++;
         } else {
@@ -523,6 +524,7 @@ $(function () {
     $('.bookedTime').click(function (e) {
         e.preventDefault();
         var rdvTimeSlot = $(this).attr('id');
+        rdvTimeSlot = rdvTimeSlot.replace('_', ' ');
         //ON SÉPARE LES INFOS DU NAME EN TABLEAU POUR RÉCUPÉRER LE JOUR, SON NUMBRE ET LE MOIS//
         var rdvDayArray = $(this).attr('name').split(' ');
         var dayName = rdvDayArray[0];
@@ -634,6 +636,8 @@ $(function () {
         if (!$(this).hasClass('unavTime') && !$(this).hasClass('bookedTime')) {
             //ON RÉCUPÈRE LES INFOS DE L'ID DU CRÉNEAU ET ON ENREGISTRE LE BOUTON SÉLECTIONNÉ//
             var timeSlotToSwitch = $(this).attr('id');
+            timeSlotToSwitch = timeSlotToSwitch.replace('_', ' ');
+
             var fullTimeSlot = $(this);
             //ON ENVOIE EN AJAX//
             $.ajax({
