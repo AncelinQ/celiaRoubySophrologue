@@ -704,7 +704,7 @@ footer a:hover,
 #accompDouleur:after,
 #enSavoirPlus:after,
 #sophroSect>h2:after,
-#tarifs {
+#tarifs:after {
   content: "";
   display: block;
   margin: 0 auto;
